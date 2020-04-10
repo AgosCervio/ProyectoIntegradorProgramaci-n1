@@ -1,9 +1,47 @@
 body  {
-background-image: url(imagenes/proyectofondo.JPG); width: 30%; height: 100px;
+background-image: url(imagenes/proyectofondo.JPG); width: 30%; height: 50px;
 }
-p{
-    color: blue;
+
+
+.liheader {
+background-color:rgb( 232, 231, 227);
+margin-left: 450px;
+width: 400px;
 }
-h1{
-    color: chartreuse;
+
+.listaheader li  {
+margin-bottom: 10px;
+list-style: none;
+text-align: center;
+font-size: 30px;
+font-family: 'Courier New', Courier, monospace;
 }
+.listaheader {
+padding-left: 0px;
+}
+.liheader a {
+text-decoration: none;
+color: ivory;
+}
+
+.mainfooter {
+width: 100%;
+height: 300px;
+}
+
+.madeby  {
+    background-color:rgb( 232, 231, 227);
+color: ivory;
+width: 500px;
+margin-left: 450px;
+height: 50px;
+}
+
+.madeby p  {
+text-align: center;
+font-size: 30px;
+font-family: 'Courier New', Courier, monospace;
+padding-top: 10px;
+}
+
+
