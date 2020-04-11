@@ -1,7 +1,10 @@
 body  {
 background-image: url(imagenes/proyectofondo.JPG); width: 30%; height: 50px;
 }
-
+.logo{
+display: block;
+margin: 0 auto;
+}
 
 .liheader {
 background-color:rgb( 232, 231, 227);
@@ -45,3 +48,14 @@ padding-top: 10px;
 }
 
 
+.hamburguesa{
+ background-color: lightgray;
+padding: 15px;
+color: white;
+margin: auto;
+display: block;
+width: 8px;
+margin: 0 auto;
+height: 8px;
+margin-top: 10px;
+}
