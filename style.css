@@ -13,6 +13,7 @@ border-radius: 50%;
     margin-left: 5px;
 }
 
+
 .liheader {
 background-color:rgb( 232, 231, 227);
 margin-left: 70px;
@@ -42,26 +43,31 @@ color: ivory;
 }
 
 .mainfooter {
-display: grid;
-width: 100%;
-height: 50px;
+position: relative;
+display: inline-block;
+width: 90%;
 background-color:rgb( 232, 231, 227);
+height: 45px;
+margin: 0 auto;
 margin-top: 20px;
-}
-
-.madeby  {
-    width: 80%;
-    padding: 1px;
-}
+padding-left: 20px;
+padding: auto;
+  }
+.mainfooter img{
+width: 10%;
+position: absolute;
+top: 0px;
+ padding: 1px;
+ padding-top: 5px;
+padding-right: 20px;
+  }
 
 .madeby p  {
 text-align: center;
 font-size: 15px;
 font-family: 'Courier New', Courier, monospace;
 color: ivory;
-
 }
-
 
 .hamburguesa{
 color: white;
