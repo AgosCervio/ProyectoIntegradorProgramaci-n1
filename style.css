@@ -79,4 +79,223 @@ width: 15px;
 background-color: rgb( 232, 231, 227);
 }
 
+
+
+
+.titulo{
+font-family: cursive;
+color: ivory;
+text-align: center;
+}
  
+
+.containartista {
+
+height: 200px;
+background-color: rgba(242, 216, 229, 0.5);
+display: grid;
+grid-template-columns: 40% 30% 28%;
+gap: 1%;
+border: white solid 4px;
+margin: 0 auto;
+
+}
+
+.fotoartista {
+height: 70%;
+width: 90%;
+border-radius: 50%;
+border: 2px solid white;
+margin-top: 4px;
+
+}
+
+.containfotoartista {
+
+
+padding-left: 7px;
+}
+
+
+.fans {
+text-align: center;
+color: rgb(84, 82, 82);
+font-weight: bold;
+font-family: fantasy;
+font-size: 10px;
+margin-top: 10px;
+}
+
+
+.nombreartista {
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
+    color:rgb(84, 82, 82);
+    margin: 0%;
+}
+
+.containcanciones {
+gap: 1%;
+
+}
+.listacanciones li {
+
+font-size: 12px;
+
+}
+
+.listacanciones {
+
+color: rgb(84, 82, 82);
+padding-left: 15px;
+padding-top: 0px;
+text-align: justify;
+}
+
+.listacanciones a {
+text-decoration: none;
+color: rgb(84, 82, 82);
+}
+
+.containcanciones p {
+color: rgb(84, 82, 82);
+text-align: center;
+text-decoration-line: underline;
+padding: 0px;
+font-size: 15px;
+}
+
+.containgeneros {
+ 
+    width: 100%;
+    height: 200px;
+    background-color: rgba(242, 216, 229, 0.5);
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 1%;
+    border: white solid 4px;
+    margin-top: 5px;
+
+}
+
+.containfotogenero{
+    padding-left: 7px;
+    position: relative;
+    height: 100%;
+ 
+
+}
+
+.fotogenero {
+    height: 60%;
+    width: 70%;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: 10%; 
+    position: relative;
+}
+
+.titulogenero {
+position: absolute;
+right: 80px;
+top: 60px;
+color: rgb(84, 82, 82);
+font-family: cursive;
+font-size: 40px;
+
+}
+
+.containinfogenero{
+gap: 1%;
+}
+
+.listaartistasgenero {
+color: rgb(84, 82, 82);
+padding-left: 15px;
+padding-top: 0px;
+text-align: justify;
+}
+
+.listaartistasgenero li {
+font-size: 20px;
+list-style-type: none;
+}
+
+.listaartistasgenero a {
+text-decoration: none;
+color: rgb(84, 82, 82);
+}
+
+.tituloinfogenero {
+    color: rgb(84, 82, 82);
+    padding-left: 15px;
+    padding-top: 0px;
+    text-align: justify;
+}
+
+
+
+.fotocancion{
+  
+    height: 60%;
+    width: 80%;
+    border-radius: 50%;
+    border: 15px solid rgba(0, 0, 0, 0,5);
+    margin-top: 4px;
+    padding-top: 10px;
+}
+.nombrecancion {
+    text-align: center;
+    font-family: cursive;
+    font-size: 25px;
+    color: rgb(84, 82, 82);
+    margin: 0%;
+
+    }
+.año {
+    text-align: center;
+    color: rgb(84, 82, 82);
+    font-weight: bold;
+    font-family: fantasy;
+    font-size: 25px;
+    margin-top: 5px;
+    
+    }
+
+    a{
+        text-align: center;
+        font-family: cursive;
+        font-size: 11px;
+        color:rgb(84, 82, 82);
+        margin: 0%;
+        margin: 0 auto; 
+        padding: 5px;
+        text-decoration: none;
+    }
+
+ .fotoalbum{
+    height: 70%;
+    width: 90%;
+    border-radius: 70%;
+    margin-top: 4px;
+    padding-top: 10px;
+ }
+ .ipervinculo{
+    text-align: center;
+    font-family: cursive;
+    font-size: 20px;
+    color:rgb(84, 82, 82);
+    margin: 0%;
+    margin: 0 auto; 
+    padding: 5px;
+    text-decoration: none; 
+ }
+ .año2 {
+    text-align: center;
+    color: rgb(84, 82, 82);
+    font-weight: bold;
+    font-family: fantasy;
+    font-size: 10px;
+    margin-top: 10px;
+    }
