@@ -94,8 +94,8 @@ text-align: center;
 height: 200px;
 background-color: rgba(242, 216, 229, 0.5);
 display: grid;
-grid-template-columns: 40% 30% 28%;
-gap: 1%;
+grid-template-columns: 35% 30% 28%;
+gap: 0%;
 border: white solid 4px;
 margin: 0 auto;
 
@@ -113,7 +113,7 @@ margin-top: 4px;
 .containfotoartista {
 
 
-padding-left: 7px;
+padding-left: 4px;
 }
 
 
@@ -125,7 +125,10 @@ font-family: fantasy;
 font-size: 10px;
 margin-top: 10px;
 }
-
+ 
+.containinfoartista {
+margin-left: 1px;
+}
 
 .nombreartista {
     text-align: center;
@@ -136,12 +139,15 @@ margin-top: 10px;
 }
 
 .containcanciones {
-gap: 1%;
+gap: 2%;
 
 }
 .listacanciones li {
 
-font-size: 12px;
+text-align: center;
+size: 4px;
+margin-left: 13px;
+
 
 }
 
@@ -151,6 +157,8 @@ color: rgb(84, 82, 82);
 padding-left: 15px;
 padding-top: 0px;
 text-align: justify;
+font-family: fantasy;
+font-size: 12px;
 }
 
 .listacanciones a {
@@ -162,7 +170,7 @@ color: rgb(84, 82, 82);
 color: rgb(84, 82, 82);
 text-align: center;
 text-decoration-line: underline;
-padding: 0px;
+margin-left: 12px;
 font-size: 15px;
 }
 
@@ -263,7 +271,7 @@ color: rgb(84, 82, 82);
     
     }
 
-    a{
+    .containinfoartista a{
         text-align: center;
         font-family: cursive;
         font-size: 11px;
