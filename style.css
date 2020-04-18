@@ -206,6 +206,7 @@ font-size: 40px;
 
 }
 
+
 .containinfogenero{
 gap: 1%;
 }
@@ -299,3 +300,38 @@ color: rgb(84, 82, 82);
     font-size: 10px;
     margin-top: 10px;
     }
+
+
+    .slider{
+        width: 45%;
+       margin: auto;
+     overflow: hidden; 
+
+      
+    }
+    .slider ul{
+display: flex;
+padding: 0;
+width: 400%;
+animation: cambio 20s infinite alternate;
+    }
+    .slider li{
+        width: 100%;
+        list-style: none;
+    }
+    .slider img{
+        width: 100%;
+    }
+    @keyframes cambio {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        25% { margin-left: -100%;}
+        45% { margin-left: -100%;}
+        50% { margin-left: -200%;}
+        70% { margin-left: -200%;}
+        75% { margin-left: -300%;}
+        100% { margin-left: -300%;}
+    } 
+
+  
+    
