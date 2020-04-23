@@ -1,5 +1,5 @@
 body  {
-background-image: url(imagenes/proyectofondo.JPG);  background-repeat: no-repeat; background-size: 100%; 
+background-image: url(imagenes/proyectofondo.JPG);  background-attachment: scroll; background-size: 100%;
 }
 .logo{
 display: block;
@@ -321,6 +321,7 @@ grid-template-rows: 70px 50px;
     }
     .slider ul{
 display: flex;
+
 padding: 0;
 width: 400%;
 animation: cambio 20s infinite alternate;
