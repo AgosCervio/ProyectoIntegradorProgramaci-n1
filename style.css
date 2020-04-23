@@ -1,5 +1,5 @@
 body  {
-background-image: url(imagenes/proyectofondo.JPG);  background-repeat: no-repeat; background-size: 100%; 
+background-image: url(imagenes/proyectofondo.JPG);  background-attachment: scroll; background-size: 100%;
 }
 .logo{
 display: block;
@@ -319,6 +319,7 @@ color: rgb(84, 82, 82);
     }
     .slider ul{
 display: flex;
+
 padding: 0;
 width: 400%;
 animation: cambio 20s infinite alternate;
@@ -342,4 +343,20 @@ animation: cambio 20s infinite alternate;
     } 
 
   
-    
+    .imgtopalbum {
+width: 100%;
+height: 100%;
+    }
+
+    .uk-position-center h1 {
+        font-family: cursive;
+        font-size: 20px;
+        background-color: rgba(242, 216, 229, 0.5);
+        display: block;
+    }
+
+    .titulotop {
+
+font-size: 40px;
+
+    }
