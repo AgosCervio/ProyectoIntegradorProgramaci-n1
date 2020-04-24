@@ -368,3 +368,17 @@ ol img{
     width: 40px;
     height: 40px;
 }
+
+
+
+.imgtopalbum {
+width: 100%;
+height: 200px;
+}
+
+.titulotopalbum {
+color: ivory;
+background-color: rgba(242, 216, 229, 0.5);
+font-size: 20px;
+text-align: center;
+}
