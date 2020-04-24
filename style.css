@@ -1,14 +1,17 @@
 body  {
-background-image: url(imagenes/proyectofondo.JPG);  background-attachment: scroll; background-size: 100%;
+background-image: url(imagenes/proyectofondo.JPG);  
+background-attachment: scroll; 
+background-size: 100%;
+
 }
 .logo{
 display: block;
+
 margin: 0 auto;
 border-radius: 50%;
     transform: translateX(65%);
     display: block;
-    margin-top: 20px;
-   border: 15px solid rgba(0, 0, 0, 0,5);
+border: 15px solid rgba(0, 0, 0, 0,5);
     height: 150px;
     margin-left: 5px;
 }
@@ -52,14 +55,17 @@ margin: 0 auto;
 margin-top: 20px;
 padding-left: 20px;
 padding: auto;
-  }
+margin: 20px;
+}
+
 .mainfooter img{
 width: 10%;
 position: absolute;
 top: 0px;
  padding: 1px;
  padding-top: 5px;
-padding-right: 20px;
+padding-right: 5px;
+margin: 10px;
   }
 
 .madeby p  {
@@ -342,7 +348,9 @@ animation: cambio 20s infinite alternate;
         70% { margin-left: -200%;}
         75% { margin-left: -300%;}
         100% { margin-left: -300%;}
+        
     } 
+
  
 
     .cancionn {
