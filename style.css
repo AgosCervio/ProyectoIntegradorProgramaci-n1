@@ -225,8 +225,12 @@ top: 70px;
 color: rgb(84, 82, 82);
 font-family: cursive;
 font-size: 40px;
+<<<<<<< HEAD
 transform: translateX(10%);
 transform: translateY(-20%);
+=======
+transform: translateX(9%);
+>>>>>>> b666d98bdc0685c9d645e53acb0b1e0dd5e42760
 
 }
 
