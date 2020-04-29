@@ -403,8 +403,27 @@ font-size: 20px;
 text-align: center;
 transform: translateY(-50%);
 }
+.logodesktop {
+margin: 0 auto;
+border-radius: 50%;
+    display: block;
+border: 15px solid rgba(0, 0, 0, 0,5);
+    height: 150px;
+    margin-left: 5px;
+    margin: auto;
 
-
+}
  .logodesktop {
 display: none;
+}
+
+.tamaño {
+width: 70%;
+margin: 0 auto  ;
+}
+
+@media (min-width:600px){
+.logodesktop {
+display: block;
+}
 }
