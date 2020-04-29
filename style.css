@@ -4,12 +4,18 @@ color: ivory !important;
 }
 
 
-body  {
-background-image: url(imagenes/proyectofondo.JPG);  
-background-attachment: scroll; 
-background-size: 100%;
-
+html{
+    background-color: transparent;
 }
+
+
+
+body  {
+    background-image: url(imagenes/proyectofondo.JPG);  
+    background-attachment: scroll; 
+    background-size: 100% !important;
+    
+    }
 .logo{
 display: block;
 
@@ -24,7 +30,7 @@ border: 15px solid rgba(0, 0, 0, 0,5);
 
 
 .liheader {
-background-color:rgb( 232, 231, 227);
+    background-color:rgb( 232, 231, 227);
 margin-left: 70px;
 width: 200px;
 margin: auto;
@@ -49,7 +55,7 @@ display: block;
 
 .liheader a {
 text-decoration: none;
-color: ivory;
+color:lightgray;
 }
 
 .mainfooter {
@@ -65,7 +71,7 @@ margin: 20px;
 }
 
 .mainfooter img{
-width: 10%;
+width: 17%;
 position: absolute;
 top: 0px;
  padding: 1px;
@@ -86,18 +92,18 @@ color: ivory;
 color: white;
 display: block;
 padding: 10px;
-margin-left: 160px;
+margin: 0 auto;
 margin-top: 20px;
 width: 15px;
 background-color: rgb( 232, 231, 227);
-margin: auto;
+
 }
 
 
 
 
 .titulo{
-font-family: cursive;
+    font-family: 'Bitter', serif;
 color: ivory;
 text-align: center;
 }
@@ -112,6 +118,7 @@ grid-template-columns: 35% 30% 28%;
 gap: 0%;
 border: white solid 4px;
 margin: 0 auto;
+margin: 10px;
 
 }
 
@@ -135,8 +142,8 @@ padding-left: 4px;
 text-align: center;
 color: rgb(84, 82, 82);
 font-weight: bold;
-font-family: fantasy;
-font-size: 10px;
+font-family: 'Norican', cursive;
+font-size: 15px;
 margin-top: 10px;
 }
  
@@ -146,8 +153,8 @@ margin-left: 1px;
 
 .nombreartista {
     text-align: center;
-    font-family: cursive;
-    font-size: 50px;
+    font-family: 'Notable', sans-serif;
+    font-size:40px;
     color:rgb(84, 82, 82);
     margin: 0%;
 }
@@ -171,8 +178,8 @@ color: rgb(84, 82, 82);
 padding-left: 15px;
 padding-top: 0px;
 text-align: justify;
-font-family: fantasy;
-font-size: 12px;
+font-family: 'Norican', cursive;
+font-size: 15px;
 }
 
 .listacanciones a {
@@ -189,15 +196,15 @@ font-size: 15px;
 }
 
 .containgeneros {
-margin: 0 auto;
+
     width: 96%;
     height: 200px;
     background-color: rgba(242, 216, 229, 0.5);
     display: grid;
     grid-template-columns: 49% 49%;
-    
+margin-top: 5px;
     border: white solid 4px;
-    margin-top: 5px;
+margin: 0 auto;
 
 }
 
@@ -205,7 +212,7 @@ margin: 0 auto;
     padding-left: 7px;
     position: relative;
     height: 100%;
-
+    font-family: 'Bitter', serif;
 
 }
 
@@ -223,8 +230,9 @@ position: absolute;
 right: 80px;
 top: 70px;
 color: rgb(84, 82, 82);
-font-family: cursive;
-font-size: 40px;
+
+font-family: 'Notable', sans-serif;
+font-size: 25px;
 
 transform: translateX(-20%);
 transform: translateY(-20%);
@@ -245,8 +253,9 @@ text-align: justify;
 }
 
 .listaartistasgenero li {
-font-size: 20px;
+font-size: 30px;
 list-style-type: none;
+font-family: 'Norican', cursive;
 }
 
 .listaartistasgenero a {
@@ -274,26 +283,34 @@ color: rgb(84, 82, 82);
 }
 .nombrecancion {
     text-align: center;
-    font-family: cursive;
-    font-size: 25px;
+    font-family: 'Notable', sans-serif;
+    font-size: 20px;
     color: rgb(84, 82, 82);
     margin: 0%;
 
     }
+    .nombrecancionalbum {
+        text-align: center;
+        font-family: 'Notable', sans-serif;
+        font-size: 30px;
+        color: rgb(84, 82, 82);
+        margin: 0%;
+    
+        }
 .año {
     text-align: center;
     color: rgb(84, 82, 82);
     font-weight: bold;
-    font-family: fantasy;
-    font-size: 25px;
+    font-family: 'Norican', cursive;
+    font-size: 20px;
     margin-top: 5px;
     
     }
 
     .containinfoartista a{
         text-align: center;
-        font-family: cursive;
-        font-size: 11px;
+        font-family: 'Norican', cursive;
+        font-size: 25px;
         color:rgb(84, 82, 82);
         margin: 0%;
         margin: 0 auto; 
@@ -310,8 +327,8 @@ color: rgb(84, 82, 82);
  }
  .ipervinculo{
     text-align: center;
-    font-family: cursive;
-    font-size: 20px;
+    font-family: 'Norican', cursive;
+    font-size: 30px
     color:rgb(84, 82, 82);
     margin: 0%;
     margin: 0 auto; 
@@ -322,48 +339,11 @@ color: rgb(84, 82, 82);
     text-align: center;
     color: rgb(84, 82, 82);
     font-weight: bold;
-    font-family: fantasy;
-    font-size: 10px;
+    font-family: 'Norican', cursive;
+    font-size: 15px;
     margin-top: 10px;
     }
 
-
-    .slider{
-        width: 45%;
-       margin: auto;
-     overflow: hidden; 
-display: grid;
-grid-template-rows: 70px 50px;
-
-      
-    }
-    .slider ul{
-display: flex;
-
-padding: 0;
-width: 400%;
-animation: cambio 20s infinite alternate;
-    }
-    .slider li{
-        width: 100%;
-        list-style: none;
-    }
-    .slider img{
-        width: 100%;
-    }
-    @keyframes cambio {
-        0% {margin-left: 0;}
-        20% {margin-left: 0;}
-        25% { margin-left: -100%;}
-        45% { margin-left: -100%;}
-        50% { margin-left: -200%;}
-        70% { margin-left: -200%;}
-        75% { margin-left: -300%;}
-        100% { margin-left: -300%;}
-        
-    } 
-
- 
 
     .cancionn {
 
@@ -371,7 +351,7 @@ animation: cambio 20s infinite alternate;
         
         padding-top: 0px;
         text-align: justify;
-        font-family: fantasy;
+        font-family: 'Handlee', cursive;
         font-size: 20px;
         list-style: none;
 
