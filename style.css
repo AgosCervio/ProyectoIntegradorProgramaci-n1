@@ -328,9 +328,8 @@ color: rgb(84, 82, 82);
  .ipervinculo{
     text-align: center;
     font-family: 'Norican', cursive;
-    font-size: 30px
+    font-size: 30px;
     color:rgb(84, 82, 82);
-    margin: 0%;
     margin: 0 auto; 
     padding: 5px;
     text-decoration: none; 
