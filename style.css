@@ -418,7 +418,9 @@ width: 60%;
 }
 
 .alineacion {
-    transform: translateX(120%);
+    
+    transform: translateX(-50%);
+        transform: translateY(-50%);
 }
 }
 
@@ -450,6 +452,7 @@ width: 90%;
     }
 
     .alineacion {
-        transform: translateX(160%);
+        transform: translateX(-50%);
+        transform: translateY(-50%);
     }
 }
