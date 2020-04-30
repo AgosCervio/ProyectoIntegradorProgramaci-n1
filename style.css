@@ -403,6 +403,11 @@ width: 70%;
 margin: 0 auto  ;
 }
 
+.alineacion {
+    transform: translateX(55%);
+    margin-top: 2%;
+}
+
 @media (min-width:600px){
 .logodesktop {
 display: block;
@@ -410,6 +415,10 @@ display: block;
 
 .tamaño{
 width: 60%;
+}
+
+.alineacion {
+    transform: translateX(120%);
 }
 }
 
@@ -433,9 +442,14 @@ font-size: medium;
 
     .liheader{
 width: 130px;
+border: solid 2px white;
     }
 
     .tamaño{
 width: 90%;
+    }
+
+    .alineacion {
+        transform: translateX(160%);
     }
 }
