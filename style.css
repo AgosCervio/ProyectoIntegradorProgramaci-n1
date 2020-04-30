@@ -407,6 +407,10 @@ margin: 0 auto  ;
 .logodesktop {
 display: block;
 }
+
+.tamaño{
+width: 60%;
+}
 }
 
 @media (min-width:768px){
@@ -429,5 +433,9 @@ font-size: medium;
 
     .liheader{
 width: 130px;
+    }
+
+    .tamaño{
+width: 90%;
     }
 }
