@@ -101,11 +101,8 @@ background-color: rgb( 232, 231, 227);
 
 }
 
-
-
-
 .titulo{
-    font-family: 'Bitter', serif;
+  font-family  : 'Bitter', serif;
 color: ivory;
 text-align: center;
 }
@@ -232,7 +229,6 @@ position: absolute;
 right: 80px;
 top: 70px;
 color: rgb(84, 82, 82);
-
 font-family: 'Notable', sans-serif;
 font-size: 25px;
 
@@ -402,15 +398,61 @@ display: none;
 width: 70%;
 margin: 0 auto  ;
 }
+.titulo{
+    color: slategray;
+}
+.tusa {
+    width: 250px;
+    height: auto;
+    border: solid black;
+    margin-top: 20px;
+}
+.rojo {
+    width: 250px;
+    height: auto;
+    border: solid black;
+    margin-top: 20px;
+}
+.closer {
+    width: 250px;
+    height: auto;
+    border: solid black;
+    margin-top: 20px;
+}
+.halsey {
+    width: 250px;
+    height: auto;
+    border: solid black;
+    margin-top: 20px;
+}
+.containcanciones {
+    text-align: center;
+}
+.cancionn{
+    font-family: 'Courier New', Courier, monospace;
+    color: slategray;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.conteincancionart{
+    font-family: 'Norican', cursive;
+    text-align: center;
+    color:slategray;
+    font-size: 30px;
+}
 
+.canciones{
+    margin: 0 auto;
+    padding-left: 0%;
+}
 @media (min-width:600px){
 .logodesktop {
 display: block;
 }
-
+}
 .tamaño{
 width: 60%;
-}
 }
 
 @media (min-width:768px){
@@ -439,3 +481,6 @@ width: 130px;
 width: 90%;
     }
 }
+
+
+    
