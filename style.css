@@ -455,6 +455,23 @@ text-align: center;
 
 
 }
+.containinfogenero{
+    height: 400px;
+}
+.containfotogenero{
+    height: 400px;
+}
+.fotocancion{
+    padding-top: 0px;
+    height: 200px;
+    width: 90%;
+}
+.containartista{
+    height: 240px;
+}
+.fotoalbum{
+    height: 200px;
+}
 }
 @media (min-width:768px){
     .hamburguesa{
@@ -531,6 +548,32 @@ grid-template-columns: 33% 33% 33%;
 
 
 
+.fotogenero{
+    height: 300px;
+    width: 45%;
+    margin-top: 15px;
+}
+.mainfooter{
+    height: 80px;
+}
+.fotoartista{
+height: 250px;
+width: 90%;
+}
+.containartista{
+    height: 280px;
+}
+.fotocancion{
+    height: 260px;
+    width: 75%;
+}
+.containartista{
+    height: 300px;
+}
+.fotoalbum{
+    width: 85%;
+    height: 250px;
+}
 }
 
 
