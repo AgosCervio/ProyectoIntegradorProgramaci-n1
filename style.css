@@ -443,11 +443,19 @@ margin: 0 auto  ;
 .logodesktop {
 display: block;
 }
-}
 .tamaño{
 width: 60%;
 }
+.mainfooter img{
+    width: 8%;
+}
+.madeby p{
+font-size: 20px;
+text-align: center;
 
+
+}
+}
 @media (min-width:768px){
     .hamburguesa{
         display: none;
@@ -505,6 +513,22 @@ grid-template-columns: 33% 33% 33%;
         margin: 5% auto;
         font-size: 20px;
     }
+
+    .mainfooter img{
+        width: 5%;
+    }
+.mainfooter{
+    height: 70px;
+   margin-left: 70px;
+
+}
+
+.madeby p {
+    font-size: 30px;
+}
+
+
+
 
 
 }
