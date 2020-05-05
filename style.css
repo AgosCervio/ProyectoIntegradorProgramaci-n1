@@ -440,20 +440,21 @@ margin: 0 auto  ;
     list-style: none;
 }
 @media (min-width:600px){
-.logodesktop {
+
+    .logodesktop {
 display: block;
 }
+
 .tamaño{
 width: 60%;
 }
+
 .mainfooter img{
-    width: 8%;
+    width: 10%;
 }
 .madeby p{
-font-size: 20px;
+font-size: 16px;
 text-align: center;
-
-
 }
 .fotogenero{
     height: 190px;
@@ -537,26 +538,36 @@ grid-template-columns: 33% 33% 33%;
     }
 
     .mainfooter img{
-        width: 5%;
+        width: 10%;
     }
 .mainfooter{
     height: 70px;
    margin-left: 70px;
+  
 
 }
 
 .madeby p {
     font-size: 30px;
+    text-align: center;
+    padding-left: 20px;
 }
 
 
 
-
-
+.titulogenero{
+    left: 110px;
+    top: 160px;
+    font-size: 40px;
+}
+.containgeneros{
+    height: 300px;
+}
 .fotogenero{
-    height: 190px;
-    width: 45%;
-    margin-top: 5px;
+    height: 280px;
+    width: 70%;
+    margin-top: 15px;
+    
 }
 .mainfooter{
     height: 80px;
@@ -571,6 +582,7 @@ width: 90%;
 .fotocancion{
     height: 260px;
     width: 75%;
+   
 }
 .containartista{
     height: 300px;
