@@ -1,0 +1,168 @@
+
+
+
+    .containartista {
+       height: 260px;
+       background-color: rgba(242, 216, 229, 0.5);
+       display: grid;
+       grid-template-columns: 33% 33% 33%;
+       justify-content: space-between;
+       border: white solid 4px;
+       margin: 10px;
+    }
+    
+    .fotoartista {
+       border-radius: 50%;
+       border: 2px solid white;
+       }
+
+    .containartista img {
+        width: 100%;
+        margin: 0 1%;
+        height: 60%;
+        }
+    
+    .fans {
+        text-align: center;
+        color: rgb(84, 82, 82);
+        font-weight: bold;
+        font-family: 'Norican', cursive;
+        font-size: 15px;
+        margin-top: 1%;
+        }
+     
+   
+    
+    .nombreartista {
+        text-align: center;
+        font-family: 'Lobster', cursive;
+        font-size:60px;
+        width: 33%;
+        color:rgb(84, 82, 82);
+        margin: 0%;
+    }
+    
+    .containcanciones p {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    
+    .listacanciones li{
+        color: rgb(84, 82, 82);
+        font-size: 20px;
+        }
+    
+    .listacanciones a {
+        text-decoration: none;
+        color: rgb(84, 82, 82);
+    }
+    .listacanciones {
+        margin-top: 0%;
+    }
+    .rojo{  
+        height: 80%;
+        }
+
+    .imagenalbumartista {
+        width: 100%;
+        height: 100%;
+        border: 4px solid white;
+        }
+
+    .tamaño {
+        width: 90%;
+        margin: 0 auto;
+        }
+
+    .titulotopalbumartista {
+        color: ivory;
+        background-color: rgba(242, 216, 229, 0.5);
+        font-size: 20px;
+        text-align: center;
+        margin: 0 auto;
+        }
+
+
+        @media (min-width:600px){
+            .containartista {
+                height: 500px;
+                display: block;
+                
+            }
+
+            .rojo{
+                height: 40%;
+            }
+
+            .fotoartista {
+                border-radius: 50%;
+                border: 2px solid white;
+                }
+            
+            .containartista img {
+                width: 40%;
+                margin-left: 30%;
+                height: 100%;
+                }
+
+            .nombreartista {
+                width: 100%;
+                margin-top: 5%;
+                font-size: 80px;
+                }
+
+            .listacanciones {
+                display: grid;
+                width: 90%;
+                height: 120px;
+                margin: 0 auto;
+                grid-template-columns: 70% 30%;
+                grid-template-rows: 40px 40px 40px;
+                justify-content: space-evenly;
+                }
+
+            .listacanciones li {
+                text-align: justify;
+                }
+
+        }
+        @media (min-width:768px){
+
+            .containartista {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 360px 140px;
+            }
+
+            .fotoartista {
+                border-radius: 50%;          
+            }
+
+            .containartista img{
+                width: 100%;
+                height: 95%;
+                margin: 0px;
+            }
+
+            .containfotoartista {
+                height: 100%;
+                width: 100%;
+            }
+
+            .fans {
+                margin: 0px;
+            }
+
+            .nombreartista {
+                margin: 35% 0%;
+            }
+
+            .listacanciones {
+                grid-template-columns: 60% 40%;
+            }
+
+        }
+
+
+   
