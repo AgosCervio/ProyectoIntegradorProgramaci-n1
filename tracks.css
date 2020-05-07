@@ -1,105 +1,4 @@
 
-a { text-decoration: none !important;
-    color: ivory !important;
-    }
-    
-    
-    html{
-        background-color: transparent;
-    }
-    
-    
-    
-    body  {
-        background-image: url(imagenes/proyectofondo.JPG);  
-        background-attachment: scroll; 
-        background-size: 100% !important;
-        
-        }
-    .logodesktop{
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-        display: block;
-    border: 15px solid rgba(0, 0, 0, 0,5);
-        height: 150px;
-        margin-left: 5px;
-        margin: auto;
-    }
-    
-    
-    .liheader {
-        background-color:rgb( 232, 231, 227);
-    width: 200px;
-    margin: auto;
-    }
-    
-    .listaheader li  {
-    margin-bottom: 10px;
-    list-style: none;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
-    }
-    ul.listaheader {
-    padding-left: 0;
-    }
-    .listaheader {
-    display: none;
-    }
-    nav:hover .listaheader  {
-    display: block;
-    }
-    
-    .liheader a {
-    text-decoration: none;
-    color:lightgray;
-    }
-    
-    .mainfooter {
-    position: relative;
-    display: inline-block;
-    width: 90%;
-    background-color:rgb( 232, 231, 227);
-    height: 40px;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: auto;
-    margin: 20px;
-   
-    
-    }
-    
-    .mainfooter img{
-    width: 15%;
-    position: absolute;
-    top: 0px;
-     padding: 1px;
-     padding-top: 5px;
-    padding-right: 20px;
-    padding-left: 5px;
-    
-      }
-    
-    .madeby p  {
-    text-align: center;
-    font-size: 12px;
-    text-align: end;
-    font-family: 'Courier New', Courier, monospace;
-    color: ivory;
-    }
-    
-    .hamburguesa{
-    color: white;
-    display: block;
-    padding: 10px;
-    margin: 0 auto;
-    margin-top: 20px;
-    width: 15px;
-    background-color: rgb( 232, 231, 227);
-    
-    }
     
     .titulo{
       font-family  : 'Bitter', serif;
@@ -180,24 +79,10 @@ margin-top: 10px;
         text-decoration: none;
         margin-right: 10px;
     }
-    .uk-search-input{
-        margin-left: 15px;
-        margin-top: 15px;
-    }
+   
+    
     @media (min-width:600px){
-        .logodesktop {
-            display: block;
-            }
-            
-            .tamaño{
-            width: 60%;
-            }
-            .mainfooter{
-                height: 55px;
-            margin: 0 auto;
-            margin: 40px;
-            
-            }
+     
             .saltar{
                 display: block;
             }
@@ -208,13 +93,7 @@ margin-top: 10px;
             .nombrecancion{
                 font-size: 25px;
             }
-            .mainfooter img{
-                width: 10%;
-            }
-            .madeby p{
-            font-size: 20px;
-            text-align: center;
-            }
+           
     
             .fotocancion{
                 padding-top: 0px;
@@ -227,47 +106,7 @@ margin-top: 10px;
     
     }
     @media(min-width:1024px){
-        .hamburguesa{
-            display: none;
-        }
-        ul.listaheader {
-            display: grid;
-            grid-template-columns: 16% 16% 16% 16% 16% 16%;
-            justify-content: space-between;
-           
-        }
-        ul.listaheader li {
-    font-size: medium;
-        }
-    
-        nav:hover ul.listaheader {
-            display: grid;
-        }
-    
-        .liheader{
-    width: 130px;
-    border: solid 2px white;
-        }
-    
-        .tamaño{
-    width: 90%;
-        }
-        .mainfooter img{
-            width: 9%;
-        }
-    .mainfooter{
-        height: 70px;
-       margin-left: 70px;
-       margin-top: 30%;
-      
-    
-    }
-    
-    .madeby p {
-        font-size: 30px;
-        text-align: center;
-        padding-left: 20px;
-    }
+        
     
     .containartista{
         height: 300px;
