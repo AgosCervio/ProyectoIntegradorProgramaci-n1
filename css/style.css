@@ -1,0 +1,613 @@
+
+a { text-decoration: none !important;
+color: ivory !important;
+}
+
+
+html{
+    background-color: transparent;
+}
+
+
+
+body  {
+    background-image: url(imagenes/proyectofondo.JPG);  
+    background-attachment: scroll; 
+    background-size: 100% !important;
+    
+    }
+.logo{
+display: block;
+
+margin: 0 auto;
+border-radius: 50%;
+    display: block;
+border: 15px solid rgba(0, 0, 0, 0,5);
+    height: 150px;
+    margin-left: 5px;
+    margin: auto;
+}
+
+
+.liheader {
+    background-color:rgb( 232, 231, 227);
+width: 200px;
+margin: auto;
+}
+
+.listaheader li  {
+margin-bottom: 10px;
+list-style: none;
+text-align: center;
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+text-transform: uppercase;
+}
+ul.listaheader {
+padding-left: 0;
+}
+.listaheader {
+display: none;
+}
+nav:hover .listaheader  {
+display: block;
+}
+
+.liheader a {
+text-decoration: none;
+color:lightgray;
+}
+
+.mainfooter {
+position: relative;
+display: inline-block;
+width: 90%;
+background-color:rgb( 232, 231, 227);
+height: 40px;
+margin-top: 20px;
+margin-left: 20px;
+padding: auto;
+margin: 20px;
+
+}
+
+.mainfooter img{
+width: 15%;
+position: absolute;
+top: 0px;
+ padding: 1px;
+ padding-top: 5px;
+padding-right: 20px;
+padding-left: 5px;
+
+  }
+
+.madeby p  {
+text-align: center;
+font-size: 12px;
+text-align: end;
+font-family: 'Courier New', Courier, monospace;
+color: ivory;
+}
+
+.hamburguesa{
+color: white;
+display: block;
+padding: 10px;
+margin: 0 auto;
+margin-top: 20px;
+width: 15px;
+background-color: rgb( 232, 231, 227);
+
+}
+
+.titulo{
+  font-family  : 'Bitter', serif;
+color: ivory;
+text-align: center;
+}
+ 
+
+.containartista {
+
+height: 200px;
+background-color: rgba(242, 216, 229, 0.5);
+display: grid;
+grid-template-columns: 35% 30% 28%;
+gap: 0%;
+border: white solid 4px;
+margin: 0 auto;
+margin: 10px;
+
+}
+
+.fotoartista {
+height: 140px;
+width: 100%;
+border-radius: 50%;
+border: 2px solid white;
+margin-top: 4px;
+
+}
+
+.containfotoartista {
+
+
+padding-left: 4px;
+}
+
+
+.fans {
+text-align: center;
+color: rgb(84, 82, 82);
+font-weight: bold;
+font-family: 'Norican', cursive;
+font-size: 15px;
+margin-top: 10px;
+}
+ 
+.containinfoartista {
+margin-left: 1px;
+}
+
+.nombreartista {
+    text-align: center;
+    font-family: 'Notable', sans-serif;
+    font-size:40px;
+    color:rgb(84, 82, 82);
+    margin: 0%;
+}
+
+.containcanciones {
+gap: 2%;
+
+}
+.listacanciones li {
+
+text-align: justify;
+size: 4px;
+margin-left: 13px;
+
+
+}
+
+.listacanciones {
+
+color: rgb(84, 82, 82);
+padding-left: 15px;
+padding-top: 0px;
+text-align: justify;
+font-family: 'Norican', cursive;
+font-size: 15px;
+}
+
+.listacanciones a {
+text-decoration: none;
+color: rgb(84, 82, 82);
+}
+
+.containcanciones p {
+color: rgb(84, 82, 82);
+text-align: center;
+text-decoration-line: underline;
+margin-left: 12px;
+font-size: 15px;
+}
+
+.containgeneros {
+
+    width: 96%;
+    height: 200px;
+    background-color: rgba(242, 216, 229, 0.5);
+    display: grid;
+    grid-template-columns: 49% 49%;
+margin-top: 5px;
+    border: white solid 4px;
+margin: 0 auto;
+
+}
+
+.containfotogenero{
+    padding-left: 7px;
+    position: relative;
+    height: 100%;
+    font-family: 'Bitter', serif;
+
+}
+
+.fotogenero {
+    height: 60%;
+    width: 70%;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: 10%; 
+    position: relative;
+}
+
+.titulogenero {
+position: absolute;
+right: 80px;
+top: 70px;
+color: rgb(84, 82, 82);
+font-family: 'Notable', sans-serif;
+font-size: 25px;
+
+transform: translateX(-20%);
+transform: translateY(-20%);
+
+}
+
+
+.containinfogenero{
+gap: 1%;
+
+}
+
+.listaartistasgenero {
+color: rgb(84, 82, 82);
+padding-left: 15px;
+padding-top: 0px;
+text-align: justify;
+}
+
+.listaartistasgenero li {
+font-size: 30px;
+list-style-type: none;
+font-family: 'Norican', cursive;
+}
+
+.listaartistasgenero a {
+text-decoration: none;
+color: rgb(84, 82, 82);
+}
+
+.tituloinfogenero {
+    color: rgb(84, 82, 82);
+    padding-left: 15px;
+    padding-top: 0px;
+    text-align: justify;
+}
+
+
+
+.fotocancion{
+  
+    height: 60%;
+    width: 80%;
+    border-radius: 50%;
+    border: 15px solid rgba(0, 0, 0, 0,5);
+    margin-top: 4px;
+    padding-top: 10px;
+}
+.nombrecancion {
+    text-align: center;
+    font-family: 'Notable', sans-serif;
+    font-size: 20px;
+    color: rgb(84, 82, 82);
+    margin: 0%;
+
+    }
+    .nombrecancionalbum {
+        text-align: center;
+        font-family: 'Notable', sans-serif;
+        font-size: 30px;
+        color: rgb(84, 82, 82);
+        margin: 0%;
+    
+        }
+.año {
+    text-align: center;
+    color: rgb(84, 82, 82);
+    font-weight: bold;
+    font-family: 'Norican', cursive;
+    font-size: 20px;
+    margin-top: 5px;
+    
+    }
+
+    .containinfoartista a{
+        text-align: center;
+        font-family: 'Norican', cursive;
+        font-size: 25px;
+        color:rgb(84, 82, 82);
+        margin: 0%;
+        margin: 0 auto; 
+        padding: 5px;
+        text-decoration: none;
+    }
+
+ .fotoalbum{
+    height: 70%;
+    width: 90%;
+    border-radius: 70%;
+    margin-top: 4px;
+    padding-top: 10px;
+ }
+ .ipervinculo{
+    text-align: center;
+    font-family: 'Norican', cursive;
+    font-size: 30px;
+    color:rgb(84, 82, 82);
+    margin: 0 auto; 
+    padding: 5px;
+    text-decoration: none; 
+ }
+ .año2 {
+    text-align: center;
+    color: rgb(84, 82, 82);
+    font-weight: bold;
+    font-family: 'Norican', cursive;
+    font-size: 15px;
+    margin-top: 10px;
+    }
+
+
+    .cancionn {
+
+        color: rgb(84, 82, 82);
+        
+        padding-top: 0px;
+        text-align: justify;
+        font-family: 'Handlee', cursive;
+        font-size: 20px;
+        list-style: none;
+
+        }
+        .conteincancionart{
+            color: rgb(84, 82, 82);
+            padding-top: 0px;
+            text-align: justify;
+            font-size: 15px;
+            list-style: none;
+            margin-bottom: 5px;
+        }
+ol img{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.imgtopalbum {
+width: 100%;
+height: 200px;
+}
+
+.titulotopalbum {
+color: ivory;
+background-color: rgba(242, 216, 229, 0.5);
+font-size: 20px;
+text-align: center;
+transform: translateY(-50%);
+}
+.logodesktop {
+margin: 0 auto;
+border-radius: 50%;
+    display: block;
+border: 15px solid rgba(0, 0, 0, 0,5);
+    height: 150px;
+    margin-left: 5px;
+    margin: auto;
+
+}
+ .logodesktop {
+display: none;
+}
+
+.tamaño {
+width: 70%;
+margin: 0 auto  ;
+}
+
+
+.search {
+    margin-top: 5%;
+    margin-left: 25%;
+
+}
+
+.titulo{
+    color: slategray;
+}
+.imagencancionplaylist {
+    width: 50%;
+    margin: 0 25%;
+    height: auto;
+    border: solid black;
+    margin-top: 20px;
+}
+
+
+
+.titulocancionplaylist{
+    font-family: 'Courier New', Courier, monospace;
+    color: slategray;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+    
+}
+.artistacancionplaylist{
+    font-family: 'Norican', cursive;
+    text-align: center;
+    color:slategray;
+    font-size: 30px;
+}
+
+.cancionesplaylist{
+    margin: 0 auto;
+    padding-left: 0%;
+    list-style: none;
+}
+
+.playlistcategoria {
+display: none;
+
+}
+@media (min-width:600px){
+
+    .logodesktop {
+display: block;
+}
+
+.tamaño{
+width: 60%;
+}
+
+.mainfooter img{
+    width: 10%;
+}
+.madeby p{
+font-size: 16px;
+text-align: center;
+}
+.fotogenero{
+    height: 190px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.containinfogenero{
+    height: 400px;
+}
+.containfotogenero{
+    height: 400px;
+}
+.fotocancion{
+    padding-top: 0px;
+    height: 200px;
+    width: 90%;
+}
+.containartista{
+    height: 240px;
+}
+.fotoalbum{
+    height: 200px;
+}
+}
+@media (min-width:768px){
+    .hamburguesa{
+        display: none;
+    }
+    ul.listaheader {
+        display: grid;
+        grid-template-columns: 16% 16% 16% 16% 16% 16%;
+        justify-content: space-between;
+       
+    }
+    ul.listaheader li {
+font-size: medium;
+    }
+
+    nav:hover ul.listaheader {
+        display: grid;
+    }
+
+    .liheader{
+width: 130px;
+border: solid 2px white;
+    }
+
+    .tamaño{
+width: 90%;
+    }
+
+    .cancionesplaylist{
+display: grid;
+width: 100%;
+height: 400px;
+grid-template-rows: 100px 100px 100px 100px;
+justify-content: center;
+    }
+
+    .divcancionesplaylist {
+border: 1px solid white;
+display: grid;
+width: 100%;
+grid-template-columns: 33% 33% 33%;
+    }
+
+    .imagencancionplaylist {
+        width: 75%;
+        height: 100px;
+        margin-top: 0%;
+    }
+
+    .titulocancionplaylist{
+        margin: 5% auto; 
+        font-size: 30px;  
+    }
+
+    .artistacancionplaylist{
+        margin: 5% auto;
+        font-size: 20px;
+    }
+
+    .mainfooter img{
+        width: 10%;
+    }
+.mainfooter{
+    height: 70px;
+   margin-left: 70px;
+   margin-top: 30%;
+  
+
+}
+
+.madeby p {
+    font-size: 30px;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+
+.titulogenero{
+    left: 110px;
+    top: 160px;
+    font-size: 40px;
+}
+.containgeneros{
+    height: 300px;
+}
+.fotogenero{
+    height: 280px;
+    width: 70%;
+    margin-top: 15px;
+    
+}
+.mainfooter{
+    height: 80px;
+}
+.fotoartista{
+height: 250px;
+width: 90%;
+}
+.containartista{
+    height: 280px;
+}
+.fotocancion{
+    height: 260px;
+    width: 75%;
+   
+}
+.containartista{
+    height: 300px;
+}
+.fotoalbum{
+    width: 85%;
+    height: 250px;
+}
+
+.playlistcategoria li{
+font-family: 'Courier New', Courier, monospace;
+    color: slategray;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline;
+    
+}
+
+}
+
+
+    
