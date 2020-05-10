@@ -1,135 +1,81 @@
 
     
     .titulo{
+      
       font-family  : 'Bitter', serif;
     color: slategray;
     text-align: center;
     }
+  .cancion{
+    height: 100px;
+    width: 60%;
+  
+  }
 
-
-    .containartista {
-
-        height: 120px;
-        background-color: rgba(242, 216, 229, 0.5);
-        display: grid;
-        grid-template-columns: 30% 45% ;
-        gap: 2%;
-        border: white solid 4px;
-        margin: 0 auto;
-        margin: 10px;
-        
-        }
-        
-      
-        
-        .containfotoartista {
-        padding-left: 4px;
-        }
-        
-
-.fotocancion{
-height: 55%;
-width: 85%;
-border-radius: 50%;
-margin: 0 auto;
-margin-top: 10px;
-
-
-
+  .nombrecancion{
+      font-size: 15px;
+      font-family: 'Notable', sans-serif;
+     
+      color: rgb(84, 82, 82);
+      margin-right: 30px;
+     margin: 0;
+  
+  }
+  .sectioncanciones{ 
+    height: 150px;
+   display: grid;
+    grid-template-columns: 100% ;
+    margin: 0 auto;
+    margin-left: 30%;
 }
-.nombrecancion {
-    text-align: center;
-    font-family: 'Notable', sans-serif;
-    font-size: 20px;
-    color: rgb(84, 82, 82);
-    margin: 0%;
-    
 
-    }
-    .nombrecancionalbum {
-        text-align: center;
-        font-family: 'Notable', sans-serif;
-        font-size: 30px;
-        color: rgb(84, 82, 82);
-        margin: 0%;
-    
-        }
-.año {
-    text-align: center;
-    color: rgb(84, 82, 82);
-    font-weight: bold;
-    font-family: 'Norican', cursive;
-    font-size: 10px;
-    margin-top: 5px;
-    margin-right: 15px;
-    }
-.saltar{
-   
-    display: none;
-   
-}
-    .containinfoartista a{
-        text-align: center;
+    .sectioncancionesfoto a {
+        
+        font-size: 10px;
         font-family: 'Norican', cursive;
-        font-size: 15px;
-        color:slategray;
-        margin: 0%;
-        margin: 0 auto; 
-        padding: 5px;
-        text-decoration: none;
-        margin-right: 10px;
+        color: grey !important;
+     margin-right: 30px;
+     margin: 0;
     }
-   
-    
     @media (min-width:600px){
      
-            .saltar{
-                display: block;
-            }
-            .containinfoartista a{
-                font-size: 25px;
-               
-            }
-            .nombrecancion{
-                font-size: 25px;
-            }
-           
-    
-            .fotocancion{
-                padding-top: 0px;
-                height: 200px;
-                width: 90%;
-            }
-            .containartista{
-                height: 240px;
-            }
-    
+          .sectioncanciones{
+            height: 120px;
+       display: grid;
+       grid-template-columns: 40% 40%;
+        gap: 10%;
+         margin: 10px;
+         margin-left: 50px;
+        
+          } 
+          .titulo{
+              font-size: 60px;
+          } 
+      
+    .cancion{
+        height:205px ;
+        width: 100%;
+    }
+ 
+
     }
     @media(min-width:1024px){
         
     
-    .containartista{
-        height: 300px;
-    }
-    .fotocancion{
-        height: 240px;
-        width: 70%;
-       
-    }
+        .sectioncanciones{ 
+            height: 120px;
+           display: grid;
+            grid-template-columns: 30% 30% 30%  ;
+            gap: 2%;
+            margin: 10px;
+             margin-left: 50px;
+        }
     
-    .año{
-        margin-right: 90px;
-        font-size: 20px;
-    }
+        .sectioncancionesfoto a {
+            font-size: 20px;
+            
+        }
     .nombrecancion{
-        font-size: 30px;
+        font-size: 25px;
     }
-    
-    .containinfoartista a{
-        font-size: 30px;
-    margin-left: 20px;
-    }
-    
-    
-    
     }

@@ -1,5 +1,5 @@
 
-    .containartista {
+    .containalbum {
 
         height: 160px;
         background-color: rgba(242, 216, 229, 0.5);
@@ -11,7 +11,7 @@
         margin: 10px;
         
         }
-    .containfotoartista {
+    .containfotoalbum {
         padding-left: 4px;
         }
 
@@ -48,7 +48,7 @@
           
          }
         
-         .año2 {
+         .año {
             text-align: center;
             color: rgb(84, 82, 82);
             font-weight: bold;
@@ -61,7 +61,7 @@
             }
 
            
-            .containinfoartista a{
+            .containinfoalbum a{
                 text-align: center;
                 font-family: 'Norican', cursive;
                 font-size: 20px;
@@ -83,7 +83,7 @@
                         display: block;
                     }
                     
-                    .containinfoartista a{
+                    .containinfoalbum a{
                         font-size: 35px;
                        
                     }
@@ -98,10 +98,10 @@
                         border-radius: 55%;
 
                     }
-                    .containartista{
+                    .containalbum{
                         height: 270px;
                     }
-                    .año2{
+                    .año{
                         font-size: 20px;
                         margin-right: 30px;
                     }
@@ -112,7 +112,7 @@
                     @media(min-width:1024px){
                         
                     
-                    .containartista{
+                    .containalbum{
                         height: 300px;
                         width: 95%;
                         margin-left: 15px;
@@ -124,7 +124,7 @@
             
                     }
                     
-                    .año2{
+                    .año{
                         margin-right: 90px;
                         font-size: 30px;
                     }
@@ -132,7 +132,7 @@
                         font-size: 50px;
                     }
                     
-                    .containinfoartista a{
+                    .containinfoalbum a{
                         font-size: 45px;
                     
                     }
