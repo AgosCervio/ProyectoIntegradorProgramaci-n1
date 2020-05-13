@@ -162,6 +162,12 @@
                 grid-template-columns: 60% 40%;
             }
 
+
+            .tamaño {
+                width: 98%;
+                margin: 0 auto;
+                }
+
         }
 
 
