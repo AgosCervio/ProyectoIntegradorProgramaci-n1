@@ -1,0 +1,40 @@
+.tamaño {
+    width: 80%;
+    margin: 0 auto  ;
+    
+    }
+
+.imgtopalbum  {
+    width: 100%;
+    height: 100%;
+    border: 4px solid white;
+
+    }    
+    
+
+        .titucarrousel {
+            color: ivory;
+            background-color: rgba(242, 216, 229, 0.5);
+            font-size: 20px;
+            text-align: center;
+            transform: translateY(-50%);
+            }
+
+    @media (min-width:600px){
+        .tamaño {
+            width: 90%;
+            margin: 0 auto;     
+        }  
+        
+    }   
+    
+    @media (min-width:768){
+        .tamaño {
+            width: 100%;
+            margin: 0 auto;
+                
+        } 
+
+    }
+
+
