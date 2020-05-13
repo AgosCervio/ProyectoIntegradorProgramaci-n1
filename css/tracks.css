@@ -15,27 +15,37 @@
   
   }
 
+
   .nombrecancion{
       font-size: 15px;
       font-family: 'Notable', sans-serif;
       color: rgb(84, 82, 82);
    margin-left: 80px;
-   margin-top: 0;
+  margin-top: 5px;
   }
 
-    .sectioncancionesfoto a {
+    .sectioncanciones a {
         
-        font-size: 10px;
+        font-size: 20px;
         font-family: 'Norican', cursive;
         color: grey !important;
-   margin-left: 80px;
+        margin-left: 80px;
+  
+  
+ 
 
+   }
+   .año{
+    font-family: 'Norican', cursive;
+    font-size: 15px;
+    margin-left: 80px;
+    color: grey !important;
    }
     @media (min-width:600px){
      
           .sectioncanciones{
        
-            height: 1700px;
+            height: 2000px;
        display: grid;
        grid-template-columns: 40% 40%;
       gap: 20px;
@@ -56,7 +66,7 @@
         
     
         .sectioncanciones{ 
-            height: 1300px;
+            height: 1400px;
           grid-template-columns: 30% 30% 30%  ;
            margin-right: 100px;
 
