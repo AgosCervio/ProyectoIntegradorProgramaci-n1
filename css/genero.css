@@ -1,0 +1,117 @@
+.containgeneros {
+
+    width: 96%;
+    height: 480px;
+    background-color: rgba(242, 216, 229, 0.5);
+    display: grid;
+    grid-template-columns: 49% 49%;
+margin-top: 5px;
+    border: white solid 4px;
+margin: 0 auto;
+
+}
+.nombreartista{
+   padding-top: 65px;
+}
+.containfotogenero{
+    padding-left: 7px;
+    position: relative;
+    height: 100%;
+    font-family: 'Bitter', serif;
+
+}
+.titulo{
+    margin-top: 30px;
+}
+.fotogeneroo{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-top: 115px; 
+    position: relative;
+}
+
+.titulogenero {
+position: absolute;
+right: 60px;
+top: 250px;
+color: rgb(84, 82, 82);
+font-family: 'Notable', sans-serif;
+font-size: 25px;
+
+transform: translateX(-20%);
+transform: translateY(-20%);
+
+}
+
+
+.containinfogenero{
+gap: 1%;
+
+}
+
+.listaartistasgenero {
+color: rgb(84, 82, 82);
+padding-left: 15px;
+padding-top: 0px;
+text-align: justify;
+}
+
+.listaartistasgenero li {
+font-size: 30px;
+list-style-type: none;
+font-family: 'Norican', cursive;
+}
+
+.listaartistasgenero a {
+text-decoration: none;
+color: rgb(84, 82, 82);
+}
+
+.tituloinfogenero {
+    color: rgb(84, 82, 82);
+    padding-left: 15px;
+    padding-top: 15px;
+    text-align: justify;
+}
+@media (min-width:600px){
+
+    .containgeneros{
+height: 500px; 
+}
+    .fotogeneroo{
+        height: 280px;
+        width: 280px;
+        margin-top: 110px;
+    }
+    .containinfogenero{
+        height: 400px;
+    }
+    .containfotogenero{
+        height: 400px;
+    }
+    .titulogenero{
+        right: 95px;
+        padding-top: 20px;
+    }
+
+}
+@media (min-width:768px){
+
+    .titulogenero{
+        left: 200px;
+        top: 250px;
+        font-size: 40px;
+    }
+    .containgeneros{
+        height: 480px;
+    }
+    .fotogeneroo{
+        height:380px;
+        width: 380px;
+        margin-top: 50px;
+        margin-left: 40px;
+        
+    }
+}

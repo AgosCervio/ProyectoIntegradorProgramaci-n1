@@ -1,3 +1,10 @@
+
+html, body {
+    margin: 0;
+}
+
+
+
 a { text-decoration: none !important;
     color: ivory !important;
     }
@@ -13,7 +20,7 @@ a { text-decoration: none !important;
         background-image: url(../imagenes/proyectofondo.JPG);  
         background-attachment: scroll; 
         background-size: 100% !important;
-        
+
         }
     .logo {
     display: block;
@@ -51,41 +58,21 @@ a { text-decoration: none !important;
     color:lightgray;
     }
     
-    .hamburguesa {
-
-        padding: 15%;
-        padding-top: 10px;
-    }
     
     .hamburguesadiv{
-    display: block;
-    margin: 0 auto;
-    height: 40px;
-    width: 10%;
-    background-color: rgb( 232, 231, 227);
+        background-color: rgb( 232, 231, 227);
+        padding: 10px;
+        color:  white;
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
+        width: 15px;
     }
 
     .search {
         width: 50%;
-
     }
-    .imgtopalbum {
-        width: 100%;
-        height: 200px;
-        border: 4px solid white;
-        }
-    .tamaño {
-        width: 70%;
-        margin: 0 auto  ;
-        }
-
-        .titulotopalbum {
-            color: ivory;
-            background-color: rgba(242, 216, 229, 0.5);
-            font-size: 20px;
-            text-align: center;
-            transform: translateY(-50%);
-            }
+    
     
     .titulo{
       font-family  : 'Bitter', serif;
@@ -96,7 +83,7 @@ a { text-decoration: none !important;
     .mainfooter {
         display: grid;
         width: 90%;
-        margin: 0 auto;
+        margin: 2% auto;
         height: 50px;
         grid-template-columns: 80% 20%;
         
@@ -121,6 +108,89 @@ height: 50px;
 background-color:rgb( 232, 231, 227);
     }
 
+    .logodesktop {
+        display: none;
+
+    }
+
+    
+
+    @media (min-width:600px){
+        .madeby {  
+           height: 60px; 
+        
+       }   
+
+       .madeby p {
+           padding-top: 1%;
+           font-size: large;
+       } 
+       
+       .mainfooter {
+           grid-template-columns: 85% 15%;
+
+       } 
+
+    }   
+
+
+    @media (min-width:768px){
+        .logodesktop {
+            display: block;
+        }
+
+        .hamburguesadiv{
+            display: none;
+        }    
+
+        ul.listaheader {
+            display: grid;
+            height: 60px;
+            width: 98%;
+            grid-template-columns: 16% 14% 14% 14% 14% 14% 14%;
+            margin: 0 auto;
+           
+        }
+
+        .liheader {
+            width: 100%;
+            height: 60px;
+            
+        }    
+
+        .search {
+            width: 100%;
+            height: 60px;
+            background-color: rgb( 232, 231, 227);
+            
+        }    
+
+        nav:hover .listaheader {
+            display: grid;
+        }
+
+        .madeby {  
+            height: 80px; 
+         
+        }   
+ 
+        .madeby p {
+            
+           font-size: x-large;
+        } 
+        
+        .mainfooter {
+            grid-template-columns: 85% 15%;
+ 
+        } 
+
+        .deezer {
+            padding-top: 7%;
+
+        }
+
+
+    }    
 
     .logodesktop  {
 display: none;
