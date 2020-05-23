@@ -135,7 +135,10 @@ background-color:rgb( 232, 231, 227);
     @media (min-width:768px){
         .logodesktop {
             display: block;
+            
+            
         }
+       
 
         .hamburguesadiv{
             display: none;
@@ -144,9 +147,10 @@ background-color:rgb( 232, 231, 227);
         ul.listaheader {
             display: grid;
             height: 60px;
-            width: 98%;
+            width:98%;
             grid-template-columns: 16% 14% 14% 14% 14% 14% 14%;
-            margin: 0 auto;
+            margin: 0 1%;
+           
            
         }
 
