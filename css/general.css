@@ -49,9 +49,7 @@ a { text-decoration: none !important;
     .listaheader {
     display: none;
     }
-    nav:hover .listaheader  {
-    display: block;
-    }
+   
     
     .liheader a {
     text-decoration: none;
