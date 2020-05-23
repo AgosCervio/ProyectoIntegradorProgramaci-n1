@@ -7,4 +7,5 @@ window.addEventListener("load", function(){
        let header = document.querySelector(".listaheader")
        header.style.display="none"
    })
+  
 })
