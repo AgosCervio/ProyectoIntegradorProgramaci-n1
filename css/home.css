@@ -10,14 +10,18 @@
     border: 4px solid white;
 
     }    
-    
-
+    .tituloprimero{
+        margin-top: 10%;
+    }
+.titulotop{
+    margin-top: 4%;
+}
         .titucarrousel {
             color: ivory;
             background-color: rgba(242, 216, 229, 0.5);
             font-size: 20px;
             text-align: center;
-            transform: translateY(-50%);
+            
             }
 
     @media (min-width:600px){
