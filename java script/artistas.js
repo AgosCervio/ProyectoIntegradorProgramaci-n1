@@ -28,8 +28,9 @@ window.addEventListener("load", function(){
           for (let index = 0; index < trackArtista.length; index++) {
               const cadaTrack = trackArtista[index];
               let nombreTrack= cadaTrack.title
+              let idTrack= cadaTrack.id
               console.log(nombreTrack)
-              document.querySelector("ol.listacanciones").innerHTML+="<li class= cancionestop5>"+"<a href='tracks.html'>"+nombreTrack+"</a>"+"</li>"
+              document.querySelector("ol.listacanciones").innerHTML+="<li class= cancionestop5>"+"<a href='tracks.html?idDelTrack="+idTrack+"'>"+nombreTrack+"</a>"+"</li>"
               
           }
       })
@@ -48,7 +49,8 @@ window.addEventListener("load", function(){
               const cadaAlbum = albumArtista[index];
               let nomreAlbum= cadaAlbum.title
               let imgAlbum= cadaAlbum.cover
-              document.querySelector(".listadoartistaalbum").innerHTML+="<li  class=uk-transition-toggle tabindex=0>"+"<img class=imagenalbumartista src='"+imgAlbum+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='albums.htm'>"+"<h1 class=titulotopalbumartista>"+nomreAlbum+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
+              let idAlbum= cadaAlbum.id
+              document.querySelector(".listadoartistaalbum").innerHTML+="<li  class=uk-transition-toggle tabindex=0>"+"<img class=imagenalbumartista src='"+imgAlbum+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='albums.html?idDeAlbum="+idAlbum+"'>"+"<h1 class=titulotopalbumartista>"+nomreAlbum+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
               
           }
       })
@@ -89,9 +91,10 @@ window.addEventListener("load", function(){
             const cadaArtistaRelacionado = artistaRelacionado[index];
             let ImgCadaRelacionado= cadaArtistaRelacionado.picture
             let nombreCadaRelacionado= cadaArtistaRelacionado.name
+            let idRelacionado= cadaArtistaRelacionado.id
             document.querySelector(".listadodeartistasrelacionados").innerHTML+= "<li  class=uk-transition-toggle tabindex=0>"+
             "<img class=imagenalbumartista  src='"+ImgCadaRelacionado+"' >"+
-            "<div class='uk-position-center uk-panel'>"+"<a href='albums.html'>"+"<h1 class=titulotopalbumartista>"+nombreCadaRelacionado+"</h1>"+"</a>"+"</div>"+"</li>"
+            "<div class='uk-position-center uk-panel'>"+"<a href='artistas.html?idDelArtista="+idRelacionado+"'>"+"<h1 class=titulotopalbumartista>"+nombreCadaRelacionado+"</h1>"+"</a>"+"</div>"+"</li>"
             
         }
 
