@@ -17,8 +17,9 @@ window.addEventListener("load", function (){
         }
 
      })
-
-     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/albums")
+     let queryString = new URLSearchParams (location.search)  
+     let codigoAlbum = queryString.get ("idDeAlbum")
+fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigoAlbum+"/albums")
      .then (function(respuestaAlbum){
          return respuestaAlbum.json()
      })
@@ -30,12 +31,13 @@ window.addEventListener("load", function (){
              const cadaAlbum = trackAlbums[index];
              let cadaAlbumTitle= cadaAlbum.title 
              let cadaAlbumImage= cadaAlbum.cover
-             document.querySelector(".listadoalbums").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaAlbumImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='albums.html'>"+"<h1 class=titucarrousel>"+cadaAlbumTitle+"</h1>"+"</a>"+"</div>"+"</li>" 
+             let idDeAlbum = cadaAlbum.id
+             document.querySelector(".listadoalbums").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaAlbumImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='albums.html?idDeAlbum= " + idDeAlbum + "'>"+"<h1 class=titucarrousel>"+cadaAlbumTitle+"</h1>"+"</a>"+"</div>"+"</li>" 
              
          }
      })
-
-     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/tracks")
+     
+     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigoAlbum+"/tracks")
      .then (function(respuestaCanciones){
          return respuestaCanciones.json()
      })
@@ -47,7 +49,8 @@ window.addEventListener("load", function (){
              const cadaCancion = trackCanciones[index];
              let cadaCancionTitle= cadaCancion.title
              let cadaCancionImage= cadaCancion.album.cover
-             document.querySelector(".listadocanciones").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaCancionImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='home.html'>"+"<h1 class=titucarrousel>"+cadaCancionTitle+"</h1>"+"</a>"+"</div>"+"</li>" 
+             let idDeTracks = cadaCancion.id
+             document.querySelector(".listadocanciones").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaCancionImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='tracks.html?idDeTracks= "+ idDeTracks+" '>"+"<h1 class=titucarrousel>"+cadaCancionTitle+"</h1>"+"</a>"+"</div>"+"</li>" 
 
              
          }
