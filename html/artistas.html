@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
     
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
 
@@ -16,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
 <script src="../java script/general.js"></script>
+<script src="../java script/artistas.js"></script>
     
 </head>
 <body>
@@ -67,77 +69,90 @@
             <div class="containcanciones violeta">
                 <p>Top Five</p>
                 <ol class="listacanciones">
-                    <li><a href="tracks.html">Don´t Start Now</a></li>
-                    <li><a href="tracks.html">Break My Heart</a></li>
-                    <li><a href="tracks.html">Physical</a></li>
-                    <li><a href="tracks.html">One Kiss</a></li>
-                    <li><a href="tracks.html">Levitating</a></li>
+                   
                 </ol>
             </div>
 
 
         </section>
+        <section class="containertopalbumsartista">
 
-        <h2 class="titulo">Top Albums de Dua Lipa</h2>
+       <h2 class="titulo top"> Albums de </h2>
 
-        <div class="uk-position-relative uk-visible-toggle uk-light tamaño"  tabindex="-1" uk-slider="autoplay: true autoplay-interval: 6000 pause-on-hover: true">
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-grid tamaño"  tabindex="-1" uk-slider="autoplay: true autoplay-interval: 6000 pause-on-hover: true">
 
-            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m  ">
+            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m listadoartistaalbum ">
+                <li  class="uk-transition-toggle" tabindex="0">
+                    <img class="imagenalbumartista"  src="../imagenes/dua lipa foto.jpg" alt="album dua lipa">
+                    <div class="uk-position-center uk-panel"><a href="albums.html"><h1 class="titulotopalbumartista">Dua Lipa Deluxe</h1></a><i class="far fa-play-circle"></i></div>
+                    
+                </li>
+                
+
+               
+
+            </ul>
+        
+            
+           
+    
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        </div>
+    </section>
+
+        <section class="containertodascanciones">
+
+        <h2 class="titulo top ">Canciones de </h2>
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-grid tamaño"  tabindex="-1" uk-slider="autoplay: true autoplay-interval: 6000 pause-on-hover: true">
+
+            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m tracks ">
+                <li  class="uk-transition-toggle" tabindex="0">
+                    <img class="imagenalbumartista"  src="../imagenes/dua lipa foto.jpg" alt="album dua lipa">
+                    <div class="uk-position-center uk-panel"><a href="albums.html"><h1 class="titulotopalbumartista">Dua Lipa Deluxe</h1></a><i class="far fa-play-circle"></i></div>
+                    
+                </li>
+                
+
+               
+
+            </ul>
+        
+            
+           
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+        
+        </div>
+        
+    </section>
+
+    <section class="containerartistasrelacionados">
+
+        <h2 class="titulo top ">Artistas que quizás te interesen </h2>
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-grid tamaño"  tabindex="-1" uk-slider="autoplay: true autoplay-interval: 6000 pause-on-hover: true">
+
+            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m listadodeartistasrelacionados ">
                 <li  class="uk-transition-toggle" tabindex="0">
                     <img class="imagenalbumartista"  src="../imagenes/dua lipa foto.jpg" alt="album dua lipa">
                     <div class="uk-position-center uk-panel"><a href="albums.html"><h1 class="titulotopalbumartista">Dua Lipa Deluxe</h1></a></div>
+                    
                 </li>
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/dua lipa album 2.jpg" alt="album dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="albums.html"><h1 class="titulotopalbumartista">Don´t Start Now</h1></a></div>
-                </li>
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/dua-lipa album 3.jpg" alt="album dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="albums.html"><h1 class="titulotopalbumartista">Break My Heart</h1></a></div>
-                </li>
+                
+
+               
 
             </ul>
         
-            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+            
+
+       
             <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-    
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
         
         </div>
-
-        <h2 class="titulo">Top 5 de Dua Lipa</h2>
-        <div class="uk-position-relative uk-visible-toggle uk-light tamaño"  tabindex="-1" uk-slider="autoplay: true autoplay-interval: 6000 pause-on-hover: true">
-
-            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m  ">
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/top5cancionesdualipa.jpg" alt="cancion dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="tracks.html"><h1 class="titulotopalbumartista">1-Don´t Start Now</h1></a></div>
-                </li>
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/top5cancionesdualipa.jpg" alt="cancion dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="tracks.html"><h1 class="titulotopalbumartista">2-Break My Heart</h1></a></div>
-                </li>
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/top5cancionesdualipa.jpg" alt="cancion dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="tracks.html"><h1 class="titulotopalbumartista">3-Physical</h1></a></div>
-                </li>
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/top5cancionesdualipa.jpg" alt="cancion dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="tracks.html"><h1 class="titulotopalbumartista">4-One Kiss</h1></a></div>
-                </li>
-                <li class="uk-transition-toggle" tabindex="0">
-                    <img class="imagenalbumartista" src="../imagenes/top5cancionesdualipa.jpg" alt="cancion dua lipa">
-                    <div class="uk-position-center uk-panel"><a href="tracks.html"><h1 class="titulotopalbumartista">5-Levitating</h1></a></div>
-                </li>
-
-            </ul>
         
-            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-    
-        
-        </div>
+    </section>
 <footer class="mainfooter" >
     <div class="madeby">
         <p>Agostina Cervio, Clara Bur y Bruno Grecco</p>
