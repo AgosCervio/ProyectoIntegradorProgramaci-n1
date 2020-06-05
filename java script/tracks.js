@@ -3,11 +3,11 @@ window.addEventListener ("load", function(){
     let codigoTracks = queryString.get ("idDelTrack")
     
     fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+ codigoTracks )
-    .then (
+     .then (
         function(respuesta){
         return respuesta.json ();
          })
-    .then(
+     .then(
         function(informaciontracks){
             let tracks = informaciontracks
             console.log (tracks)
@@ -30,41 +30,12 @@ window.addEventListener ("load", function(){
         
             }
          
+      
 
+        } )
+        
+    }) 
+   
+  
 
-   } )
-
-
-   let codigoArtista = queryString.get("idDelArtista");
-   fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/"+codigoArtista +"/top")
-
-   .then (
-    function(respuesta){
-    return respuesta.json ();
-     })
-     .then (
-         function (infodeartista5){
-             let top5 = infodeartista5.data
-             console.log (top5)
-             
-           for (let index = 0; index < top5.length; index++) {
-               const cadatop = top5[index];
-
-               let titulotop = cadatop.title
-               let idtop = cadatop.id
-               let picturetop = cadatop.contributors
-               for (let index = 0; index < picturetop.length; index++) {
-                   const foto= picturetop[index];
-                   let imagentop = foto.picture
-
-                   document.querySelector(".temas5").innerHTML += "<li  class=uk-transition-toggle tabindex=0>"+"<img class=imagentop5 src='"+imagentop+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='tracks.html?idDelTrack="+idtop+"'>"+ "<h1 class=nombretop5>"+titulotop+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
-                 }
-               
-            }
-         }
-     )
-
-
-
-
-        })
+  

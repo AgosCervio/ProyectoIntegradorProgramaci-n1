@@ -1,33 +1,29 @@
 
     .containalbum {
-
-        height: 160px;
+        grid-template-columns: 40% 45% ;
+        height: 200px;
         background-color: rgba(242, 216, 229, 0.5);
         display: grid;
-        grid-template-columns: 40% 45% ;
-        gap: 2%;
+        justify-content: space-between;
         border: white solid 4px;
-        margin: 0 auto;
         margin: 10px;
-        
+        margin-left: 20px;
         }
-    .containfotoalbum {
-        padding-left: 4px;
-        }
-
-       
-        .uk-search-input{
-            margin-left: 15px;
-            margin-top: 15px;
-        }
-  
+    
+      
+    .titulo{
+      font-family  : 'Bitter', serif;
+    color: slategray;
+    text-align: center;
+    margin-top: 10px;
+    }
 
 
 
     .nombrealbum {
         
         font-family: 'Notable', sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         color: rgb(84, 82, 82);
         margin-right: 30px;
        margin: 0;
@@ -46,7 +42,7 @@
             list-style-type: none;
            }
            .hola{
-           
+            background-color: rgba(242, 216, 229, 0.5);
             width: 95%;
             margin-left: 50px;
             border: white solid 2px;
@@ -65,6 +61,15 @@
          
            
             }
+            .ipervinculo {
+                font-size: 20px;
+               
+            }
+            .ipervinculo1 {
+                font-size: 20px;
+               
+            }
+          
             .buscador{
                 margin-left: 0%;
                 margin: 0%;
@@ -79,28 +84,26 @@
            
             .titulodeltrack{
                 color:black;
-        
-                font-size: 20px;
-               
+                font-size: 20px;   
                 margin: 0 auto;
                 
             }
-          
-            
+          .iper{
+            text-align: center;
+            color: rgb(84, 82, 82);
+            font-weight: bold;
+            font-family: 'Norican', cursive;
+            font-size: 20px;
+            margin-top: 10px;
+          }
+         
             @media (min-width:600px){
                
                     .saltar{
                         display: block;
                     }
                     
-                    .ag {
-                        font-size: 35px;
-                       
-                    }
-                    .ag1 {
-                        font-size: 35px;
-                       
-                    }
+                   
                     .nombrealbum{
                         font-size: 45px;
                     }
@@ -113,13 +116,20 @@
 
                     }
                     .containalbum{
-                        height: 270px;
+                        height: 290px;
                     }
                     .año{
                         font-size: 20px;
                   
                     }
-                    
+                    .ipervinculo{
+                        font-size: 35px;
+                       
+                    }
+                    .ipervinculo1 {
+                        font-size: 35px;
+                       
+                    }
 
                     }
 
@@ -127,27 +137,49 @@
                         
                     
                     .containalbum{
-                        height: 300px;
+                        height: 340px;
                         width: 95%;
                         margin-left: 50px;
                     }
                     .fotoalbum{
-                       margin-top: 30px;
-                        height: 240px;
-                        width: 50%;
-                        margin-left: 30px;
-                 
-                          }
+                       margin-top: 10px;
+                       height: 270px;
+                       width: 40%;
+                       margin-left: 30px;
+                       border-radius: 50%;
+
+
+                    }
+                       .ipervinculo {
+                        font-size: 45px;
+                       
+                    }
+                    .ipervinculo1 {
+                        font-size: 45px;
+                       
+                    }
+            
+
                    .año{
                        margin-top: 5px;
-                       margin-right: 140px;
+                       margin-right: 400px;
 
                    }
               
+                   .hola{
+                    width: 95%;
+                    margin-left: 50px;
+                    border: white solid 2px;
+                    margin-top: 10px;
+                   }
 
 
                  
 
+                 
+.iper{
+    font-size: 50px;
+}
                  
 
                  }
