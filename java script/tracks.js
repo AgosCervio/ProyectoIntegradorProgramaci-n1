@@ -22,16 +22,21 @@ window.addEventListener ("load", function(){
                 const unasola = imagen[index];
                  let img = unasola.picture
                 
-
-
-
-                 document.querySelector (".sectioncanciones").innerHTML = `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a><p class="duracion">`+duracion+`</p></div>`
+                 document.querySelector (".sectioncanciones").innerHTML = `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a><p class="duracion">`+duracion+`</p><i class='far fa-play-circle sizeicono iconotracks'></i><i class='fas fa-heart sizeicono'></i></div>`
 
         
-            }
-         
+            
+         let iconotracks = document.querySelectorAll (".iconotracks")
+            for (let index = 0; index < iconotracks.length; index++) {
+                const cadatoque = iconotracks[index];
+                
+                cadatoque.addEventListener("click", function(){
+                    document.querySelector (".reproductortrack").innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=`+codigoTracks +`&app_id=1" width="300" height="300"></iframe>`
+                })
+            
+                }
       
-
+            }
         } )
         
     }) 
