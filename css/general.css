@@ -181,7 +181,11 @@ a { text-decoration: none !important;
 
 
     @media (min-width:768px){
-        
+        .logodesktop {
+            display: block;
+            
+            
+        }
         .contain{
             border-radius: 20px 20px 0 0;
         }
@@ -240,7 +244,6 @@ a { text-decoration: none !important;
         nav:hover .listaheader {
             display: grid;
         }
-
 
 
         .deezer {
