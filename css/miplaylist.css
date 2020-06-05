@@ -8,7 +8,9 @@
     border: solid black;
     margin-top: 20px;
 }
-
+.miplaylisttitulo{
+    height: 100px;
+}
 
 
 .titulocancionplaylist{
@@ -42,8 +44,8 @@ display: none;
 .cancionesplaylist{
     display: grid;
     width: 100%;
-    height: 400px;
-    grid-template-rows: 100px 100px 100px 100px;
+    
+    
     justify-content: center;
         }
     
@@ -82,5 +84,8 @@ display: none;
             }
             .madeby{
                 margin-top: 100px;
+            }
+            .miplaylisttitulo{
+                height: 50px;
             }
         }

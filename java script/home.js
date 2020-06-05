@@ -19,7 +19,8 @@ window.addEventListener("load", function (){
             let idArtista= cadaArtista.id 
             let cadaArtistaName= cadaArtista.name
             let cadaArtistaImage= cadaArtista.picture
-            
+            let cadaArtistaCanciones= cadaArtista.tracklist
+            console.log(cadaArtistaCanciones)
             document.querySelector(".listadoartistas").innerHTML+= "<li class=uk-transition-toggle  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
             
           
@@ -65,6 +66,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
          console.log(trackCanciones)
          for (let index = 0; index < trackCanciones.length; index++) {
              const cadaCancion = trackCanciones[index];
+             let cadaCancionMusica= cadaCancion.isrc
              let cadaCancionTitle= cadaCancion.title
              let cadaCancionImage= cadaCancion.album.cover
              let idDeTrack = cadaCancion.id
@@ -80,8 +82,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
         //iconos que se muestren cuando pongo mouse
          let artistascarrousel= document.querySelector(".maincontainerartistas")
          artistascarrousel.addEventListener("mouseover", function(){
-             let iconosartistas= document.querySelector(".sizeicono")
-             iconosartistas.style.display="inline"
+             let iconosartistas= document.querySelector(".")
+             iconosartistas.style.display="none"
 
          })
          
@@ -109,11 +111,11 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
          }
         })
         //bienvenida usuario
-        let bienvenidacontainer= this.document.querySelector(".bienvenidacontainer")
+        let bienvenidacontainer= document.querySelector(".bienvenidacontainer")
      let nombreUsuario= prompt("¿Cómo Se llama?") 
     
       let bienvenida= document.querySelector(".bienvenida")
-      let main= this.document.querySelector(".maincontainer")
+      let main= document.querySelector(".maincontainer")
        if (nombreUsuario == "") {
         bienvenida.innerHTML+= " "+ "usuario"
         
@@ -121,15 +123,111 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                  bienvenida.innerHTML+= " "+nombreUsuario
             }
 
-
+    let cointainerprimero= document.querySelector(".containregistracion")
 
     let usuarioInvitado= document.querySelector(".usuarioinvitado")
     usuarioInvitado.addEventListener("click", function(){
-         bienvenidacontainer.style.display="none"
+        bienvenidacontainer.style.display="none"
          main.style.display="block"
+         bienvenidacontainer.preventDefault()
 
 
       })
+      
+      //let formularioIniciarSesion= document.querySelector(".formularioinciar")
+      //let iniciarSesion= document.querySelector(".diviniciarsesion")
+      
+      let formularioiniciar= document.querySelector(".formularioiniciar")
+      let botonIniciarSesion= document.querySelector(".botoniniciarsesion")
+      //botonIniciarSesion.addEventListener("click", function(){
+          //main.style.display="block"
+          //bienvenidacontainer.display.display="none"
+          //UIkit.modal(element).hide();
+          //formularioiniciar.style.display="none"
+
+      //})
+      // validando formulario iniciar sesion
+
+      
+
+     // let botonregistrar= document.querySelector(".registrarse")
+     // let formularioregistrar= document.querySelector(".formularioregistrar")
+      //botonregistrar.addEventListener("click", function(){
+       // bienvenida.innerHTML= "Registrate!!"
+       // formularioregistrar.style.display="block"
+       // cointainerprimero.style.display="none"
+    //})
+
+
+
+        //FORMULARIOS QUE ANDEN
+
+        
+        //let formularios = document.querySelectorAll("form")
+        //let elementosDelFormulario= formularios.elements
+        //let  elementosDelFormularioEnArray= array.from(elementosDelFormulario);
+        //elementosDelFormularioEnArray.pop();
+        //formularios.addEventListener("submit", function(){
+            //let elementosDelFormulario= formularios.elements
+            //let elementosDelFormularioEnArray= array.from(elementosDelFormulario)
+            //elementosDelFormularioEnArray.pop()
+            //for (let index = 0; index < elementosDelFormularioEnArray.length; index++) {
+                //const cadaElementos = elementosDelFormularioEnArray[index];
+                //element.addEventListener("blur", function(){
+                //if (cadaElementos == " ") {
+                
+                    //event.preventDefault();
+                    
+                         //    } 
+                //})
+           // }
+            
+        //})
+
+        //formularios.addEventListener("submit", function(event){
+           // main.style.display="block"
+          //  bienvenidacontainer.display="none"
+        //})
+
+
+        
+        
+       
+        
+        let nombre= document.querySelector("#username").value
+        let contra= document.querySelector("#password").value
+        let objUsuarioIniciando= 
+            {
+                name: nombre,
+                contraseña: contra
+            }
+        
+        console.log(objUsuarioIniciando)
+        
+         
+       
+        
+        
+
+        //function getInfo (){
+          // let  username= document.getElementById("username").value
+           //let password= document.getElementById("password").value
+           //for (let index = 0; index < objusuario.length; index++) {
+              // const cadaUsuarioInfo = objusuario[index];
+               //if (mail == objUsuario[i].mail && password == objUsuario[i].password) {
+                //   console.log(username + "is logged")
+                   
+               //}
+               
+           //}
+           
+        //}
+       
+            
+    
+
+          
+      
 
       //un solo carrousel por pagina
     let body= document.querySelector("body")
@@ -144,8 +242,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
     var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
     // Partially visible elements return true:
     //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible;
-           } 
+    return isVisible;}
+           
        let elemento = document.querySelector(".maincontainerartistas")
      let estaElElementoVisible = isScrolledIntoView(elemento)
      if (estaElElementoVisible == true) {
@@ -156,6 +254,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
 
       } 
+      
+      
 })
         
 
