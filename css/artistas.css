@@ -148,6 +148,10 @@
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 360px 140px;
             }
+            .buscadorartista{
+                width: 90%;
+                margin: 0;
+            }
 
             .fotoartista {
                 border-radius: 50%;          
@@ -181,6 +185,8 @@
                 width: 98%;
                 margin: 0 auto;
                 }
+
+                
 
         }
 
