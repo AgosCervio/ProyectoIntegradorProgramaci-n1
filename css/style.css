@@ -63,7 +63,7 @@ position: relative;
 display: inline-block;
 width: 90%;
 background-color:rgb( 232, 231, 227);
-height: 40px;
+height: 70px;
 margin-top: 20px;
 margin-left: 20px;
 padding: auto;
@@ -90,6 +90,15 @@ font-family: 'Courier New', Courier, monospace;
 color: ivory;
 }
 
+.redsocial  {
+    text-align: center;
+    font-size: 20px;
+    text-align: end;
+    font-family: 'Courier New', Courier, monospace;
+    color: ivory;
+    text-decoration: none;   
+    margin: 0;
+}
 .hamburguesa{
 color: white;
 display: block;
@@ -532,7 +541,9 @@ width: 90%;
     height: 250px;
 }
 
-
+.redsocial{
+    font-size: 30px;
+}
 
 }
 
