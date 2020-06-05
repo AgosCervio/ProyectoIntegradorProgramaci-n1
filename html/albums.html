@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
+<link rel="stylesheet" href="../css/general.css">
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="../css/general.css">
+    
+    <script src="../java script/general.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    
     <script src="https://kit.fontawesome.com/a0c0bb4f74.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Bitter|Bungee|Handlee|Norican|Notable|Permanent+Marker&display=swap" rel="stylesheet">
+   
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="../css/albums.css">
@@ -20,32 +30,40 @@
         
         <header class="main-header" >
     
-            <img src="../imagenes/logo negro.png" class="logo logodesktop"> 
-            <nav class="main-nav" >
- 
-                <div class="hamburguesadiv"><a href="#" class="hamburguesa">
-                <span class="fa fa-bars hamburguesa"></span>
-                </a></div>
-                 <ul  class="listaheader">
-                     <div><li><form class="uk-search uk-search-default alineacion search">
-                        <a href="" uk-search-icon></a>
-                        <span uk-search-icon></span>
-                        <input class="uk-search-input" type="search" placeholder="Search...">
-                    </form></li></div>
-               <div  class="liheader"><li><a href="home.html">HOME</a></li></div>
-                <div  class="liheader"><li><a href="miplaylist.html">MIS PLAYLISTS</a></li></div>
-               <div   class="liheader"><li><a href="géneros.html">GÉNEROS</a></li></div>
-               <div class="liheader"><li><a href="artistas.html">ARTISTAS</a></li></div>
-               <div class="liheader"><li><a href="tracks.html">TRACKS</a></li></div>
-               <div class="liheader"><li><a href="albums.html">ALBUMS</a></li></div>
-              
-                </ul>
+            <div class="uk-child-width-1-2@m uk-text-center" uk-grid>
+                <div class="uk-animation-toggle logo" tabindex="0">
+                    <img class="uk-animation-stroke logo"   src="../imagenes/logo negro.png" alt="" uk-svg="stroke-animation: true">
+                </div>
                 
+            </div>
             
-            </nav>
+            
+           <nav class="main-nav" >
+         
+            <div class="hamburguesadiv"><a href="#" class="hamburguesa">
+            <span class="fa fa-bars hamburguesa"></span>
+            </a></div>
+            <div class="contain">
+             <ul  class="listaheader">
+                <form action="resultados.html" class="uk-search uk-search-default search">
+                    
+                    <input name="buscador" class="uk-search-input buscador" type="search" placeholder="Search...">
+                    
+                </form>
+           <div  class="liheader"><li><a href="home.html"><i class="fas fa-home"></i><br> HOME</a></li></div>
+            <div  class="liheader"><li><a href="miplaylist.html"><i class="fas fa-heart"></i><br> MIS PLAYLISTS</a></li></div>
+           <div   class="liheader"><li><a href="géneros.html"><i class="fas fa-compact-disc"></i><br> GÉNEROS</a></li></div>
+           <div class="liheader"><li><a href="artistas.html"><i class="fas fa-microphone"></i><br> ARTISTAS</a></li></div>
+           <div class="liheader"><li><a href="tracks.html"><i class="fas fa-music logomusic"></i><br> TRACKS</a></li></div>
+           <div class="liheader"><li><a href="albums.html"><i class="fas fa-folder-plus"></i><br> ALBUMS</a></li></div>
+          
+            </ul></div>
+            
+        
+        </nav>
         </header>
         <main>
-            <h1 class="titulo">ALBUMS</h1>
+            <div class="titulosdelaspaginas"><h1 class="titulo">ALBUMS</h1></div>
         </main>
 
         <section class="containalbum">
@@ -72,13 +90,28 @@
 
    
    
-            <footer class="mainfooter" >
-                <div class="madeby">
-                    <p>Agostina Cervio, Clara Bur y Bruno Grecco</p>
-                 </div>
-               <div class="madeby"><img class="deezer"  src="../imagenes/deezer 1img.png" alt="logo deezer">
-               </div>
-             </footer>
+        <footer class="mainfooter" >
+    
+            <div class="footer ">
+                <p class="titulos-footer">Creadores</p>
+                <p>Agostina Cervio</p>
+                <p>Clara Bur</p>
+                <p>Bruno Grecco</p>
+             </div>
+             <div class="footer ">
+                 <p class="titulos-footer">Contact</p>
+                 <a class="footer-a" href="tel:155437645">Contact us by phone</a>
+                 <a class="footer-a" href="mailto:music@gmail.com">Contact us by e-mail</a>
+             </div>
+             <div class="footer ">
+                 <p class="titulos-footer">Follow us on Instagram</p>
+                      <a class="footer-a" href="https://www.instagram.com/agoscervio_/"><i class="fab fa-instagram instagram"></i>@Music</a>
+             </div>
+           <div class=""><img class="deezer"  src="../imagenes/deezer 1img.png" alt="logo deezer">
+           </div>
+           
+             
+         </footer>
 
     </div>
     
