@@ -1,25 +1,16 @@
 
     .containalbum {
-
-        height: 160px;
+        grid-template-columns: 40% 45% ;
+        height: 200px;
         background-color: rgba(242, 216, 229, 0.5);
         display: grid;
-        grid-template-columns: 40% 45% ;
-        gap: 2%;
+        justify-content: space-between;
         border: white solid 4px;
-        margin: 0 auto;
         margin: 10px;
-        
+        margin-left: 20px;
         }
-    .containfotoalbum {
-        padding-left: 4px;
-        }
-
-       
-        .uk-search-input{
-            margin-left: 15px;
-            margin-top: 15px;
-        }
+    
+      
     .titulo{
       font-family  : 'Bitter', serif;
     color: slategray;
@@ -32,7 +23,7 @@
     .nombrealbum {
         
         font-family: 'Notable', sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         color: rgb(84, 82, 82);
         margin-right: 30px;
        margin: 0;
@@ -40,14 +31,26 @@
         }
 
         .fotoalbum{
-            height: 80%;
-            width: 70%;
-           
-      margin-top: 5px;
-      margin-left: 5px;
+            width: 100%;
+            margin: 0 1%;
+            height: 55%;
+            margin: 10px;
+            border-radius: 50%;
+      
           
          }
-        
+         .temas {
+            list-style-type: none;
+           
+           }
+
+           .hola{
+            width: 100%;
+            margin-top: 5px;
+            border: white solid 2px;
+           }
+
+
          .año {
             text-align: center;
             color: rgb(84, 82, 82);
@@ -58,47 +61,43 @@
          
            
             }
-
-            .ag1 {
-               
-                font-family: 'Norican', cursive;
+            .ipervinculo {
                 font-size: 20px;
-                color:slategray;
-                margin: 0%;
-                margin: 0 auto; 
-                text-decoration: none;
-                
-            }   
-            .ag {
                
-                font-family: 'Norican', cursive;
+            }
+            .ipervinculo1 {
                 font-size: 20px;
-                color:slategray;
-                margin: 0%;
-                margin: 0 auto; 
-                text-decoration: none;
-                
-            }   
+               
+            }
+          
             .saltar{
    
                 display: none;
                
             }
-            
+           
+            .titulodeltrack{
+                color:black;
+                font-size: 20px;   
+                margin: 0 auto;
+                
+            }
+          .iper{
+            text-align: center;
+            color: rgb(84, 82, 82);
+            font-weight: bold;
+            font-family: 'Norican', cursive;
+            font-size: 20px;
+            margin-top: 10px;
+          }
+         
             @media (min-width:600px){
                
                     .saltar{
                         display: block;
                     }
                     
-                    .ag {
-                        font-size: 35px;
-                       
-                    }
-                    .ag1 {
-                        font-size: 35px;
-                       
-                    }
+                   
                     .nombrealbum{
                         font-size: 45px;
                     }
@@ -111,13 +110,20 @@
 
                     }
                     .containalbum{
-                        height: 270px;
+                        height: 290px;
                     }
                     .año{
                         font-size: 20px;
                   
                     }
-                    
+                    .ipervinculo{
+                        font-size: 35px;
+                       
+                    }
+                    .ipervinculo1 {
+                        font-size: 35px;
+                       
+                    }
 
                     }
 
@@ -125,35 +131,47 @@
                         
                     
                     .containalbum{
-                        height: 300px;
+                        height: 340px;
                         width: 95%;
-                        margin-left: 15px;
+                        margin-left: 50px;
+                        
                     }
                     .fotoalbum{
-                       margin-top: 30px;
-                        height: 240px;
-                        width: 50%;
-                        margin-left: 30px;
-                 
-                          }
+                       margin-top: 10px;
+                       height: 270px;
+                       width: 40%;
+                       margin-left: 30px;
+                       border-radius: 50%;
+
+
+                    }
+                       .ipervinculo {
+                        font-size: 45px;
+                       
+                    }
+                    .ipervinculo1 {
+                        font-size: 45px;
+                       
+                    }
+            
+
                    .año{
                        margin-top: 5px;
-                       margin-right: 140px;
+                       margin-right: 400px;
 
                    }
-                   .ag {
-                       margin-top: 10px;
-                       font-size: 40px;
-                       margin-right: 200px;
-                   }
-                 .ag1{
+              
+                   .hola{
+                    width: 95%;
+                   margin-left: 40px;
+                    border: white solid 2px;
                     margin-top: 10px;
-                    font-size: 30px;
-                    margin-right: 200px;
+                   }
 
-
-                 }
-
+                 
+.iper{
+    font-size: 50px;
+}
                  
 
                  }
