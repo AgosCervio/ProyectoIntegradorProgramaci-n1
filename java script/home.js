@@ -21,14 +21,29 @@ window.addEventListener("load", function (){
             let cadaArtistaImage= cadaArtista.picture
             let cadaArtistaCanciones= cadaArtista.tracklist
             console.log(cadaArtistaCanciones)
-            document.querySelector(".listadoartistas").innerHTML+= "<li class=uk-transition-toggle  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
+            document.querySelector(".listadoartistas").innerHTML+= "<li class=uk-transition-toggle  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i class='far fa-play-circle icono sizeicono  iconoArtista'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
+            let iconoArtista= document.querySelectorAll(".iconoArtista")
+        
+            for (let index = 0; index < iconoArtista.length; index++) {
+                const cadaIconoArtista = iconoArtista[index];
+                cadaIconoArtista.addEventListener("click", function(){
+                document.querySelector(".reproduccionArtista").innerHTML+="<iframe scrolling=no frameborder=0 allowTransparency=true src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=&size=medium&type=radio&id=artist-"+idArtista+"&app_id=1+' width='700' height='350'></iframe>"
+                 })
+            }
             
-          
-            
-            
+                
+     
         }
+        
+            
+        
 
      })
+     
+
+
+
+
      let queryString = new URLSearchParams (location.search)  
      let codigoAlbum = queryString.get ("idDeAlbum")
 fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigoAlbum+"/albums")
@@ -82,8 +97,15 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
         //iconos que se muestren cuando pongo mouse
          let artistascarrousel= document.querySelector(".maincontainerartistas")
          artistascarrousel.addEventListener("mouseover", function(){
-             let iconosartistas= document.querySelector(".")
-             iconosartistas.style.display="none"
+             
+             let iconos= document.querySelectorAll(".icono")
+             for (let index = 0; index < iconos.length; index++) {
+                 const cadaIconoArtista = iconos[index];
+                 iconos.classList.remove("sizeicono")
+                 iconos.classList.add("iconoblock")
+                 
+             }
+             
 
          })
          
@@ -129,7 +151,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
     usuarioInvitado.addEventListener("click", function(){
         bienvenidacontainer.style.display="none"
          main.style.display="block"
-         bienvenidacontainer.preventDefault()
+         //bienvenidacontainer.preventDefault()
 
 
       })
@@ -227,12 +249,13 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
     
 
           
-      
+     
+
+       
 
       //un solo carrousel por pagina
     let body= document.querySelector("body")
-    let topcanciones= document.querySelector(".maincontainercanciones")
-    let topalbums= document.querySelector(".maincontaineralbums")
+    
     
     function isScrolledIntoView(el) {
     var rect = el.getBoundingClientRect();

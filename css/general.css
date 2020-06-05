@@ -5,7 +5,7 @@ html, body {
 
 
 .sizeicono{
-    display: "none";
+    display: none;
     font-size: 40px;
     color: black;
     
@@ -13,6 +13,9 @@ html, body {
     
     
     
+}
+.iconoblock{
+    display: inline;
 }
 a { text-decoration: none !important;
     color: ivory !important;
