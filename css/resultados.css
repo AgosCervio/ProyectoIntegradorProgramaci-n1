@@ -1,0 +1,81 @@
+.container-search{
+    display: grid;
+    width: 90%;
+    
+    margin:0 auto ;
+    justify-content: space-around;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+
+}
+.div-search{
+    background-color: white;
+    
+    height: 300px;
+    border: 5px solid #FF5470
+}
+.titulo-search{
+border: 2px solid white ;
+font-size: 25px;
+width: 90%;
+margin: 2% auto;
+color: #FF5470;
+text-align: center;
+
+
+}
+
+.artista-search{
+border: 2px solid white;
+font-size: 20px;
+margin: 2% auto;
+font-family: 'Bitter', serif;
+width: 90%;
+margin-bottom: 2%;
+color: #FF5470;
+text-align: center;
+
+}
+
+.img-search{
+    width: 90%;
+    margin-left: 5%;
+    height: 130px ;
+
+}
+
+@media (min-width:600px){
+    .container-search{
+        grid-template-columns: 32% 32% 32%;
+    }
+    .titulo-search{
+        font-size: 20px;
+    }
+    .artista-search{
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width:768px){
+    .container-search{
+        grid-template-columns: 19% 19% 19% 19% 19%;
+    }
+    .div-search{
+        height: 250px;
+    }
+    .artista-search{
+        font-size: 13px;
+    }
+    .titulo-search{
+        font-size: 15px;
+    }
+
+
+
+
+
+
+
+}
+
