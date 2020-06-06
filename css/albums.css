@@ -15,7 +15,7 @@
       font-family  : 'Bitter', serif;
     color: slategray;
     text-align: center;
-    margin-top: 10px;
+  margin: 10px;
     }
 
 
@@ -32,9 +32,9 @@
 
         .fotoalbum{
           
-      width: 100%;
-      height: 100%;
+     
       border-radius: 50%;
+      margin-top: 10px;
       
           
          }
@@ -44,7 +44,7 @@
            .hola{
             background-color: rgba(242, 216, 229, 0.5);
             width: 95%;
-            margin-left: 50px;
+            margin-left: 5px;
             border: white solid 2px;
             margin-top: 10px;
            }
@@ -96,7 +96,17 @@
             font-size: 20px;
             margin-top: 10px;
           }
-         
+         .hola{
+             margin-left: 10px;
+         }
+         .sizeicono {
+            display: block;
+           
+           
+        }
+        .reproductoralbum{
+            margin-left: 30px;
+        }
             @media (min-width:600px){
                
                     .saltar{
@@ -166,7 +176,9 @@
 
                    }
               
-                  
+                  .hola{
+                      margin-left: 55px;
+                  }
 
 
                  

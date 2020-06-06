@@ -7,7 +7,7 @@
       border: white solid 4px;
       margin: 10px;
       margin-left: 20px;
-      height: 500px;
+      height: 270px;
    
      
     }
@@ -26,10 +26,14 @@
   }
   .sizeicono {
     display: block;
-   
+    font-size: 20px;
+   margin-left: 50px;
+   margin-top: 0;
    
 }
- 
+ .reproductortrack{
+   margin-left: 30px;
+ }
   .nombrecancion{
     font-size: 15px;
       font-family: 'Notable', sans-serif;
@@ -68,7 +72,7 @@
            @media (min-width:600px){
      
             .sectioncanciones{
-              height: 350px;
+              height: 70px;
           
          
           
