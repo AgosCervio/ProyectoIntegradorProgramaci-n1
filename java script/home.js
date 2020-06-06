@@ -22,14 +22,14 @@ window.addEventListener("load", function (){
             let cadaArtistaCanciones= cadaArtista.tracklist
             console.log(cadaArtistaCanciones)
             document.querySelector(".listadoartistas").innerHTML+= "<li class=uk-transition-toggle  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i class='far fa-play-circle icono sizeicono  iconoArtista'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
-        
-            //for (let index = 0; index < iconoArtista.length; index++) {
+            let iconoArtista= document.querySelectorAll(".iconoArtista")
+            for (let index = 0; index < iconoArtista.length; index++) {
                 
-                //const cadaIconoArtista = iconoArtista[index];
-                //cadaIconoArtista.addEventListener("click", function(){
-                //document.querySelector(".reproduccionArtista").innerHTML+="<iframe class=iframe scrolling=no frameborder=0 allowTransparency=true src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=007FEB&layout=&size=medium&type=radio&id=artist-"+idArtista+"&app_id=1' width='700' height='100'></iframe>"
-                // })
-            //}
+                const cadaIconoArtista = iconoArtista[index];
+                cadaIconoArtista.addEventListener("click", function(){
+                document.querySelector(".reproduccionArtista").innerHTML+="<iframe class=iframe scrolling=no frameborder=0 allowTransparency=true src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=007FEB&layout=&size=medium&type=radio&id=artist-"+idArtista+"&app_id=1' width='700' height='100'></iframe>"
+                 })
+            }
             
                 
      
@@ -291,7 +291,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
             })
 
-            document.querySelector("")
+            
 
 
 
