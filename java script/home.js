@@ -22,14 +22,14 @@ window.addEventListener("load", function (){
             let cadaArtistaCanciones= cadaArtista.tracklist
             console.log(cadaArtistaCanciones)
             document.querySelector(".listadoartistas").innerHTML+= "<li class=uk-transition-toggle  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i class='far fa-play-circle icono sizeicono  iconoArtista'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
-            let iconoArtista= document.querySelectorAll(".iconoArtista")
         
-            for (let index = 0; index < iconoArtista.length; index++) {
-                const cadaIconoArtista = iconoArtista[index];
-                cadaIconoArtista.addEventListener("click", function(){
-                document.querySelector(".reproduccionArtista").innerHTML+="<iframe scrolling=no frameborder=0 allowTransparency=true src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=&size=medium&type=radio&id=artist-"+idArtista+"&app_id=1+' width='700' height='350'></iframe>"
-                 })
-            }
+            //for (let index = 0; index < iconoArtista.length; index++) {
+                
+                //const cadaIconoArtista = iconoArtista[index];
+                //cadaIconoArtista.addEventListener("click", function(){
+                //document.querySelector(".reproduccionArtista").innerHTML+="<iframe class=iframe scrolling=no frameborder=0 allowTransparency=true src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=700&height=350&color=007FEB&layout=&size=medium&type=radio&id=artist-"+idArtista+"&app_id=1' width='700' height='100'></iframe>"
+                // })
+            //}
             
                 
      
@@ -145,7 +145,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                  bienvenida.innerHTML+= " "+nombreUsuario
             }
 
-    let cointainerprimero= document.querySelector(".containregistracion")
+   
 
     let usuarioInvitado= document.querySelector(".usuarioinvitado")
     usuarioInvitado.addEventListener("click", function(){
@@ -159,91 +159,32 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
       //let formularioIniciarSesion= document.querySelector(".formularioinciar")
       //let iniciarSesion= document.querySelector(".diviniciarsesion")
       
-      let formularioiniciar= document.querySelector(".formularioiniciar")
-      let botonIniciarSesion= document.querySelector(".botoniniciarsesion")
-      //botonIniciarSesion.addEventListener("click", function(){
-          //main.style.display="block"
-          //bienvenidacontainer.display.display="none"
-          //UIkit.modal(element).hide();
-          //formularioiniciar.style.display="none"
-
-      //})
-      // validando formulario iniciar sesion
+      
+      
 
       
 
-     // let botonregistrar= document.querySelector(".registrarse")
-     // let formularioregistrar= document.querySelector(".formularioregistrar")
-      //botonregistrar.addEventListener("click", function(){
-       // bienvenida.innerHTML= "Registrate!!"
-       // formularioregistrar.style.display="block"
-       // cointainerprimero.style.display="none"
-    //})
+    
 
 
 
-        //FORMULARIOS QUE ANDEN
+       
 
-        
-        //let formularios = document.querySelectorAll("form")
-        //let elementosDelFormulario= formularios.elements
-        //let  elementosDelFormularioEnArray= array.from(elementosDelFormulario);
-        //elementosDelFormularioEnArray.pop();
-        //formularios.addEventListener("submit", function(){
-            //let elementosDelFormulario= formularios.elements
-            //let elementosDelFormularioEnArray= array.from(elementosDelFormulario)
-            //elementosDelFormularioEnArray.pop()
-            //for (let index = 0; index < elementosDelFormularioEnArray.length; index++) {
-                //const cadaElementos = elementosDelFormularioEnArray[index];
-                //element.addEventListener("blur", function(){
-                //if (cadaElementos == " ") {
-                
-                    //event.preventDefault();
-                    
-                         //    } 
-                //})
-           // }
-            
-        //})
-
-        //formularios.addEventListener("submit", function(event){
-           // main.style.display="block"
-          //  bienvenidacontainer.display="none"
-        //})
+      
 
 
         
         
        
         
-        let nombre= document.querySelector("#username").value
-        let contra= document.querySelector("#password").value
-        let objUsuarioIniciando= 
-            {
-                name: nombre,
-                contraseña: contra
-            }
         
-        console.log(objUsuarioIniciando)
         
          
        
         
         
 
-        //function getInfo (){
-          // let  username= document.getElementById("username").value
-           //let password= document.getElementById("password").value
-           //for (let index = 0; index < objusuario.length; index++) {
-              // const cadaUsuarioInfo = objusuario[index];
-               //if (mail == objUsuario[i].mail && password == objUsuario[i].password) {
-                //   console.log(username + "is logged")
-                   
-               //}
-               
-           //}
-           
-        //}
+        
        
             
     
@@ -253,30 +194,107 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
        
 
-      //un solo carrousel por pagina
-    let body= document.querySelector("body")
+      
     
     
-    function isScrolledIntoView(el) {
-    var rect = el.getBoundingClientRect();
-    var elemTop = rect.top;
-    var elemBottom = rect.bottom;
-    // Only completely visible elements return true:
-    var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    // Partially visible elements return true:
-    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible;}
+
+
+
+
+
+      //registrar formulario
+      document.querySelector(".botonregistrarse").addEventListener("click", function(){
+         
+        let usuarioRegistrados= [
+
+        ]
+        
+        //registro nuevos datos 
+        let nombreNuevo= document.querySelector("#name")
+        let passwordNueva= document.querySelector("#contraseñausuarionuevo")
+        let apellidoNuevo= document.querySelector("#apellido")
+        let emailNuevo= document.querySelector("#mailusurionuevo")
+
+        
+
+        // campos vacios
+
+        if(emailNuevo.value == ""){
+            UIkit.notification({
+                message: 'Complete su email',
+                status: 'warning',
+                pos: 'top-center',
+                timeout: 5000
+            });
+            document.querySelector(".botonregistrarse")=e.preventDefault()
+            
+        } else if (passwordNueva.value == ""){
+            UIkit.notification({
+                message: 'Complete su contraseña',
+                status: 'danger',
+                pos: 'top-center',
+                timeout: 5000
+            });
+            document.querySelector(".botonregistrarse").e.preventDefault()
+        } else{
+            // paso los datos al localstorage
+            let arrayUsuarioRegistrados= []
+            localStorage.setItem("usuarioNuevo", arrayUsuarioRegistrados )
+            
+
+            if (localStorage.getItem("usuarioNuevo") != null) {
+                //arrayDeGifsFavoritos y le voy a agregar el código el GIF
+                arrayUsuarioRegistrados = localStorage.getItem("usuarioNuevo").split(",")
+                arrayUsuarioRegistrados.push(emailNuevo.value)
+                arrayUsuarioRegistrados.push(passwordNueva.value)
+                let body =document.querySelector(".maincontainer")
+           body.style.display="block"
+           let bienvenida= document.querySelector(".bienvenidacontainer")
+           bienvenida.style.display="none"
+           console.log(arrayUsuarioRegistrados)
+           let titulowelcome= document.querySelector(".welcome")
+           titulowelcome.innerHTML+= " " + nombreNuevo.value
+            } else {
+                //TENGO QUE CREAR UN ARRAY NUEVO CON EL CODIGO DEL GIF
+                 arrayUsuarioRegistrados = []
+                  arrayUsuarioRegistrados.push(passwordNueva.value)
+                  arrayUsuarioRegistrados.push(emailNuevo.value)
+                  console.log(arrayUsuarioRegistrados)
+                  let body =document.querySelector(".maincontainer")
+                  body.style.display="block"
+                  let bienvenida= document.querySelector(".bienvenidacontainer")
+                  bienvenida.style.display="none"
+                  let titulowelcome= document.querySelector(".welcome")
+                  titulowelcome.innerHTML+= " " + nombreNuevo.value
+
+            }
            
-       let elemento = document.querySelector(".maincontainerartistas")
-     let estaElElementoVisible = isScrolledIntoView(elemento)
-     if (estaElElementoVisible == true) {
-    
-    elemento.style.display="block"
-    topalbums.style.display="block"
-    topcanciones.style.display="block"
 
 
-      } 
+        }
+
+
+
+        if (localStorage.getItem("usuarioNuevo") != null){
+
+
+            let usuarioNuevo = localStorage.getItem("usuarioNuevo").split(",")
+            console.log(usuarioNuevo)
+            
+           
+        }
+        
+
+
+
+
+
+            })
+
+            document.querySelector("")
+
+
+
       
       
 })

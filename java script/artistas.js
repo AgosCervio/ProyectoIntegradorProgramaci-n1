@@ -31,6 +31,7 @@ window.addEventListener("load", function(){
               let idTrack= cadaTrack.id
               console.log(nombreTrack)
               document.querySelector("ol.listacanciones").innerHTML+="<li class= cancionestop5>"+"<a href='tracks.html?idDelTrack="+idTrack+"'>"+nombreTrack+"</a>"+"</li>"
+             
               
           }
       })

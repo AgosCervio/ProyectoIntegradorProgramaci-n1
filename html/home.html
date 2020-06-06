@@ -20,6 +20,7 @@
 <script src="../java script/home.js"></script>
 <script src="../java script/general.js"></script>
 <script src="../java script/buscador.js"></script>
+<script src="signup.js"></script>
     
 </head>
 
@@ -32,7 +33,7 @@
        <div class="diviniciarsesion"><button class="iniciarsesion uk-button uk-button-default " uk-toggle="target: #my-id" type="button"><a href="#modal-example" uk-toggle>Iniciar Sesión</a></button></div>
        
        <br>
-       <div class="divregistrarse"><button class="registrarse uk-button uk-button-default " uk-toggle="target: #registrarse-id" type="button"><a href="#modal-example" uk-toggle>Registrate</a></button></div>
+       <div class="divregistrarse"><button class="registrarse uk-button uk-button-default " uk-toggle="target: #registracion-id" type="button"><a href="#modal-example" uk-toggle>Registrate</a></button></div>
        
      <br>
        
@@ -59,7 +60,7 @@
         
     </div>
 
-    <div class="formularioregistrar uk-modal" id="registrarse-id" uk-modal>
+    <div class="formularioregistrar uk-modal" id="registracion-id" uk-modal>
         <div class="uk-modal-dialog uk-modal-body form">
             <h2 class="uk-modal-title">Registrate</h2>
              <form class="register-form-" action="home.html" method="GET">
@@ -84,8 +85,8 @@
                 <input type="date" name="fecha" id="fechausuario">
             </p>
             <p class="uk-text-right">
-                <button class="uk-button uk-button-default uk-modal-close cancelar " type="button">Cancel</button>
-                    <button class="uk-button uk-button-primary  " uk-toggle="target:#registrate-id" type="button">Registrate</button>
+                <button class="uk-button uk-button-default uk-modal-close cancelar "  type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary botonregistrarse "  name="sub"   uk-toggle="target:#registracion-id"  type="button"  >Registrate</button>
             </p>
            </form>
         </div>
@@ -134,7 +135,7 @@
 
 </nav>
 </header>
-
+<div  class="titulosdelaspaginas"><h2 class=" titulo  tituloprimero welcome ">Welcome</h2></div>
 <section uk-scrollspy="cls:uk-animation-scale-down;repeat:true" class="maincontainerartistas">
 
 <div  class="titulosdelaspaginas"><h2 class=" titulo  tituloprimero ">Top Artistas</h2></div>
@@ -235,7 +236,7 @@
          
      </footer>
 
-
+    
 
     </div>
 </body>
