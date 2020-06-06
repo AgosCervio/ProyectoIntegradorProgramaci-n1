@@ -1,17 +1,15 @@
 .container-search{
     display: grid;
     width: 90%;
-    
-    background-color: black;
-    margin:0 auto ;
+    margin:2% auto ;
     justify-content: space-around;
     grid-template-columns: 49% 49%;
-    gap: 2%;
+    
 
 }
 .div-search{
     background-color: white;
-    
+    margin: 2%;
     height: 300px;
     border: 5px solid #FF5470
 }
@@ -43,6 +41,11 @@ text-align: center;
     margin-left: 5%;
     height: 130px ;
 
+}
+.iconossearch{
+ font-size: 20px;
+ color: black;
+ padding-left: 5%;
 }
 
 @media (min-width:600px){
