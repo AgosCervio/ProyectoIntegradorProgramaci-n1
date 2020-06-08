@@ -27,8 +27,9 @@ window.addEventListener ("load", function(){
             let genero = cadaGenero.name 
             let id = cadaGenero.id
          
-           document.querySelector (".containalbum").innerHTML =  ' <div class=containfotoalbum> <img class=fotoalbum src=  "' + img +'" >  <p class="año">'+año+'</p> </div> <div class="containinfoalbum"> <h2 class="nombrealbum">' + nombreAlbum+' </h2> <a href="artistas.html?idDelArtista= ' + idArtista + ' ">  <p class="ipervinculo">'+artista+' </p> </a>   <a href="géneros.html?idDelGenero='  + id + '  ">  <p class="ipervinculo1">' +genero+' </p></a><i class="far fa-play-circle sizeicono iconoalbum"></i><i class="fas fa-heart sizeicono>"</i>  </div> ' 
+           document.querySelector (".containalbum").innerHTML =  ' <div class=containfotoalbum> <img class=fotoalbum src=  "' + img +'" >  <p class="año">'+año+'</p> </div> <div class="containinfoalbum"> <h2 class="nombrealbum">' + nombreAlbum+' </h2> <a href="artistas.html?idDelArtista= ' + idArtista + ' ">  <p class="ipervinculo">'+artista+' </p> </a>   <a href="géneros.html?idDelGenero='  + id + '  ">  <p class="ipervinculo1">' +genero+' </p></a> <p class="iconoalbum"> PLAY </p>  </div> ' 
          
+
 
            let iconoalbum = document.querySelectorAll (".iconoalbum")
            for (let index = 0; index < iconoalbum.length; index++) {
@@ -50,6 +51,7 @@ window.addEventListener ("load", function(){
     
 
     
+           //canciones que pertenecen al album
 
     fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/"+codigoAlbum+"/tracks")
     .then (
@@ -66,9 +68,26 @@ window.addEventListener ("load", function(){
              let nombretema= cadatema.title
            let imagentema= cadatema.cover
            let idtema= cadatema.id
+           let duracion = cadatema.duration
 
-           document.querySelector(".temas").innerHTML += "<div class=hola>"+"<li>"+"<a href='tracks.html?idDelTrack="+idtema+"'>"+"<h1 class=titulodeltrack>"+nombretema+"</h1>"+"</a>"+"</div>"+"</li>"
+          
+           document.querySelector(".temas").innerHTML += "<div class=hola>"+"<li>"+"<a href='tracks.html?idDelTrack="+idtema+"'>"+"<h1 class=titulodeltrack>"+nombretema+"</h1>"+"<hr>"+"</a>"+"</div>"+"</li>"
+           document.querySelector (".icono").innerHTML +=  " <p class='tiempo'>"+duracion+"</p>"  
+           document.querySelector (".numeros").innerHTML += " <i class='fa fa-play-circle play' aria-hidden='true'></i>"
 
+
+           let play = document.querySelectorAll (".play")
+           for (let index = 0; index < play.length; index++) {
+               const cadacanciondel = play[index];
+               let idcadau = cadacanciondel.idtema
+               cadacanciondel.addEventListener("click", function(){
+                   document.querySelector (".playcancion").innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcadau +`&app_id=1" width="300" height="300"></iframe>`
+                  
+                  })
+            
+                }
+      
+            
 
 
 
