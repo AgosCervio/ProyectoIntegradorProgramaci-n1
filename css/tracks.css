@@ -1,27 +1,24 @@
 
     .sectioncanciones{
-      display: grid;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 40% 45% ;
+      height: 350px;
       background-color: rgba(242, 216, 229, 0.5);
-      padding-left:10px ;
+      display: grid;
+      justify-content: space-between;
       border: white solid 4px;
       margin: 10px;
       margin-left: 20px;
-      height: 270px;
-   
-     
     }
     .titulo{
-    font-family  : 'Bitter', serif;
-    color: slategray;
-    text-align: center;
-    
+      font-family  : 'Bitter', serif;
+      color: slategray;
+      text-align: center;
+    margin: 10px;
     }
   .cancion{
-    margin-top: 20px;
-    width: 100% ;
-    height: 100px;
-  border-radius: 50%;
+    border-radius: 50%;
+    margin-top: 70px;
+    margin-left: 30px;
    
   }
   .sizeicono {
@@ -35,10 +32,11 @@
    margin-left: 30px;
  }
   .nombrecancion{
-    font-size: 15px;
-      font-family: 'Notable', sans-serif;
-      color: rgb(84, 82, 82);
-      margin-left: 40px;
+    font-family: 'Notable', sans-serif;
+    font-size: 20px;
+    color: rgb(84, 82, 82);
+    margin-right: 30px;
+   margin: 0;
       
      
      }
@@ -46,31 +44,37 @@
 
     .ipervincuos {
         
-        font-size: 15px;
-        font-family: 'Norican', cursive;
-        color: grey !important;
-        margin-left: 40px;
+        font-size: 20px;
+   
        }
        .ipervincuosalbum {
         
-        font-size: 15px;
-        font-family: 'Norican', cursive;
-        color: grey !important;
-        margin-left: 40px;
+        font-size: 20px;
+     
        }
    .duracion{   
-    font-family: 'Norican', cursive;
-    font-size: 15px;
-    margin-top: auto;
-    color: grey !important;
-     margin-left: 40px;
+
+    font-size: 20px;
+    
    }
-  
+   .iconotracks{
+               
+    color:white;
+    font-size: 25px;
+    font-family  : 'Bitter', serif;
+    border-radius: 20px 20px 20px 20px ;
+    border: 4px solid #FF5470;
+    background-color: purple;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+}
+
 
            @media (min-width:600px){
      
             .sectioncanciones{
-              height: 70px;
+              height: 500px;
           
          
           
@@ -104,7 +108,7 @@
            
            .duracion{
              font-size: 30px;
-            margin-left: 40px;
+           
            }
           
       
