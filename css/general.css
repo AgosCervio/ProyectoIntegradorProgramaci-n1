@@ -3,25 +3,30 @@ html, body {
     margin: 0;
 }
 
-.iframe{
+.reproduccionArtista{
   width: 100%;
-  position: relative;
-  bottom: 100%;
+  position: fixed;
+  bottom: -20%;
+  
     z-index: 10;
     margin-bottom: 10%;
 }
+
+
+
 .reproduccion{
     display: none;
 }
 .sizeicono{
     display: inline;
     font-size: 40px;
-    color: black;
-    
-    margin: 0 auto;
-    
-    
-    
+    color: white;
+    max-width: 50%;
+   
+       
+}
+.iconoCirculo{
+    padding-left: 25%;
 }
 .iconoblock{
     display: inline;
