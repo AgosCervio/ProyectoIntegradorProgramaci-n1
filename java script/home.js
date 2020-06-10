@@ -65,21 +65,17 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
              
      
      fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigoAlbum+"/tracks")
-             document.querySelector(".listadoalbums").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaAlbumImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='albums.html?idDeAlbum= " + idDeAlbum + "''>"+"<h1 class=titucarrousel>"+cadaAlbumTitle+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono   iconoalbum'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
-             
-
-             let iconoalbum= document.querySelectorAll(".iconoalbum")
+             document.querySelector(".listadoalbums").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaAlbumImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='albums.html?idDeAlbum= " + idDeAlbum + "''>"+"<h1 class=titucarrousel>"+cadaAlbumTitle+"</h1>"+"</a>"+"<i idDeAlbum="+ idDeAlbum +" class='far fa-play-circle sizeicono   iconoalbum'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
+ 
+         }
+         let iconoalbum= document.querySelectorAll(".iconoalbum")
              for (let index = 0; index < iconoalbum.length; index++) { 
                  const cadaIconoalbum= iconoalbum[index];
-                 
-               let idcada = cadaIconoalbum.id
+               let idcada = cadaIconoalbum.getAttribute ("idDeAlbum")
                  cadaIconoalbum.addEventListener("click", function(){
                  document.querySelector(".reproduccionArtista").innerHTML+= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id=`+idcada+`&app_id=1" width="700" height="240"></iframe>`
                   })
              }
-
-
-         }
      })
     
      //carrousel tracks
@@ -98,19 +94,22 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
              let cadaCancionImage= cadaCancion.album.cover
              let idDeTrack = cadaCancion.id
              
-             document.querySelector(".listadocanciones").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaCancionImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='tracks.html?idDelTrack= "+ idDeTrack+" ''>"+"<h1 class=titucarrousel>"+cadaCancionTitle+"</h1>"+"</a>"+"<i class='far fa-play-circle sizeicono   iconotrack'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
+             document.querySelector(".listadocanciones").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaCancionImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='tracks.html?idDelTrack= "+ idDeTrack+" ''>"+"<h1 class=titucarrousel>"+cadaCancionTitle+"</h1>"+"</a>"+"<i idDeTrack= "+ idDeTrack+" class='far fa-play-circle sizeicono   iconotrack'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
 
-             let iconotrack= document.querySelectorAll(".iconotrack")
-             for (let index = 0; index < iconotrack.length; index++) { 
-                 const cadaIconotrack= iconotrack[index];
-                 let idcada1 = cadaIconotrack.id
-                 cadaIconotrack.addEventListener("click", function(){
-                 document.querySelector(".reproduccionArtista").innerHTML+= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcada1+`&app_id=1" width="700" height="350"></iframe>`
-                  })
            
-             }
         
          }
+
+         let iconotrack= document.querySelectorAll(".iconotrack")
+         for (let index = 0; index < iconotrack.length; index++) { 
+             const cadaIconotrack= iconotrack[index];
+             let idcada1 = cadaIconotrack.getAttribute ("idDeTrack")
+             cadaIconotrack.addEventListener("click", function(){
+             document.querySelector(".reproduccionArtista").innerHTML+= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcada1+`&app_id=1" width="700" height="350"></iframe>`
+              })
+       
+         }
+
          //cancion top 1 de artista muestre en la bienvenida
          let cancionTop1= trackCanciones[0].link
          console.log (cancionTop1)
