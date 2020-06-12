@@ -6,16 +6,28 @@ html, body {
 .reproduccionArtista{
   width: 100%;
   position: fixed;
-  bottom: -20%;
-  
+  bottom: -15%;
+  height: 150px;
     z-index: 10;
     margin-bottom: 10%;
 }
 
-
+.spinner{
+    width: 25%;
+   margin-left: 47%;
+   margin-top: 2%;
+   
+    
+}
 
 .reproduccion{
-    display: none;
+    width: 100%;
+  position: fixed;
+  bottom: -15%;
+  height: 150px;
+    z-index: 10;
+    margin-bottom: 10%;
+    
 }
 .sizeicono{
     display: inline;
@@ -224,7 +236,9 @@ a { text-decoration: none !important;
            
            
         }
-       
+       .reproduccionArtista{
+        bottom: -25%;
+       }
 
         .liheader {
             width: 100%;

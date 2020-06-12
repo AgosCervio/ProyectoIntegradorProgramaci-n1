@@ -1,6 +1,12 @@
 
 
-
+    .artistaicono{
+        color: white;
+       
+    }
+    .icono{
+        margin-left: 2%;
+    }
     .containartista {
        height: 260px;
        background-color: rgba(242, 216, 229, 0.5);
@@ -52,6 +58,7 @@
     .listacanciones li{
         color: rgb(84, 82, 82);
         font-size: 20px;
+        max-width: 100%;
         
         }
     
@@ -91,12 +98,14 @@
 
         @media (min-width:600px){
             .containartista {
-                height: 600px;
+                height: 700px;
                 display: block;
                 
                 
             }
-
+            .icono{
+                margin-left: 0%;
+            }
             .rojo{
                 height: 40%;
             }
@@ -122,10 +131,10 @@
             .listacanciones {
                 display: grid;
                 width: 90%;
-                height: 120px;
+                height: 250px;
                 margin: 0 auto;
                 grid-template-columns: 60% 40%;
-                grid-template-rows: 40px 40px 40px;
+                
                 justify-content: space-evenly;
                 
                 
@@ -133,7 +142,12 @@
 
             .listacanciones li {
                 text-align: justify;
-                height:15px;
+                height:50px;
+                max-width: 100%;
+                
+                
+                
+                
                 
                 
                 
@@ -143,7 +157,7 @@
         @media (min-width:768px){
 
             .containartista {
-                height: 540px;
+                height: 600px;
                 display: grid;
                 grid-template-columns: 50% 50%;
                 grid-template-rows: 360px 140px;
@@ -158,7 +172,7 @@
             }
 
             .containartista img{
-                width: 60%;
+                width: 80%;
                 height: 90%;
                 margin: 0 auto;
             }
@@ -177,7 +191,7 @@
             }
 
             .listacanciones {
-                grid-template-columns: 60% 40%;
+                grid-template-columns: 65% 35%;
             }
 
 
