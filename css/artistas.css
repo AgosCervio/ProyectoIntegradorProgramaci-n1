@@ -1,6 +1,12 @@
 
 
-
+    .artistaicono{
+        color: white;
+       
+    }
+    .icono{
+        margin-left: 2%;
+    }
     .containartista {
        height: 260px;
        background-color: rgba(242, 216, 229, 0.5);
@@ -92,12 +98,14 @@
 
         @media (min-width:600px){
             .containartista {
-                height: 600px;
+                height: 700px;
                 display: block;
                 
                 
             }
-
+            .icono{
+                margin-left: 0%;
+            }
             .rojo{
                 height: 40%;
             }
@@ -164,7 +172,7 @@
             }
 
             .containartista img{
-                width: 60%;
+                width: 80%;
                 height: 90%;
                 margin: 0 auto;
             }
@@ -183,7 +191,7 @@
             }
 
             .listacanciones {
-                grid-template-columns: 60% 40%;
+                grid-template-columns: 65% 35%;
             }
 
 

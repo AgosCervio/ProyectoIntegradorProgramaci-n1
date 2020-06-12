@@ -21,7 +21,13 @@ html, body {
 }
 
 .reproduccion{
-    display: none;
+    width: 100%;
+  position: fixed;
+  bottom: -15%;
+  height: 150px;
+    z-index: 10;
+    margin-bottom: 10%;
+    
 }
 .sizeicono{
     display: inline;
