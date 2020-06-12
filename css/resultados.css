@@ -35,17 +35,22 @@ color: #FF5470;
 text-align: center;
 
 }
-
+.div-iconos{
+    height: 5px;
+    background-color: teal;
+}
 .img-search{
     width: 90%;
     margin-left: 5%;
     height: 130px ;
+    background-color: tomato;
 
 }
 .iconossearch{
  font-size: 20px;
  color: black;
  padding-left: 5%;
+ 
 }
 
 @media (min-width:600px){
