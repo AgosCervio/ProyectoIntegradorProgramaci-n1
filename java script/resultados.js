@@ -1,4 +1,7 @@
+
 window.addEventListener("load", function(){
+    document.querySelector(".div-spinner").innerHTML+=" <div class='spinner' uk-spinner></div>"
+
     let queryString= new URLSearchParams(location.search)
     let codigoDelBuscador= queryString.get("buscador")
     
@@ -22,6 +25,9 @@ window.addEventListener("load", function(){
     })
     .then (function(infoSearch){
         console.log(infoSearch)
+        if (infoSearch != null) {
+            document.querySelector(".div-spinner").style.display="none"
+        }
         let infoBuscador= infoSearch.data
         if (infoBuscador.length == 0) {
             alert("No hay resultados");
@@ -38,13 +44,26 @@ window.addEventListener("load", function(){
         
         "<a href='tracks.html?idDelTrack="+idBuscado+"'>"+"<h1 class=titulo-search>"+nombreBuscador+"</h1>"+"</a>"+
         "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h2 class=artista-search>"+nombreArtistaBuscado+"</h2>"+"</a>"+
-        "<a href='tracks.html?idDelTrack="+idBuscado+"'>"+"<img class=img-search src='"+imgBuscado+"'"+"</a>"+"<i class='far fa-play-circle iconossearch '></i>"+"<i class='fas fa-heart iconossearch '></i>"+ "</div>"
+        "<img class=img-search src='"+imgBuscado+"'"+"<div class=div-iconos>"+"<i idBuscado='"+idBuscado+"' class='far fa-play-circle iconoCancion iconossearch '></i>"+"<i class='fas fa-heart  iconossearch '></i>"+"</div>"+ "</div>"
             
         }
         
         
-
+        let iconosSearch = document.querySelectorAll(".iconoCancion")
+    for (let index = 0; index < iconosSearch.length; index++) {
+        const cadaIconoCancion = iconosSearch[index];
+        let cadaIdIcono = cadaIconoCancion.getAttribute("idBuscado")
+        console.log(cadaIconoCancion)
+        
+        cadaIconoCancion.addEventListener("click", function(){
+           
+        document.querySelector(".reproduccionArtista").innerHTML="<iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=1000&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+cadaIdIcono+"&app_id=1' width='100%' height='150'></iframe>"
+        })
+        
+    }
     })
+
+    
     
 
 
