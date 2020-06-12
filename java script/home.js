@@ -32,7 +32,7 @@ window.addEventListener("load", function (){
                 let cadaIdIcono = cadaIconoArtista.getAttribute("idArtista")
                 console.log(cadaIconoArtista)
                 cadaIconoArtista.addEventListener("click", function(){
-                document.querySelector(".reproduccionArtista").innerHTML="<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=1000&height=250&color=007FEB&layout=dark&size=medium&type=radio&id=artist-"+cadaIdIcono+"&app_id=1' width='700''height='350'></iframe>"
+                document.querySelector(".reproduccionArtista").innerHTML="<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=1000&height=250&color=007FEB&layout=dark&size=medium&type=radio&id=artist-"+cadaIdIcono+"&app_id=1' width='100%''height='100'></iframe>"
                 })
                 
             }
@@ -82,7 +82,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                  const cadaIconoalbum= iconoalbum[index];
                let idcada = cadaIconoalbum.getAttribute ("idDeAlbum")
                  cadaIconoalbum.addEventListener("click", function(){
-                 document.querySelector(".reproduccionArtista").innerHTML+= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id=`+idcada+`&app_id=1" width="700" height="240"></iframe>`
+                 document.querySelector(".reproduccionArtista").innerHTML= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id=`+idcada+`&app_id=1" width="100%" height="1000"></iframe>`
                   })
              }
      })
@@ -114,7 +114,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
              const cadaIconotrack= iconotrack[index];
              let idcada1 = cadaIconotrack.getAttribute ("idDeTrack")
              cadaIconotrack.addEventListener("click", function(){
-             document.querySelector(".reproduccionArtista").innerHTML+= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcada1+`&app_id=1" width="700" height="350"></iframe>`
+             document.querySelector(".reproduccionArtista").innerHTML= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcada1+`&app_id=1" width="100%" height="100"></iframe>`
               })
        
          }
@@ -167,8 +167,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
     let usuarioInvitado= document.querySelector(".usuarioinvitado")
     usuarioInvitado.addEventListener("click", function(){
-        bienvenidacontainer.style.display="none"
-         main.style.display="block"
+        document.querySelector(".bienvenidacontainer").style.display="none"
+         document.querySelector(".maincontainer").style.display="block"
          //bienvenidacontainer.preventDefault()
 
 
