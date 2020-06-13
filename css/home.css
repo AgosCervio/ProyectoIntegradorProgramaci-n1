@@ -139,8 +139,11 @@
             text-align: center;
             max-width: 80%;
             margin: 0 auto;
+            display: none;
             
-            
+            }
+            .iconoscarrousel:hover .titucarrousel{
+                display: block;
             }
 
           .iniciarsesion{

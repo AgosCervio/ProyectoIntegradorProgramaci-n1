@@ -21,7 +21,7 @@ window.addEventListener("load", function (){
             let cadaArtistaImage= cadaArtista.picture
             let cadaArtistaCanciones= cadaArtista.tracklist
             console.log(cadaArtistaCanciones)
-            document.querySelector(".listadoartistas").innerHTML+= "<li class=uk-transition-toggle  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i idArtista='"+ idArtista+"' class='far fa-play-circle icono sizeicono iconoCirculo iconoArtista'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
+            document.querySelector(".listadoartistas").innerHTML+= "<li class='uk-transition-toggle'  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i idArtista='"+ idArtista+"' class='far fa-play-circle icono sizeicono iconoCirculo iconoArtista'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
 
     
             
@@ -103,7 +103,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
              let cadaCancionImage= cadaCancion.album.cover
              let idDeTrack = cadaCancion.id
              
-             document.querySelector(".listadocanciones").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaCancionImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='tracks.html?idDelTrack= "+ idDeTrack+" ''>"+"<h1 class=titucarrousel>"+cadaCancionTitle+"</h1>"+"</a>"+"<i idDeTrack= "+ idDeTrack+" class='far fa-play-circle sizeicono iconoCirculo  iconotrack'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
+             document.querySelector(".listadocanciones").innerHTML+= "<li class='uk-transition-toggle iconoscarrousel' tabindex=0>"+ "<img class=imgtopalbum src="+cadaCancionImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='tracks.html?idDelTrack= "+ idDeTrack+" ''>"+"<h1 class=titucarrousel>"+cadaCancionTitle+"</h1>"+"</a>"+"<i idDeTrack= "+ idDeTrack+" class='far fa-play-circle sizeicono iconoCirculo  iconotrack'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
 
            
         
@@ -276,7 +276,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
           ]
       }
-
+      
 
       //registrar formulario
       document.querySelector(".botonregistrarse").addEventListener("click", function(){
@@ -326,10 +326,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                let usuarioJson= JSON.stringify(usuarios)
                localStorage.setItem("usuarios", usuarioJson)
                console.log(localStorage)
+               console.log(usuarioNuevo)
+               sessionStorage.setItem("usuarioYaRegistrado", usuarioJson)
               
-               
-               
-               
                 let body =document.querySelector(".maincontainer")
                 body.style.display="block"
                 let bienvenida= document.querySelector(".bienvenidacontainer")
@@ -338,27 +337,14 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                 let titulowelcome= document.querySelector(".welcome")
                 titulowelcome.innerHTML+= " " + usuarioNuevo.nombre
             
-                
-               
-        }
-
-
-
-        
-        
-
-
-        
-
-
-            })
             
-            if (usuarioNuevo.nombre != " ") {
-                document.querySelector(".bienvenidacontainer").style.display="none"
-                document.querySelector(".maincontainer").style.display="block"
+                 
+        }
+        
+        
+    })
     
-                   
-               }
+            
             
 
 
