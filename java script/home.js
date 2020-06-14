@@ -124,19 +124,6 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
          console.log (cancionTop1)
         })
         //iconos que se muestren cuando pongo mouse
-         let artistascarrousel= document.querySelector(".maincontainerartistas")
-         artistascarrousel.addEventListener("mouseover", function(){
-             
-             let iconos= document.querySelectorAll(".icono")
-             for (let index = 0; index < iconos.length; index++) {
-                 const cadaIconoArtista = iconos[index];
-                 iconos.classList.remove("sizeicono")
-                 iconos.classList.add("iconoblock")
-                 
-             }
-             
-
-         })
          
              
          
@@ -239,13 +226,14 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
         for (let index = 0; index < usuarios.length; index++) {
             const cadausuarioRegistrado = usuarios[index];
             if (cadausuarioRegistrado.nombre == nombreLogIn.value && cadausuarioRegistrado.password == contraseñaLogIn.value ) {
-                alert("bien")
+               
                 usuarioYaRegistrado= cadausuarioRegistrado
                 let usuarioYaRegistradoJSON= JSON.stringify(usuarioYaRegistrado)
                 sessionStorage.setItem("usuarioYaRegistrado", usuarioYaRegistradoJSON)
                 
                     document.querySelector(".bienvenidacontainer").style.display="none"
                     document.querySelector(".maincontainer").style.display="block"
+                    document.querySelector(".welcome").innerHTML+= " " + " Back" +" "+ usuarioYaRegistrado.nombre
                 
                 
             } 
@@ -292,6 +280,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
         
 
         // campos vacios
+        
 
         if(emailNuevo.value == ""){
             UIkit.notification({
@@ -300,7 +289,8 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                 pos: 'top-center',
                 timeout: 5000
             });
-            document.querySelector(".botonregistrarse").e.preventDefault()
+            
+                
             
         } else if (passwordNueva.value == ""){
             UIkit.notification({
@@ -310,42 +300,70 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                 timeout: 5000
             });
             document.querySelector(".botonregistrarse").e.preventDefault()
-        } else{
-            // paso los datos al localstorage
+        } else if (emailNuevo.value != " ") {
+                let usuarioP = localStorage.getItem("usuarios")
+                usuarioP= JSON.parse(usuarioP)
+                for (let index = 0; index < usuarioP.length; index++) {
+                    const cadaUsuario = usuarioP[index];
+                    let cadaUsuarioEmail= cadaUsuario.email
+                    console.log(cadaUsuarioEmail)
+                    if (emailNuevo.value == cadaUsuarioEmail) {
+                        UIkit.notification({
+                            message: 'email ya registrado, pruebe con otro',
+                            status: 'warning',
+                            pos: 'top-center',
+                            timeout: 5000
+                        }); 
+                        document.querySelector(".botonregistrarse").e.preventDefault()
+
+                    }else{
+                            // paso los datos al localstorage
             
             
 
             
                 //arrayDeGifsFavoritos y le voy a agregar el código el GIF
                let usuarioNuevo= {
-                   nombre: nombreNuevo.value  ,
-                   password: passwordNueva.value ,
-               }
-              let hola= usuarioNuevo
-               usuarios.push(usuarioNuevo)
+                nombre: nombreNuevo.value  ,
+                password: passwordNueva.value ,
+                email: emailNuevo.value
+            }
+            usuarios.push(usuarioNuevo)
                let usuarioJson= JSON.stringify(usuarios)
                localStorage.setItem("usuarios", usuarioJson)
                console.log(localStorage)
                console.log(usuarioNuevo)
-               sessionStorage.setItem("usuarioYaRegistrado", usuarioJson)
+               let usuarioNuevoJson= JSON.stringify(usuarioNuevo)
+               sessionStorage.setItem("usuarioYaRegistrado", usuarioNuevoJson)
               
                 let body =document.querySelector(".maincontainer")
                 body.style.display="block"
                 let bienvenida= document.querySelector(".bienvenidacontainer")
                 bienvenida.style.display="none"
+                let nombreCuandoRegistra= usuarioNuevo.nombre
+                 document.querySelector(".welcome").innerHTML+= " " + nombreCuandoRegistra
                 
-                let titulowelcome= document.querySelector(".welcome")
-                titulowelcome.innerHTML+= " " + usuarioNuevo.nombre
+                console.log(usuarioNuevo.nombre)
+
+                    }
+                    
+                }
+                
+            
+        
+           
             
             
                  
-        }
+            }
         
         
     })
     
             
             
+
+
 
 
 
