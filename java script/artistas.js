@@ -1,6 +1,15 @@
 window.addEventListener("load", function(){
+
+
+
+
         let queryString = new URLSearchParams(location.search);
         let codigoArtista = queryString.get("idDelArtista");
+
+        if (codigoArtista == null) {
+            alert("error, selecciona un artista")
+        }
+        
         fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/"+ codigoArtista)
         .then (function(respuestaartista){
             return respuestaartista.json()
@@ -64,7 +73,7 @@ window.addEventListener("load", function(){
               let nomreAlbum= cadaAlbum.title
               let imgAlbum= cadaAlbum.cover
               let idAlbum= cadaAlbum.id
-              document.querySelector(".listadoartistaalbum").innerHTML+="<li  class='uk-transition-toggle iconoscarrousel' tabindex=0>"+"<img class=imagenalbumartista src='"+imgAlbum+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='albums.html?idDeAlbum="+idAlbum+"'>"+"<h1 class=titulotopalbumartista>"+nomreAlbum+"</h1>"+"</a>"+"<i idiconoAlbum='"+idAlbum+ "' class='far fa-play-circle iconoo sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
+              document.querySelector(".listadoartistaalbum").innerHTML+="<li  class='uk-transition-toggle ' tabindex=0>"+"<img class=imagenalbumartista src='"+imgAlbum+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='albums.html?idDeAlbum="+idAlbum+"'>"+"<h1 class=titulotopalbumartista>"+nomreAlbum+"</h1>"+"</a>"+"<i idiconoAlbum='"+idAlbum+ "' class='far fa-play-circle iconoo sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
               
           }
           let iconoAlbum= document.querySelectorAll(".iconoo")
@@ -95,7 +104,7 @@ window.addEventListener("load", function(){
             let cadaCancionNombre= cadaCancion.title
             let imgCancion= cadaCancion.album.cover
             let idCancion= cadaCancion.id
-            document.querySelector(".tracks").innerHTML+="<li  class='uk-transition-toggle iconoscarrousel' tabindex=0>"+
+            document.querySelector(".tracks").innerHTML+="<li  class='uk-transition-toggle ' tabindex=0>"+
             "<img class=imagenalbumartista  src='"+imgCancion+"'>"+
             "<div class='uk-position-center uk-panel'>"+"<a href='tracks.html?idDelTrack="+idCancion+"'>"+"<h1 class=titulotopalbumartista>"+cadaCancionNombre+"</h1>"+"</a><i idiconoCancion='"+idCancion+"' class='far fa-play-circle iconoTrack sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
             
