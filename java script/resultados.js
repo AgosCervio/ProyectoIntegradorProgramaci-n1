@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
     let queryString= new URLSearchParams(location.search)
     let codigoDelBuscador= queryString.get("buscador")
     
-    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=artist:"+codigoDelBuscador)
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q="+codigoDelBuscador)
     .then(function(respuestaSearchArtista){
         return respuestaSearchArtista.json()
     })
@@ -13,9 +13,28 @@ window.addEventListener("load", function(){
         console.log(infoSearchArtista)
         let infoBuscadorArtista= infoSearchArtista.data
         console.log(infoBuscadorArtista)
+        
+        
+        let idBuscadoArtista= infoBuscadorArtista[0].id
+        let nombreBuscadorArtista= infoBuscadorArtista[0].name
+        let imgBuscadoArtista= infoBuscadorArtista[0].picture
+        document.querySelector(".container-artistas").innerHTML="<div class='div-artista'>"+"<a href='artistas.html?idDelArtista="+idBuscadoArtista+"'>"+"<img src='"+imgBuscadoArtista+"'>"+"<h1 class='nombreArtista'>"+nombreBuscadorArtista+"</h1>"+"</a>"+"</div>"
+              
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 
 
+    
     })
 
 
@@ -61,6 +80,40 @@ window.addEventListener("load", function(){
         })
         
     }
+    })
+
+    fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q="+codigoDelBuscador)
+    .then(function(informacionAlbum){
+        return informacionAlbum.json()
+    })
+    .then(function(infoAlbum){
+        console.log(infoAlbum)
+        let infoAlbumData= infoAlbum.data
+        for (let index = 0; index < infoAlbumData.length; index++) {
+            const cadaAlbumBuscado = infoAlbumData[index];
+            let nombreAlbumBuscado = cadaAlbumBuscado.title
+            let imgAlbum = cadaAlbumBuscado.cover
+            let artistAlbum = cadaAlbumBuscado.artist.name
+            let idAlbumBuscado= cadaAlbumBuscado.id
+            let idArtistaAlbum= cadaAlbumBuscado.artist.id
+            document.querySelector(".div-albumsearch").innerHTML+="<div class=div-search>"+
+        
+            "<a href='albums.html?idDeAlbum="+idAlbumBuscado+"'>"+"<h1 class=titulo-search>"+nombreAlbumBuscado+"</h1>"+"</a>"+
+            "<a href='artistas.html?idDelArtista="+idArtistaAlbum+"'>"+"<h2 class=artista-search>"+artistAlbum+"</h2>"+"</a>"+
+            "<img class=img-search src='"+imgAlbum+"'"+"<div class=div-iconos>"+"<i idBuscadoAlbum='"+idAlbumBuscado+"' class='far fa-play-circle iconoCancion iconossearch iconoAlbumBuscado'></i>"+"<i class='fas fa-heart  iconossearch '></i>"+"</div>"+ "</div>"
+            
+        }
+        let iconoAlbumBuscado= document.querySelectorAll(".iconoAlbumBuscado")
+        for (let index = 0; index < iconoAlbumBuscado.length; index++) {
+            const cadaIcono = iconoAlbumBuscado[index];
+            let idCadaIcono= cadaIcono.getAttribute("idBuscadoAlbum")
+            console.log(idCadaIcono)
+            cadaIcono.addEventListener("click", function(){
+                document.querySelector(".reproduccionArtista").innerHTML= "<iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=1000&height=350&color=007FEB&layout=dark&size=medium&type=album&id="+idCadaIcono+"&app_id=1' width='100%' height='350'></iframe>"
+            })
+            
+        }
+
     })
 
     
