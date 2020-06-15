@@ -8,10 +8,22 @@ window.onload = function(){
     .then(
         function(informacion){
             console.log(informacion)
-            for(let index = 0; index < informacion.data.length;index ++){
-                const genero = informacion.data[index].name
-                console.log(genero)
-            }
+            let contenedorgeneros = document.querySelector (".containgeneros")
+            informacion.data.forEach(genero => {
+                contenedorgeneros.innerHTML += 
+                `
+                <div class="genero2">
+    <div class="containfotogenero">
+    <img class="fotogeneroo" src="${genero.picture_big}" alt="fondo generos">
+    
+</div>
+<h2>${genero.name}</h2>
+
+
+</div>
+                `
+                
+            });
         }
     )
     
