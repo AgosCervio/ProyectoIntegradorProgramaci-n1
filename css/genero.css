@@ -1,14 +1,6 @@
-.containgeneros {
-
-    width: 96%;
-    height: 480px;
-    background-color: rgba(242, 216, 229, 0.5);
+.containgeneros{
     display: grid;
-    grid-template-columns: 49% 49%;
-margin-top: 5px;
-    border: white solid 4px;
-margin: 0 auto;
-
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .nombreartista{
    padding-top: 65px;
@@ -16,7 +8,6 @@ margin: 0 auto;
 .containfotogenero{
     padding-left: 7px;
     position: relative;
-    height: 100%;
     font-family: 'Bitter', serif;
 
 }
@@ -24,11 +15,10 @@ margin: 0 auto;
     margin-top: 30px;
 }
 .fotogeneroo{
-    height: 250px;
-    width: 250px;
+    
     border-radius: 50%;
     border: 2px solid white;
-    margin-top: 115px; 
+    margin-top: 15px; 
     position: relative;
 }
 
@@ -77,20 +67,7 @@ color: rgb(84, 82, 82);
 }
 @media (min-width:600px){
 
-    .containgeneros{
-height: 500px; 
-}
-    .fotogeneroo{
-        height: 280px;
-        width: 280px;
-        margin-top: 110px;
-    }
-    .containinfogenero{
-        height: 400px;
-    }
-    .containfotogenero{
-        height: 400px;
-    }
+   
     .titulogenero{
         right: 95px;
         padding-top: 20px;
@@ -104,14 +81,5 @@ height: 500px;
         top: 250px;
         font-size: 40px;
     }
-    .containgeneros{
-        height: 480px;
-    }
-    .fotogeneroo{
-        height:380px;
-        width: 380px;
-        margin-top: 50px;
-        margin-left: 40px;
-        
-    }
+   
 }
