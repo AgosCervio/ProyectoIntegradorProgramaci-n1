@@ -119,11 +119,9 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
        
          }
 
-         //cancion top 1 de artista muestre en la bienvenida
-         let cancionTop1= trackCanciones[0].link
-         console.log (cancionTop1)
+        
         })
-        //iconos que se muestren cuando pongo mouse
+        
          
              
          
@@ -133,21 +131,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
         
      
-      //carrousel podcasts
-     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/podcasts")
-     .then (function(respuestaPodcasts){
-         return respuestaPodcasts.json()
-     })
-     .then (function(informacionPodcast){
-         console.log(informacionPodcast)
-         let trackPodcast= informacionPodcast.data
-         console.log (trackPodcast)
-         for (let index = 0; index < trackPodcast.length; index++) {
-             const cadaPodcast = trackPodcast[index];
-              
-             
-         }
-        })
+     
         //bienvenida usuario
         
    
@@ -198,7 +182,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
      
 
        
-      //usuario logeado
+      //usuario logeado no se pone la bienvenida pq hay algo en usuarioYaRegistrado
       let usuarioYaRegistrado= sessionStorage.getItem("usuarioYaRegistrado")
      
       if (usuarioYaRegistrado != null) {
@@ -207,51 +191,35 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
             document.querySelector(".welcome").innerHTML+= " " + " Back" +" "+ usuarioYaRegistrado.nombre
             // aca el usuario ya esta logeado 
             document.querySelector(".bienvenidacontainer").style.display="none"
-            document.querySelector(".maincontainer").style.display="block"
-
-            
-            
-           
-          
+            document.querySelector(".maincontainer").style.display="block"   
       } else {
           usuarioYaRegistrado= null
+        }
 
-          
-      }
       //boton sing up 
     document.querySelector(".botoniniciarsesion").addEventListener("click", function(){
-        let nombreLogIn= document.querySelector("#username")
+        let emailLogIn= document.querySelector("#username")
         let contraseñaLogIn= document.querySelector("#password")
 
         for (let index = 0; index < usuarios.length; index++) {
             const cadausuarioRegistrado = usuarios[index];
-            if (cadausuarioRegistrado.nombre == nombreLogIn.value && cadausuarioRegistrado.password == contraseñaLogIn.value ) {
+            if (cadausuarioRegistrado.email == emailLogIn.value && cadausuarioRegistrado.password == contraseñaLogIn.value ) {
                
                 usuarioYaRegistrado= cadausuarioRegistrado
+                console.log(usuarioYaRegistrado)
                 let usuarioYaRegistradoJSON= JSON.stringify(usuarioYaRegistrado)
                 sessionStorage.setItem("usuarioYaRegistrado", usuarioYaRegistradoJSON)
                 
                     document.querySelector(".bienvenidacontainer").style.display="none"
                     document.querySelector(".maincontainer").style.display="block"
                     document.querySelector(".welcome").innerHTML+= " " + " Back" +" "+ usuarioYaRegistrado.nombre
-                
-                
             } 
-            
-
-
-            
-        }
-
-        
-
+            }
 
 
     })
     
-
-
-      let usuarios= localStorage.getItem("usuarios")
+        let usuarios= localStorage.getItem("usuarios")
       if (usuarios != null) {
             usuarios= JSON.parse(usuarios)
             console.log(usuarios)
@@ -269,7 +237,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
       //registrar formulario
       document.querySelector(".botonregistrarse").addEventListener("click", function(){
          
-        
+        console.log(3)
         
         //registro nuevos datos 
         let nombreNuevo= document.querySelector("#name")
@@ -301,10 +269,11 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
             });
             document.querySelector(".botonregistrarse").e.preventDefault()
         } else if (emailNuevo.value != " ") {
-                let usuarioP = localStorage.getItem("usuarios")
-                usuarioP= JSON.parse(usuarioP)
-                for (let index = 0; index < usuarioP.length; index++) {
-                    const cadaUsuario = usuarioP[index];
+                console.log(usuarios)
+                let error= false
+                for (let index = 0; index < usuarios.length; index++) {
+                    const cadaUsuario = usuarios[index];
+                    
                     let cadaUsuarioEmail= cadaUsuario.email
                     console.log(cadaUsuarioEmail)
                     if (emailNuevo.value == cadaUsuarioEmail) {
@@ -315,8 +284,11 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                             timeout: 5000
                         }); 
                         document.querySelector(".botonregistrarse").e.preventDefault()
-
-                    }else{
+                        error = true
+                        
+                    }
+                }
+                    if (error == false){ 
                             // paso los datos al localstorage
             
             
@@ -327,7 +299,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                 nombre: nombreNuevo.value  ,
                 password: passwordNueva.value ,
                 email: emailNuevo.value
-            }
+                        }
             usuarios.push(usuarioNuevo)
                let usuarioJson= JSON.stringify(usuarios)
                localStorage.setItem("usuarios", usuarioJson)
@@ -341,13 +313,13 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                 let bienvenida= document.querySelector(".bienvenidacontainer")
                 bienvenida.style.display="none"
                 let nombreCuandoRegistra= usuarioNuevo.nombre
-                 document.querySelector(".welcome").innerHTML+= " " + nombreCuandoRegistra
+                 document.querySelector(".welcome").innerHTML+= " " + usuarioNuevo.nombre
                 
                 console.log(usuarioNuevo.nombre)
 
                     }
                     
-                }
+                
                 
             
         
