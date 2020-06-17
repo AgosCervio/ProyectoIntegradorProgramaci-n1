@@ -22,7 +22,7 @@ window.addEventListener ("load", function(){
                 const unasola = imagen[index];
                  let img = unasola.picture
                 
-                 document.querySelector (".sectioncanciones").innerHTML = `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>   <a class="ipervincuos" href="miplaylist.html"><p class="ipervincuos"></p></a></a> <p class="duracion">`+duracion+`</p> <p class="iconotracks"> PLAY </p></div>`
+                 document.querySelector (".sectioncanciones").innerHTML = `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>   <a class="ipervincuos `+codigoTracks+`" href="miplaylist.html"><p class="ipervincuos">Agregar a playlist</p></a></a> <p class="duracion">`+duracion+`</p> <p class="iconotracks"> PLAY </p></div>`
 
         
             
@@ -39,6 +39,38 @@ window.addEventListener ("load", function(){
             }
         } )
         
+
+        let bottonPlay= document.querySelectorAll(".ipervincuos")
+          
+        for (let index = 0; index < bottonPlay.length; index++) {
+            const cadaBottonPLay = bottonPlay[index];
+            let idIconoCorazon= cadaBottonPLay.getAttribute("codigoTracks")
+            cadaBottonPLay.addEventListener("click", function(){
+                alert(codigoTracks)
+                
+                if (sessionStorage.getItem("codigoPlaylist")!= null) {
+                  canciones= sessionStorage.getItem("codigoPlaylist").split(",")
+                  canciones.push(codigoTracks)
+                  sessionStorage.setItem("codigoPlaylist", canciones)
+                } else{
+                    canciones= [
+
+                    ]
+                    canciones.push(codigoTracks)
+                    sessionStorage.setItem("codigoPlaylist", canciones)
+
+                }
+                
+                
+                
+            })
+            
+
+
+}
+
+
+
     }) 
    
   
