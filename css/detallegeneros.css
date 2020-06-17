@@ -1,0 +1,308 @@
+.containalbum {
+    grid-template-columns: 40% 45% ;
+    height: auto;
+    background-color: rgba(242, 216, 229, 0.5);
+    display: grid;
+    justify-content: space-between;
+    border: white solid 4px;
+    margin: 10px;
+  
+    
+    }
+
+  
+.titulo{
+  font-family  : 'Bitter', serif;
+color: slategray;
+text-align: center;
+margin: 10px;
+}
+
+
+
+.nombrealbum {
+    
+    font-family: 'Notable', sans-serif;
+    font-size: 20px;
+    color: rgb(84, 82, 82);
+    margin-right: 30px;
+   margin: 0;
+
+    }
+
+    .fotoalbum{
+        border-radius: 50%;
+        margin-top: 10%;
+        margin-left: 10%;
+        width: 100%;
+    }
+      
+     
+    
+   .tiempo{
+       font-size: 10px;
+      
+       max-width: 80%;
+      
+       
+   }
+   address, dl, fieldset, figure, ol, p, pre, ul {
+   margin-top: 0;
+}
+.fa.fa-heart-o {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    margin-top: 30%;
+    color: rgb(84, 82, 82);
+}
+     
+    .temasdelalbum{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       height: auto;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+       color: rgb(84, 82, 82);
+      
+       
+    }
+    .temas {
+        list-style-type: none;
+       margin-left: 0;
+       
+       }
+      
+     .numeros{
+        margin-left: 20px;
+       
+     }
+  
+.titu{
+text-align: center;
+font-family  : 'Bitter', serif;
+color: rgb(84, 82, 82);
+font-weight: bold;
+
+}
+
+       
+     .año {
+        text-align: center;
+        color: rgb(84, 82, 82);
+        font-weight: bold;
+        font-family: 'Norican', cursive;
+        font-size: 10px;
+        margin-top: 5px;
+     margin-left: 30px;
+       
+        }
+        .ipervinculo {
+            font-size: 20px;
+           
+        }
+        .ipervinculo1 {
+            font-size: 20px;
+           
+        }
+      
+       .iconoalbum{
+           
+           color:white;
+           font-size: 25px;
+           font-family  : 'Bitter', serif;
+           border-radius: 20px 20px 20px 20px ;
+           border: 4px solid #FF5470;
+           background-color: purple;
+           width: 50%;
+           height: 50px;
+           text-align: center;
+       }
+
+         
+        .saltar{
+
+            display: none;
+           
+        }
+       
+        .titulodeltrack{
+            color: rgb(84, 82, 82);
+            font-size: 12px;   
+          max-width: 80%;
+          text-align: center;
+        
+            
+        }
+      .iper{
+        text-align: center;
+        color: rgb(84, 82, 82);
+        font-weight: bold;
+        font-family: 'Norican', cursive;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+     
+     .sizeicono {
+        display: block;
+       
+       
+    }
+
+   
+    .icono{
+        text-align: center;
+        max-width: 80%;
+        color: rgb(84, 82, 82);
+     font-size: 10px;
+    }
+ 
+        @media (min-width:600px){
+           
+                .saltar{
+                    display: block;
+                }
+                
+               
+                .nombrealbum{
+                    font-size: 45px;
+                }
+                
+                 .fotoalbum{
+                    padding-top: 10px;
+                padding-left: 10px;                    }
+                
+            
+                .año{
+                    font-size: 20px;
+                   margin-left: 20%;
+              
+                }
+                .ipervinculo{
+                    font-size: 35px;
+                   
+                }
+                .ipervinculo1 {
+                    font-size: 35px;
+                   
+                }
+               
+                .play{
+                    font-size: 35px;
+                    
+                }
+                .titulodeltrack{
+                    font-size: 25px;
+                }
+.tiempo{
+
+font-size: 25px;
+}
+.hash{
+margin-top: 8px;
+margin-left: 10px;
+color: rgb(84, 82, 82);
+font-weight: bold;
+font-size: 35px;
+}
+.icono{
+margin-top: 7px;
+color: rgb(84, 82, 82);
+    font-size: 20px;   
+}
+.titu{
+font-size: 45px;
+}
+.temasdelalbum{
+margin-left: 90px;
+}
+.reproductoralbum{
+margin-left: 30px;
+}
+.fa.fa-heart-o {
+
+margin-top: 0;
+}
+ 
+                }
+                
+                @media(min-width:1024px){
+                    
+                
+                .containalbum{
+                    
+                 
+                    margin-left: 10px;
+                }
+                .fotoalbum{
+                  margin-top: 10px;
+                   
+                    width: 50%;
+                    margin-left: 10%;
+                    border-radius: 50%;
+                
+                }
+
+                
+                   .ipervinculo {
+                    font-size: 45px;
+                   
+                }
+                .ipervinculo1 {
+                    font-size: 45px;
+                   
+                }
+        
+
+               .año{
+                   margin-top: 5px;
+                 margin-right: 50%;
+
+               }
+          
+              .hola{
+                  margin-left: 55px;
+              }
+
+
+             
+
+             
+.iper{
+font-size: 50px;
+}
+            
+.play{
+margin-top: 5px;
+font-size: 83px;
+}
+.titulodeltrack{
+font-size: 45px;
+}
+.tiempo{
+
+font-size: 45px;
+}
+.icono{
+font-size: 30px;
+
+
+}
+.titu{
+font-size: 45px;
+margin-right: 80px;
+}
+.hash{
+font-size: 40px;
+margin-left: 40px;
+}
+             }
+
+
+
+
+
+
+    
+            
+          

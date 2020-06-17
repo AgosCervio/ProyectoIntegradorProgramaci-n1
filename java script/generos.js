@@ -12,7 +12,7 @@ window.onload = function(){
             informacion.data.forEach(genero => {
                 contenedorgeneros.innerHTML += 
                 `
-                <div class="genero2">
+                <a href="detallegeneros.html?iddelgenero=${genero.id}" class="genero2">
     <div class="containfotogenero">
     <img class="fotogeneroo" src="${genero.picture_big}" alt="fondo generos">
     
@@ -20,7 +20,7 @@ window.onload = function(){
 <h2>${genero.name}</h2>
 
 
-</div>
+</a>
                 `
                 
             });
