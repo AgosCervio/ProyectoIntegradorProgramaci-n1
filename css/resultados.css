@@ -7,6 +7,9 @@
     
 
 }
+.titulosdelaspaginas{
+    display: none;
+}
 .div-albumsearch{
     display: grid;
     width: 90%;

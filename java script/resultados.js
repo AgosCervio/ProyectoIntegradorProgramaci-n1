@@ -4,7 +4,7 @@ window.addEventListener("load", function(){
 
     let queryString= new URLSearchParams(location.search)
     let codigoDelBuscador= queryString.get("buscador")
-    
+    let cancionesSearch;
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q="+codigoDelBuscador)
     .then(function(respuestaSearchArtista){
         return respuestaSearchArtista.json()
@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
         let infoBuscadorArtista= infoSearchArtista.data
         console.log(infoBuscadorArtista)
         
-        
+        document.querySelector(".tituloartista").style.display="block"
         let idBuscadoArtista= infoBuscadorArtista[0].id
         let nombreBuscadorArtista= infoBuscadorArtista[0].name
         let imgBuscadoArtista= infoBuscadorArtista[0].picture
@@ -43,6 +43,7 @@ window.addEventListener("load", function(){
         return respuestaSearch.json()
     })
     .then (function(infoSearch){
+        document.querySelector(".titulocanciones").style.display="block"
         console.log(infoSearch)
         if (infoSearch != null) {
             document.querySelector(".div-spinner").style.display="none"
@@ -63,7 +64,7 @@ window.addEventListener("load", function(){
         
         "<a href='tracks.html?idDelTrack="+idBuscado+"'>"+"<h1 class=titulo-search>"+nombreBuscador+"</h1>"+"</a>"+
         "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h2 class=artista-search>"+nombreArtistaBuscado+"</h2>"+"</a>"+
-        "<img class=img-search src='"+imgBuscado+"'"+"<div class=div-iconos>"+"<i idBuscado='"+idBuscado+"' class='far fa-play-circle iconoCancion iconossearch '></i>"+"<i class='fas fa-heart  iconossearch '></i>"+"</div>"+ "</div>"
+        "<img class=img-search src='"+imgBuscado+"'"+"<div class=div-iconos>"+"<i idBuscado='"+idBuscado+"' class='far fa-play-circle iconoCancion iconossearch '></i>"+"<i idIconoPlaylist='"+ idBuscado+"' class='fas fa-heart iconoplaylist  iconossearch '></i>"+"</div>"+ "</div>"
             
         }
         
@@ -80,13 +81,42 @@ window.addEventListener("load", function(){
         })
         
     }
+    let iconoPlaylist= document.querySelectorAll(".iconoplaylist")
+    for (let index = 0; index < iconoPlaylist.length; index++) {
+        const cadaIcono = iconoPlaylist[index];
+        let id = cadaIcono.getAttribute("idIconoPlaylist")
+        cadaIcono.addEventListener("click", function(){
+        
+        alert(id)
+        if (sessionStorage.getItem("codigoPlaylist") != null) {
+            cancionesSearch= sessionStorage.getItem("codigoPlaylist").split(" , ")
+            cancionesSearch.push(id)
+            sessionStorage.setItem("codigoPlaylist", cancionesSearch)
+            
+        }else{
+            cancionesSearch= []
+            cancionesSearch.push(id)
+            sessionStorage.setItem("codigoPlaylist", cancionesSearch)
+        }
+
+    })
+    }
     })
 
+    
+    
+    
+    
+    
+    
+    
+    
     fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q="+codigoDelBuscador)
     .then(function(informacionAlbum){
         return informacionAlbum.json()
     })
     .then(function(infoAlbum){
+        document.querySelector(".tituloalbums").style.display="block"
         console.log(infoAlbum)
         let infoAlbumData= infoAlbum.data
         for (let index = 0; index < infoAlbumData.length; index++) {
