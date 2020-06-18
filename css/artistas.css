@@ -11,7 +11,7 @@
         display: block;
     }
     .containartista {
-       height: 400px;
+       height: 450px;
        background-color: rgba(242, 216, 229, 0.5);
        display: grid;
        grid-template-columns: 33% 33% 33%;
@@ -70,7 +70,8 @@
         color: rgb(84, 82, 82);
     }
     .listacanciones {
-        margin-top: 0%;
+        margin-top: 5%;
+        margin-left: 15%;
     }
     .rojo{  
         height: 80%;

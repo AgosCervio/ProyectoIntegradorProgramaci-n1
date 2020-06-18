@@ -62,7 +62,7 @@ window.addEventListener("load", function(){
               const cadaIconoCorazon = iconoCorazon[index];
               let idIconoCorazon= cadaIconoCorazon.getAttribute("idiconoCorazon")
               cadaIconoCorazon.addEventListener("click", function(){
-                  alert(idIconoCorazon)
+                  
                   
                   if (sessionStorage.getItem("codigoPlaylist")!= null) {
                     canciones= sessionStorage.getItem("codigoPlaylist").split(",")
@@ -153,7 +153,7 @@ window.addEventListener("load", function(){
             const cadaCorazon = corazon[index];
             let idCorazon = cadaCorazon.getAttribute("idCanciones")
             cadaCorazon.addEventListener("click", function(){
-                alert(idCorazon)
+                
                
                if ( sessionStorage.getItem("codigoPlaylist") != null){
                    canciones= sessionStorage.getItem("codigoPlaylist").split(",")
