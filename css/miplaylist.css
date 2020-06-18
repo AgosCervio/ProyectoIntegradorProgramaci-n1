@@ -1,91 +1,80 @@
-.titulo{
-  color: slategray;
-}
-.imagencancionplaylist {
-  width: 50%;
-  margin: 0 25%;
+.section{
+  grid-template-columns: 40% 50% ;
   height: auto;
-  border: solid black;
-  margin-top: 20px;
-}
-.miplaylisttitulo{
-  height: 100px;
-}
-
-.titulocancionplaylist{
-  font-family: 'Courier New', Courier, monospace;
-  color: slategray;
-  text-align: center;
-  font-size: 40px;
-  margin-top: 20px;
-  
-}
-.artistacancionplaylist{
-  font-family: 'Norican', cursive;
-  text-align: center;
-  color:slategray;
-  font-size: 30px;
-}
-
-.cancionesplaylist{
-  margin: 0 auto;
-  padding-left: 0%;
-  list-style: none;
-}
-
-.playlistcategoria {
-display: none;
-
-}
-
-@media (min-width:768px){
-
-.cancionesplaylist{
+ 
+  background-color: rgba(242, 216, 229, 0.5);
   display: grid;
-  width: 100%;
-  
-  
-  justify-content: center;
-      }
-  
-      .divcancionesplaylist {
-  border: 1px solid white;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 33% 33% 33%;
-      }
-  
-      .imagencancionplaylist {
-          width: 60%;
-          height: 100px;
-          margin-top: 0%;
-      }
-  
-      .titulocancionplaylist{
-          margin: 5% auto; 
-          font-size: 30px; 
-          padding-top: 5px; 
-      }
-  
-      .artistacancionplaylist{
-          margin: 5% auto;
-          font-size: 20px;
-          padding-top: 15px;
-      }
+  justify-content: space-between;
+  border: white solid 4px;
+  margin: 10px;
+  margin-left: 10px;
+}
 
-      .playlistcategoria li{
-          font-family: 'Courier New', Courier, monospace;
-              color: slategray;
-              text-align: center;
-              font-size: 20px;
-              text-decoration: underline;
-              padding-top: 30px;
-          }
-          .madeby{
-              margin-top: 100px;
-          }
-          .miplaylisttitulo{
-              height: 50px;
-          }
-      }
+ul{
+  list-style-type: none;
+ margin-left: 0;
+ margin-right: 30px;
+}
 
+.cancion{
+  border-radius: 50%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+ 
+
+ }
+
+ .nombrecancion{
+  font-family: 'Notable', sans-serif;
+  font-size: 15px;
+  color: rgb(84, 82, 82);
+  margin-right: 30px;
+ margin: 0;
+    
+   
+   }
+   .tituloss {
+        
+    font-size: 20px;
+    color: white;
+
+   }
+   .iconotracks{
+font-size: 35px;
+color: rgb(84, 82, 82);
+}
+
+@media (min-width:600px){
+
+  .tituloss{
+    font-size: 35px;
+  }
+.nombrecancion{
+  font-size: 35px;
+}
+
+.iconotracks{
+  margin-top: 10%;
+  font-size: 45px;
+  margin-bottom: 10%;
+}
+}
+@media (min-width:1024px){
+
+  .cancion{
+    width: 40%;
+  }
+
+  .tituloss{
+    font-size: 50px;
+  
+  }
+  .nombrecancion{
+    font-size: 50px;
+  }
+  .iconotracks{
+    margin: 0;
+  }
+}

@@ -30,7 +30,7 @@
                   let imagen = track.album.cover
                   let idTrack= track.id
                   
-            document.querySelector(".listacanciones").innerHTML += "<li>"+"<img src='"+ imagen+"'>"+"<a href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2>"+nombre+"</h2>"+"</a>"+"<a href='artistas.html?idDelArtista="+idArtista+"'><h3>"+artista+"</h3></a>"+"<a href='albums.html?idDeAlbum="+idDeAlbum+"'><h2>"+album+"</h2></a>"+ "<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+"</li>"
+            document.querySelector(".listacanciones").innerHTML += "<li>"+" <div class=section>"+"<img class=cancion src='"+ imagen+"'>"+"<div class=sectioninfo>"+"<a class=nombrecancion href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2 class= nombrecancion>"+nombre+"</h2>"+"</a>"+"<a class=ipervinculos href='artistas.html?idDelArtista="+idArtista+"'><h2 class= tituloss>"+artista+"</h2></a>"+"<a  class=ipervinculos href='albums.html?idDeAlbum="+idDeAlbum+"'><h2 class= tituloss>"+album+"</h2></a>"+ "<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+"</li>"+"</div>"+"</div>"
 
                   
               
@@ -55,6 +55,7 @@
 
  } else{
      alert("crea una playlist")
+     
  }
 
  })
