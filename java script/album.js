@@ -70,11 +70,46 @@ window.addEventListener ("load", function(){
            let idtema= cadatema.id
            let duracion = cadatema.duration
 
-          
-     
-           document.querySelector (".temasdelalbum").innerHTML += "<div class=numeros>   <i idtema="+idtema+" class='fa fa-play-circle play' aria-hidden='true'></i></div> <div class=hola><ul class=temas><li><a href='tracks.html?idDelTrack="+idtema+"'><h1 class=titulodeltrack>"+nombretema+"</h1></a></li></ul></div><p class=tiempo>"+duracion+"</p><div class=icono><i class='fa fa-heart-o' aria-hidden='true'></i> </div> "
+           document.querySelector (".temasdelalbum").innerHTML += "<div class=numeros>   <i idtema="+idtema+" class='fa fa-play-circle play' aria-hidden='true'></i></div> <div class=hola><ul class=temas><li><a href='tracks.html?idDelTrack="+idtema+"'><h1 class=titulodeltrack>"+nombretema+"</h1></a></li></ul></div><p class=tiempo>"+duracion+"</p><div class=icono><a href='miplaylist.html'><i  idGo="+idtema+" class='fa fa-heart-o go' ></i></a> </div> "
+           
+        
+         
         
 
+          let go= document.querySelectorAll(".go")
+          
+          for (let index = 0; index < go.length; index++) {
+              const cadaGoPlay = go[index];
+              let idGo= cadaGoPlay.getAttribute("idGo")
+              cadaGoPlay.addEventListener("click", function(){
+                cadaGoPlay.style.backgroundColor = "blue"
+               
+       
+                alert(idGo)
+                  
+                  if (sessionStorage.getItem("codigoPlaylist")!= null) {
+                    canciones= sessionStorage.getItem("codigoPlaylist").split(",")
+                    canciones.push(idGo)
+                    sessionStorage.setItem("codigoPlaylist", canciones)
+                  } else{
+                      canciones= [
+
+                      ]
+                      canciones.push(idGo)
+                      sessionStorage.setItem("codigoPlaylist", canciones)
+
+                  }
+                  
+                  
+                  
+              })
+
+
+
+
+
+
+               
 
            let play = document.querySelectorAll (".play")
            for (let index = 0; index < play.length; index++) {
@@ -86,8 +121,13 @@ window.addEventListener ("load", function(){
                   })
             
                 }
-      
+              
 
+              
+                
+               
+              } 
+         
 
 
            }
