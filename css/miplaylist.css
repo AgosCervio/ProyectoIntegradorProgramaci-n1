@@ -33,8 +33,7 @@ ul{
   margin-right: 30px;
  margin: 0;
     
-   
-   }
+      }
    .tituloss {
         
     font-size: 20px;
@@ -46,6 +45,11 @@ font-size: 35px;
 color: rgb(84, 82, 82);
 }
 
+.borrar{
+  margin-left: 5%;
+  font-size: 30px;
+color: rgb(84, 82, 82);
+}
 @media (min-width:600px){
 
   .tituloss{
@@ -53,6 +57,7 @@ color: rgb(84, 82, 82);
   }
 .nombrecancion{
   font-size: 35px;
+
 }
 
 .iconotracks{
@@ -60,7 +65,13 @@ color: rgb(84, 82, 82);
   font-size: 45px;
   margin-bottom: 10%;
 }
+.borrar{
+  margin-top: 10%;
+  font-size: 40px;
+  margin-bottom: 10%;
 }
+}
+
 @media (min-width:1024px){
 
   .cancion{
@@ -75,6 +86,9 @@ color: rgb(84, 82, 82);
     font-size: 50px;
   }
   .iconotracks{
+    margin: 0;
+  }
+  .borrar{
     margin: 0;
   }
 }
