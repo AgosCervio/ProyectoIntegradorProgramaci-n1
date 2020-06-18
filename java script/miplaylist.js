@@ -39,7 +39,7 @@ let codigoPlaylist = localStorage.getItem ("codigoPlaylist")
                      }
             document.querySelector (".sectionfavoritas").innerHTML += `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>   <p class="duracion">`+duracion+`</p> <p class="iconotracks"> PLAY </p></div>`
 
-                  
+                  ""
               
 
               } )
@@ -55,6 +55,15 @@ let codigoPlaylist = localStorage.getItem ("codigoPlaylist")
  
 
  
+
+ ` <ol class="cancionesplaylist">
+ <div class="divcancionesplaylist playlistcategoria"><li>Nombre</li><li>Artista</li><li>Cancion</li></div>
+ <div class="divcancionesplaylist"><li class="titulocancionplaylist"><p class=nombrecancion>`+nombre+`</p></li>
+ <li class="artistacancionplaylist">   <a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a> </li>
+<li><img class="imagencancionplaylist" src="`+ img+`" alt=""></li></div>
+ 
+  
+</ol>`
 
 
   
