@@ -1,53 +1,60 @@
 
-  
-
-  
-  
-   
-    window.addEventListener("load", function() {
+  window.addEventListener("load", function() {
         
  
-let codigoPlaylist = localStorage.getItem ("codigoPlaylist")
-   if (codigoPlaylist == null) {
-       alert ("no hay fav")
-   }else{
-       codigoPlaylist = codigoPlaylist.split (",")
+
+   if (sessionStorage.getItem("codigoPlaylist") != null) {
+       
+    let codigoPlaylist = sessionStorage.getItem("codigoPlaylist").split(",")
+       
        for (let index = 0; index < codigoPlaylist.length; index++) {
-           const favorita = codigoPlaylist[index];
+           const cadaCancionFavorita = codigoPlaylist[index];
            
-           fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/"+favorita+"/tracks")
+           fetch ("https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/"+cadaCancionFavorita)
            .then (
               function(respuesta){
-              return respuesta.json ();
+              return respuesta.json()
                })
            .then(
               function(informaciontracks){
-                  let tracks = informaciontracks
-                  console.log (tracks)
-                  let nombre = informaciontracks.title
-                  let artista = informaciontracks.artist.name
-                  let idArtista = informaciontracks.artist.id
-                  let duracion = informaciontracks.duration
-                  let album = informaciontracks.album.title
-                  let idDeAlbum = informaciontracks.album.id
-                  let imagen = informaciontracks.contributors
-                  for (let index = 0; index < imagen.length; index++) {
-                    const unasola = imagen[index];
-                     let img = unasola.picture
-                     
+                  console.log(informaciontracks)
+                   let track = informaciontracks
+                  console.log (track)
+                  let nombre = track.title
+                  console.log(nombre)
+                  let artista = track.artist.name
+                  let idArtista = track.artist.id
+                  let duracion = track.duration
+                  let album = track.album.title
+                  let idDeAlbum = track.album.id
+                  let imagen = track.album.cover
+                  let idTrack= track.id
+                  
+            document.querySelector(".listacanciones").innerHTML += "<li>"+"<img src='"+ imagen+"'>"+"<a href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2>"+nombre+"</h2>"+"</a>"+"<a href='artistas.html?idDelArtista="+idArtista+"'><h3>"+artista+"</h3></a>"+"<a href='albums.html?idDeAlbum="+idDeAlbum+"'><h2>"+album+"</h2></a>"+ "<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+"</li>"
 
-                     }
-                     document.querySelector (".sectionfavoritas").innerHTML += `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>   <p class="duracion">`+duracion+`</p> <p class="iconotracks"> PLAY </p></div>`
-
-                     ""              
-
-            
-                    } )
+                  
+              
+            let play = document.querySelectorAll(".iconotracks")
+            for (let index = 0; index < play.length; index++) {
+                const cadaPlay = play[index];
+                let id = cadaPlay.getAttribute("id")
+                cadaPlay.addEventListener("click", function(){
+                    
+                    document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
+                })
+                
+            }
+   
+              })
+              
        
    }
+   
 
  
 
+ } else{
+     alert("crea una playlist")
  }
 
  })
@@ -55,14 +62,7 @@ let codigoPlaylist = localStorage.getItem ("codigoPlaylist")
  
 
 
- ` <ol class="cancionesplaylist">
- <div class="divcancionesplaylist playlistcategoria"><li>Nombre</li><li>Artista</li><li>Cancion</li></div>
- <div class="divcancionesplaylist"><li class="titulocancionplaylist"><p class=nombrecancion>`+nombre+`</p></li>
- <li class="artistacancionplaylist">   <a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a> </li>
-<li><img class="imagencancionplaylist" src="`+ img+`" alt=""></li></div>
- 
-  
-</ol>`
+
 
 
 
