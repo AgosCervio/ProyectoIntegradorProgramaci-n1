@@ -4,7 +4,7 @@
  
 
    if (sessionStorage.getItem("codigoPlaylist") != null) {
-       alert("hola")
+       
     let codigoPlaylist = sessionStorage.getItem("codigoPlaylist").split(",")
        
        for (let index = 0; index < codigoPlaylist.length; index++) {
@@ -30,26 +30,31 @@
                   let imagen = track.album.cover
                   let idTrack= track.id
                   
-            document.querySelector(".listacanciones").innerHTML += `<li><div class="sectioncancionesfoto"><img class=cancion src="`+ imagen+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum=`+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>   <p class="duracion">`+duracion+`</p> <p id="`+idTrack+ `class="iconotracks"> PLAY </p></div></li>`
+            document.querySelector(".listacanciones").innerHTML += "<li>"+"<img src='"+ imagen+"'>"+"<a href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2>"+nombre+"</h2>"+"</a>"+"<a href='artistas.html?idDelArtista="+idArtista+"'><h3>"+artista+"</h3></a>"+"<a href='albums.html?idDeAlbum="+idDeAlbum+"'><h2>"+album+"</h2></a>"+ "<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+"</li>"
 
                   
-              let play = document.querySelectorAll("iconotracks")
-              for (let index = 0; index < play.length; index++) {
-                  const cadaPlay = play[index];
-                  let id = cadaPlay.getAttribute("id")
-                  cadaPlay.addEventListener("click", function(){
-                      alert("anda")
-                      document.querySelector(".reproductortrack").innerHTML= "<iframe class=iframe id=dzplayer dztype=dzplayer src='http://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=tracks&id="+id+"' scrolling=no frameborder=0 style=border:none; overflow:hidden; width=700 height=40 allowTransparency=true></iframe>"
-                  })
-                  
-              }
-
+              
+            let play = document.querySelectorAll(".iconotracks")
+            for (let index = 0; index < play.length; index++) {
+                const cadaPlay = play[index];
+                let id = cadaPlay.getAttribute("id")
+                cadaPlay.addEventListener("click", function(){
+                    
+                    document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
+                })
+                
+            }
+   
               })
+              
        
    }
+   
 
  
 
+ } else{
+     alert("crea una playlist")
  }
 
  })
