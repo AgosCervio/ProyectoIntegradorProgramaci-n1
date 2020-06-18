@@ -24,7 +24,7 @@
     .nombrealbum {
         
         font-family: 'Notable', sans-serif;
-        font-size: 20px;
+        font-size: 17px;
         color: rgb(84, 82, 82);
         margin-right: 30px;
        margin: 0;
@@ -165,7 +165,7 @@
                     
                    
                     .nombrealbum{
-                        font-size: 45px;
+                        font-size: 35px;
                     }
                     
                      .fotoalbum{
