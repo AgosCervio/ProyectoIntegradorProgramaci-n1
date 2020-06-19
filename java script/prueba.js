@@ -9,10 +9,7 @@ window.addEventListener("load", function(){
             
         
            
-    } else{
-        reproduccionCanciones.style.display="none"
-    }
-
+    } 
     
     
        
