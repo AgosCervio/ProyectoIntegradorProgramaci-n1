@@ -55,10 +55,10 @@
                    const cadaBorrar = borrar[index];
                    let iddd= cadaBorrar.getAttribute("idd")
                    cadaBorrar.addEventListener("click", function(){
-                    alert("hl")
+                  
                     
                      if (codigoPlaylist.includes(iddd) ){
-                         alert("matcheo")
+                        
                          let seva = codigoPlaylist.indexOf(iddd)
                          console.log(seva)
                        codigoPlaylist.splice(seva, 1);
