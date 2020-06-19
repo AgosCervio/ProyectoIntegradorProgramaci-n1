@@ -32,6 +32,7 @@ window.addEventListener("load", function (){
                 let cadaIdIcono = cadaIconoArtista.getAttribute("idArtista")
                 console.log(cadaIconoArtista)
                 cadaIconoArtista.addEventListener("click", function(){
+                    sessionStorage.setItem("reproduccion", cadaIdIcono)
                 document.querySelector(".reproduccionArtista").innerHTML="<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=1000&height=250&color=007FEB&layout=dark&size=medium&type=radio&id=artist-"+cadaIdIcono+"&app_id=1' width='100%''height='100'></iframe>"
                 })
                 
@@ -114,6 +115,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
              const cadaIconotrack= iconotrack[index];
              let idcada1 = cadaIconotrack.getAttribute ("idDeTrack")
              cadaIconotrack.addEventListener("click", function(){
+                sessionStorage.setItem("reproduccion", idcada1)
              document.querySelector(".reproduccionArtista").innerHTML= `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcada1+`&app_id=1" width="100%" height="100"></iframe>`
               })
        
@@ -295,39 +297,32 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
 
             
                 //arrayDeGifsFavoritos y le voy a agregar el código el GIF
-               let usuarioNuevo= {
-                nombre: nombreNuevo.value  ,
-                password: passwordNueva.value ,
-                email: emailNuevo.value
-                        }
-            usuarios.push(usuarioNuevo)
-               let usuarioJson= JSON.stringify(usuarios)
-               localStorage.setItem("usuarios", usuarioJson)
-               console.log(localStorage)
-               console.log(usuarioNuevo)
-               let usuarioNuevoJson= JSON.stringify(usuarioNuevo)
-               sessionStorage.setItem("usuarioYaRegistrado", usuarioNuevoJson)
-              
-                let body =document.querySelector(".maincontainer")
-                body.style.display="block"
-                let bienvenida= document.querySelector(".bienvenidacontainer")
-                bienvenida.style.display="none"
-                let nombreCuandoRegistra= usuarioNuevo.nombre
-                 document.querySelector(".welcome").innerHTML+= " " + usuarioNuevo.nombre
-                
-                console.log(usuarioNuevo.nombre)
-
+                    let usuarioNuevo= {
+                    nombre: nombreNuevo.value  ,
+                    password: passwordNueva.value ,
+                    email: emailNuevo.value
                     }
+                    usuarios.push(usuarioNuevo)
+                    let usuarioJson= JSON.stringify(usuarios)
+                    localStorage.setItem("usuarios", usuarioJson)
+                    console.log(localStorage)
+                    console.log(usuarioNuevo)
+                    let usuarioNuevoJson= JSON.stringify(usuarioNuevo)
+                    sessionStorage.setItem("usuarioYaRegistrado", usuarioNuevoJson)
+              
+                    let body =document.querySelector(".maincontainer")
+                    body.style.display="block"
+                    let bienvenida= document.querySelector(".bienvenidacontainer")
+                    bienvenida.style.display="none"
+                    let nombreCuandoRegistra= usuarioNuevo.nombre
+                    document.querySelector(".welcome").innerHTML+= " " + usuarioNuevo.nombre
+                
+                    console.log(usuarioNuevo.nombre)
+
+                 }
                     
                 
-                
-            
-        
-           
-            
-            
-                 
-            }
+                }// cierra else ifde mail completado
         
         
     })

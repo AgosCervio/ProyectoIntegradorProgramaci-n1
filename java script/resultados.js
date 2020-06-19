@@ -76,6 +76,7 @@ window.addEventListener("load", function(){
         console.log(cadaIconoCancion)
         
         cadaIconoCancion.addEventListener("click", function(){
+            sessionStorage.setItem("reproduccion", cadaIdIcono)
            
         document.querySelector(".reproduccionArtista").innerHTML="<iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=1000&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+cadaIdIcono+"&app_id=1' width='100%' height='150'></iframe>"
         })

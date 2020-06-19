@@ -36,7 +36,7 @@ window.addEventListener ("load", function(){
                const cadacancionalbum = iconoalbum[index];
                
                cadacancionalbum.addEventListener("click", function(){
-                   document.querySelector (".reproductoralbum").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id='+codigoAlbum+'&app_id=1" width="700" height="350"></iframe>'
+                   document.querySelector (".reproduccionArtista").innerHTML = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id='+codigoAlbum+'&app_id=1" width="100%" height="350"></iframe>'
                   
                   })
             
@@ -101,7 +101,8 @@ window.addEventListener ("load", function(){
                const cadacanciondel = play[index];
                let idcadau = cadacanciondel.getAttribute("idtema")
                cadacanciondel.addEventListener("click", function(){
-                   document.querySelector (".playcancion").innerHTML = `<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=`+idcadau +`&app_id=1" width="300" height="300"></iframe>`
+                 sessionStorage.setItem("reproduccion", idcadau)
+                   document.querySelector (".reproduccionArtista").innerHTML = "<iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+idcadau+"&app_id=1' width='100%' height='350'></iframe>"
                   
                   })
             
