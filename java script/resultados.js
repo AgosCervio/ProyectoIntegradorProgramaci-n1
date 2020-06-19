@@ -76,6 +76,7 @@ window.addEventListener("load", function(){
         console.log(cadaIconoCancion)
         
         cadaIconoCancion.addEventListener("click", function(){
+            
             sessionStorage.setItem("reproduccion", cadaIdIcono)
            
         document.querySelector(".reproduccionArtista").innerHTML="<iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=1000&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+cadaIdIcono+"&app_id=1' width='100%' height='150'></iframe>"
@@ -88,7 +89,12 @@ window.addEventListener("load", function(){
         let id = cadaIcono.getAttribute("idIconoPlaylist")
         cadaIcono.addEventListener("click", function(){
         
-        alert(id)
+            UIkit.notification({
+                message: 'Se ha agregado a tu Playlist',
+                status: 'success',
+                pos: 'top-center',
+                timeout: 1000
+            });
         if (sessionStorage.getItem("codigoPlaylist") != null) {
             cancionesSearch= sessionStorage.getItem("codigoPlaylist").split(" , ")
             cancionesSearch.push(id)

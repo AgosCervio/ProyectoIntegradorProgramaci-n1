@@ -66,6 +66,12 @@ window.addEventListener("load", function(){
               const cadaIconoCorazon = iconoCorazon[index];
               let idIconoCorazon= cadaIconoCorazon.getAttribute("idiconoCorazon")
               cadaIconoCorazon.addEventListener("click", function(){
+                UIkit.notification({
+                    message: 'Se ha agregado a tu Playlist',
+                    status: 'success',
+                    pos: 'top-center',
+                    timeout: 1000
+                });
                   
                   
                   if (sessionStorage.getItem("codigoPlaylist")!= null) {
@@ -158,7 +164,12 @@ window.addEventListener("load", function(){
             const cadaCorazon = corazon[index];
             let idCorazon = cadaCorazon.getAttribute("idCanciones")
             cadaCorazon.addEventListener("click", function(){
-                
+                UIkit.notification({
+                    message: 'Se ha agregado a tu Playlist',
+                    status: 'success',
+                    pos: 'top-center',
+                    timeout: 1000
+                });
                 sessionStorage.setItem("reproduccion", idCorazon)
                if ( sessionStorage.getItem("codigoPlaylist") != null){
                    canciones= sessionStorage.getItem("codigoPlaylist").split(",")
