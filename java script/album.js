@@ -74,14 +74,13 @@ window.addEventListener ("load", function(){
            
 //capta los id de del track para cada corazon y al clickear se cambian de color a azul
           let go = document.querySelectorAll(".go")
-          for (let index = 0; index < go.length; index++) {
+          for (let index = 0;  index < go.length; index++) {
               const cadaGoPlay = go[index];
               let idGo= cadaGoPlay.getAttribute("idGo")
               cadaGoPlay.addEventListener("click", function(){
                 cadaGoPlay.style.backgroundColor = "blue"
 
-              
-               
+ 
                   //cancion  se agrega a playlist
                   if (sessionStorage.getItem("codigoPlaylist")!= null) {
                     canciones= sessionStorage.getItem("codigoPlaylist").split(",")
@@ -89,6 +88,7 @@ window.addEventListener ("load", function(){
                     sessionStorage.setItem("codigoPlaylist", canciones)
                   } else{
                       canciones= [
+                    
                       ]
                       canciones.push(idGo)
                       sessionStorage.setItem("codigoPlaylist", canciones)
