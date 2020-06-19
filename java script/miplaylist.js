@@ -48,28 +48,22 @@
 
 
                 let borrar = document.querySelector(".borrar")
-                for (let index = 0; index < borrar.length; index++) {
-                    const borrarcancion = borrar[index];
-                    
+               
 
                 
                 borrar.addEventListener("click", function(e){
                   e.preventDefault()
-               
-                  for (let i = 0; i <borrarcancion.length; i++) {
-                   if (borrarcancion [i] == id ){
-                     borrarcancion.splice (i, 1);
+                  for (let i = 0; i <canciones.length; i++) {
+                   if (canciones [i] == id ){
+                     canciones.splice (i, 1);
                    } 
                   }
-                 
-                  let boton = document.querySelector (".borrar")
+                  let boton = document.querySelector (".section")
                   boton.style.display += "none"
-                 
-               
                   console.log (canciones)
                   sessionStorage.setItem ("codigoPlaylist", canciones)
                 })
-            }
+            
             
 
                 cadaPlay.addEventListener("click", function(){
