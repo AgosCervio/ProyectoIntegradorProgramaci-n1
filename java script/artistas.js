@@ -44,13 +44,17 @@ window.addEventListener("load", function(){
              
               
           }
+
+          
+          //home
           let iconos= document.querySelectorAll(".icono")
           for (let index = 0; index < iconos.length; index++) {
               const cadaIconoTopFive = iconos[index];
               let idCadaIconoTopFive= cadaIconoTopFive.getAttribute("idTrack")
               cadaIconoTopFive.addEventListener("click", function(){
-                document.querySelector(".reproduccionArtista").innerHTML= "<iframe scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=true&playlist=true&width=1000&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+idCadaIconoTopFive+"&app_id=1' width='100%' height='350'></iframe>"
-
+                  sessionStorage.setItem("reproduccion", idCadaIconoTopFive)
+                  document.querySelector(".reproduccionArtista").innerHTML="<iframe class='iframe' scrolling=no frameborder=0 allowTransparency=true src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+idCadaIconoTopFive+"&app_id=1' width=100% height=350></iframe>"
+                  
               })
               
           }
@@ -85,6 +89,7 @@ window.addEventListener("load", function(){
       })
       
 
+      
 
 
       //albums artista
@@ -154,7 +159,7 @@ window.addEventListener("load", function(){
             let idCorazon = cadaCorazon.getAttribute("idCanciones")
             cadaCorazon.addEventListener("click", function(){
                 
-               
+                sessionStorage.setItem("reproduccion", idCorazon)
                if ( sessionStorage.getItem("codigoPlaylist") != null){
                    canciones= sessionStorage.getItem("codigoPlaylist").split(",")
                    
