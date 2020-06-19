@@ -58,6 +58,12 @@
                   
                     
                      if (codigoPlaylist.includes(iddd) ){
+                        UIkit.notification({
+                            message: 'Se ha borrado de tu playlist',
+                            status: 'danger',
+                            pos: 'top-center',
+                            timeout: 2000
+                        });
                         
                          let seva = codigoPlaylist.indexOf(iddd)
                          console.log(seva)
