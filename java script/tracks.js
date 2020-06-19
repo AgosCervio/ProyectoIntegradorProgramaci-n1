@@ -50,7 +50,7 @@ window.addEventListener ("load", function(){
                 
                 if (sessionStorage.getItem("codigoPlaylist")!= null) {
                   canciones= sessionStorage.getItem("codigoPlaylist").split(",")
-                  canciones.push(codigoTracks)
+                  canciones.push(idIconoCorazon)
                   sessionStorage.setItem("codigoPlaylist", canciones)
                 } else{
                     canciones= [
