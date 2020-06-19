@@ -21,7 +21,7 @@ window.addEventListener("load", function (){
             let cadaArtistaImage= cadaArtista.picture
             let cadaArtistaCanciones= cadaArtista.tracklist
             console.log(cadaArtistaCanciones)
-            document.querySelector(".listadoartistas").innerHTML+= "<li class='uk-transition-toggle'  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i idArtista='"+ idArtista+"' class='far fa-play-circle icono sizeicono iconoCirculo iconoArtista'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</li>"
+            document.querySelector(".listadoartistas").innerHTML+= "<li class='uk-transition-toggle'  tabindex=0 uk-transition-slide-top>"+ "<img class=imgtopalbum src="+cadaArtistaImage+">"+"<div class=uk-position-center uk-panel >" + "<a href='artistas.html?idDelArtista="+idArtista+"'>"+"<h1 class=titucarrousel>"+cadaArtistaName+"</h1>"+"</a>"+"<i idArtista='"+ idArtista+"' class='far fa-play-circle icono sizeicono iconoCirculo iconoArtista'></i>"+"</li>"
 
     
             
@@ -75,7 +75,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
              
      
      fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigoAlbum+"/tracks")
-             document.querySelector(".listadoalbums").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaAlbumImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='albums.html?idDeAlbum= " + idDeAlbum + "''>"+"<h1 class=titucarrousel>"+cadaAlbumTitle+"</h1>"+"</a>"+"<i idDeAlbum="+ idDeAlbum +" class='far fa-play-circle sizeicono iconoCirculo  iconoalbum'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>" 
+             document.querySelector(".listadoalbums").innerHTML+= "<li class=uk-transition-toggle tabindex=0>"+ "<img class=imgtopalbum src="+cadaAlbumImage+">"+"<div class=uk-position-center uk-panel>"+"<a href='albums.html?idDeAlbum= " + idDeAlbum + "''>"+"<h1 class=titucarrousel>"+cadaAlbumTitle+"</h1>"+"</a>"+"<i idDeAlbum="+ idDeAlbum +" class='far fa-play-circle sizeicono iconoCirculo  iconoalbum'></i>"+"</div>"+"</li>" 
  
          }
          let iconoalbum= document.querySelectorAll(".iconoalbum")

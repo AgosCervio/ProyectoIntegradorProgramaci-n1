@@ -112,7 +112,7 @@ window.addEventListener("load", function(){
               let nomreAlbum= cadaAlbum.title
               let imgAlbum= cadaAlbum.cover
               let idAlbum= cadaAlbum.id
-              document.querySelector(".listadoartistaalbum").innerHTML+="<li  class='uk-transition-toggle ' tabindex=0>"+"<img class=imagenalbumartista src='"+imgAlbum+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='albums.html?idDeAlbum="+idAlbum+"'>"+"<h1 class=titulotopalbumartista>"+nomreAlbum+"</h1>"+"</a>"+"<i idiconoAlbum='"+idAlbum+ "' class='far fa-play-circle iconoo sizeicono'></i>"+"<i class='fas fa-heart sizeicono'></i>"+"</div>"+"</li>"
+              document.querySelector(".listadoartistaalbum").innerHTML+="<li  class='uk-transition-toggle ' tabindex=0>"+"<img class=imagenalbumartista src='"+imgAlbum+"'>"+"<div class='uk-position-center uk-panel'>"+"<a href='albums.html?idDeAlbum="+idAlbum+"'>"+"<h1 class=titulotopalbumartista>"+nomreAlbum+"</h1>"+"</a>"+"<i idiconoAlbum='"+idAlbum+ "' class='far fa-play-circle iconoo sizeicono'></i>"+"</div>"+"</li>"
               
           }
           let iconoAlbum= document.querySelectorAll(".iconoo")

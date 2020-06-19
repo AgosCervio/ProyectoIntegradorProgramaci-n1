@@ -137,7 +137,7 @@ window.addEventListener("load", function(){
         
             "<a href='albums.html?idDeAlbum="+idAlbumBuscado+"'>"+"<h1 class=titulo-search>"+nombreAlbumBuscado+"</h1>"+"</a>"+
             "<a href='artistas.html?idDelArtista="+idArtistaAlbum+"'>"+"<h2 class=artista-search>"+artistAlbum+"</h2>"+"</a>"+
-            "<img class=img-search src='"+imgAlbum+"'"+"<div class=div-iconos>"+"<i idBuscadoAlbum='"+idAlbumBuscado+"' class='far fa-play-circle iconoCancion iconossearch iconoAlbumBuscado'></i>"+"<i class='fas fa-heart  iconossearch '></i>"+"</div>"+ "</div>"
+            "<img class=img-search src='"+imgAlbum+"'"+"<div class=div-iconos>"+"<i idBuscadoAlbum='"+idAlbumBuscado+"' class='far fa-play-circle iconoCancion iconossearch iconoAlbumBuscado'></i>"+"</div>"+ "</div>"
             
         }
         let iconoAlbumBuscado= document.querySelectorAll(".iconoAlbumBuscado")
