@@ -52,23 +52,23 @@
                 ]
                 let borrar = document.querySelector(".borrar")
                
-
-                
+               
+               
                 borrar.addEventListener("click", function(e){
-                  e.preventDefault()
-                  for (let i = 0; i <canciones.length; i++) {
-                   if (canciones [i] == id ){
-                     canciones.splice (i, 1);
-                   } 
-                  }
-                  let boton = document.querySelector (".section")
-                  boton.style.display += "none"
-                  console.log (canciones)
-                  sessionStorage.setItem ("codigoPlaylist", canciones)
-                })
+                    e.preventDefault()
+                    for (let i = 0; i <canciones.length; i++) {
+                     if (canciones [i] == id ){
+                       canciones.splice (i, 1);
+                     } 
+                    }
+                    let boton = document.querySelector (".section")
+                    boton.style.display += "none"
+                    console.log (canciones)
+                    sessionStorage.setItem ("codigoPlaylist", canciones)
+                  })
+              
             
             
-
                 cadaPlay.addEventListener("click", function(){
                     
                     document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
