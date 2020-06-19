@@ -202,11 +202,11 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
     document.querySelector(".botoniniciarsesion").addEventListener("click", function(){
         let emailLogIn= document.querySelector("#username")
         let contraseñaLogIn= document.querySelector("#password")
-
+        let incorrecto= true
         for (let index = 0; index < usuarios.length; index++) {
             const cadausuarioRegistrado = usuarios[index];
             if (cadausuarioRegistrado.email == emailLogIn.value && cadausuarioRegistrado.password == contraseñaLogIn.value ) {
-               
+               incorrecto= false
                 usuarioYaRegistrado= cadausuarioRegistrado
                 console.log(usuarioYaRegistrado)
                 let usuarioYaRegistradoJSON= JSON.stringify(usuarioYaRegistrado)
@@ -216,8 +216,19 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
                     document.querySelector(".maincontainer").style.display="block"
                     document.querySelector(".welcome").innerHTML+= " " + " Back" +" "+ usuarioYaRegistrado.nombre
             } 
-            }
+            
 
+        }
+        if (incorrecto == true) {
+
+            UIkit.notification({
+            message: 'Email o Contraseña erónea',
+            status: 'warning',
+            pos: 'top-center',
+            timeout: 1000
+        });
+        }
+            
 
     })
     
