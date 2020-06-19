@@ -20,7 +20,7 @@ window.addEventListener("load", function(){
             console.log (informacionArtista)
             let nombreArtista= informacionArtista.name
             let seguidoresArtista= informacionArtista.nb_fan
-            let fotoArtista= informacionArtista.picture
+            let fotoArtista= informacionArtista.picture_big
                 document.querySelector(".containartista").innerHTML="<div class=containfotoartista rojo>"+ "<img class=fotoartista src="+fotoArtista+ ">"+"<p class=fans>"+ seguidoresArtista+""+ "fans"+"</p>"+"</div>"+"<div class=containinfoartista amarillo>"+"<h2 class=nombreartista>"+nombreArtista+"</h2>"+'</div><div class=containcanciones violeta><p>Top Five</p><ol class=listacanciones></ol></div>'
                 document.querySelectorAll(".top")[0].innerHTML+= nombreArtista 
                 document.querySelectorAll(".top")[1].innerHTML+= nombreArtista 

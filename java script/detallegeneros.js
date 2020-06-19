@@ -42,7 +42,7 @@ containalbum.innerHTML=` <div class="containfotoalbum">
                 let temasdelalbum=document.querySelector(".temasdelalbum")
                 let artistas=informacion.data
                 artistas.forEach(artista => {
-                    temasdelalbum.innerHTML+=` <a href="artistas.html?iddelgenero=${artista.id}" class="genero2">
+                    temasdelalbum.innerHTML+=` <a href="artistas.html?idDelArtista=${artista.id}" class="genero2">
                     <div class="containfotogenero">
                     <img class="fotogeneroo" src="${artista.picture_big}" alt="fondo generos">
                     
