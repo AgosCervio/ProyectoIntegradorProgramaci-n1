@@ -30,7 +30,7 @@
                   let imagen = track.album.cover
                   let idTrack= track.id
                   
-            document.querySelector(".listacanciones").innerHTML += "<li>"+" <div class=section>"+"<img class=cancion src='"+ imagen+"'>"+"<div class=sectioninfo>"+"<a class=nombrecancion href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2 class= nombrecancion>"+nombre+"</h2>"+"</a>"+"<a class=ipervinculos href='artistas.html?idDelArtista="+idArtista+"'><h2 class= tituloss>"+artista+"</h2></a>"+"<a  class=ipervinculos href='albums.html?idDeAlbum="+idDeAlbum+"'><h2 class= tituloss>"+album+"</h2></a>"+ "<p class='borrar'>ELIMINAR DE PLAYLIST</p>"+"<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+ "</li>"+"</div>"+"</div>"
+            document.querySelector(".listacanciones").innerHTML += "<li>"+" <div class=section>"+"<img class=cancion src='"+ imagen+"'>"+"<div class=sectioninfo>"+"<a class=nombrecancion href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2 class= nombrecancion>"+nombre+"</h2>"+"</a>"+"<a class=ipervinculos href='artistas.html?idDelArtista="+idArtista+"'><h2 class= tituloss>"+artista+"</h2></a>"+"<a  class=ipervinculos href='albums.html?idDeAlbum="+idDeAlbum+"'><h2 class= tituloss>"+album+"</h2></a>"+ "<p idd='"+idTrack+"' class='borrar'>ELIMINAR DE PLAYLIST</p>"+"<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+ "</li>"+"</div>"+"</div>"
 
             
           
@@ -47,33 +47,39 @@
 
                     document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
                 })
-                canciones = [
-
-                ]
-                let borrar = document.querySelector(".borrar")
+            }
+                
+                let borrar = document.querySelectorAll(".borrar")
                
-               
-               
-                borrar.addEventListener("click", function(e){
-                    e.preventDefault()
-                    for (let i = 0; i <canciones.length; i++) {
-                     if (canciones [i] == id ){
-                       canciones.splice (i, 1);
-                     } 
-                    }
+               for (let index = 0; index < borrar.length; index++) {
+                   const cadaBorrar = borrar[index];
+                   let iddd= cadaBorrar.getAttribute("idd")
+                   cadaBorrar.addEventListener("click", function(){
+                    alert("hl")
+                    
+                     if (codigoPlaylist.includes(iddd) ){
+                         alert("matcheo")
+                         let seva = codigoPlaylist.indexOf(iddd)
+                         console.log(seva)
+                       codigoPlaylist.splice(seva, 1);
+                       
+                    console.log (codigoPlaylist)
+                    sessionStorage.setItem ("codigoPlaylist", codigoPlaylist)
                     let boton = document.querySelector (".section")
                     boton.style.display += "none"
-                    console.log (canciones)
-                    sessionStorage.setItem ("codigoPlaylist", canciones)
+                     } 
+                    
+                    
                   })
+                   
+               
+               
+                
               
             
             
-                cadaPlay.addEventListener("click", function(){
-                    
-                    document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
-                })
-            }
+                
+                }
 
     
 
