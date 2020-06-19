@@ -71,7 +71,16 @@
     height: 50px;
     text-align: center;
 }
-
+.ipervincuosplaylist {
+  font-size: 14px;
+  color: white;
+  border: 4px solid #FF5470;
+  background-color: purple;
+  width: 90%;
+  height: 40px;
+  text-align: center;
+    
+}
 
            @media (min-width:600px){
      

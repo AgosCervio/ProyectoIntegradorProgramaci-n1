@@ -46,9 +46,13 @@ color: rgb(84, 82, 82);
 }
 
 .borrar{
-  margin-left: 5%;
-  font-size: 30px;
-color: rgb(84, 82, 82);
+  font-size: 14px;
+  color: white;
+  border: 4px solid white;
+  background-color: rgb(84, 82, 82);
+  width: 90%;
+  height: 40px;
+  text-align: center;
 }
 @media (min-width:600px){
 
