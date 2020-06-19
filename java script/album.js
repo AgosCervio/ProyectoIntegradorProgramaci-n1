@@ -72,17 +72,14 @@ window.addEventListener ("load", function(){
 
            document.querySelector (".temasdelalbum").innerHTML += "<div class=numeros>   <i idtema="+idtema+" class='fa fa-play-circle play' aria-hidden='true'></i></div> <div class=hola><ul class=temas><li><a href='tracks.html?idDelTrack="+idtema+"'><h1 class=titulodeltrack>"+nombretema+"</h1></a></li></ul></div><p class=tiempo>"+duracion+"</p><div class=icono><a href='miplaylist.html'><i  idGo="+idtema+" class='fa fa-heart-o go' ></i></a> </div> "
            
-
+//capta los id de del track para cada corazon y al clickear se cambian de color a azul
           let go = document.querySelectorAll(".go")
-          
           for (let index = 0; index < go.length; index++) {
               const cadaGoPlay = go[index];
               let idGo= cadaGoPlay.getAttribute("idGo")
               cadaGoPlay.addEventListener("click", function(){
                 cadaGoPlay.style.backgroundColor = "blue"
-               
-       
-              
+    
                   //cancion  se agrega a playlist
                   if (sessionStorage.getItem("codigoPlaylist")!= null) {
                     canciones= sessionStorage.getItem("codigoPlaylist").split(",")
@@ -90,11 +87,9 @@ window.addEventListener ("load", function(){
                     sessionStorage.setItem("codigoPlaylist", canciones)
                   } else{
                       canciones= [
-
                       ]
                       canciones.push(idGo)
                       sessionStorage.setItem("codigoPlaylist", canciones)
-
                   }
                  
 
