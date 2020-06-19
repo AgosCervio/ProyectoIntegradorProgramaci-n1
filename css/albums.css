@@ -18,7 +18,12 @@
     text-align: center;
   margin: 10px;
     }
-
+    .titulo1{
+        font-family  : 'Bitter', serif;
+      color: slategray;
+      text-align: center;
+    margin: 5px;
+      }
 
 
     .nombrealbum {
