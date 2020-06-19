@@ -22,7 +22,7 @@ window.addEventListener ("load", function(){
                 const unasola = imagen[index];
                  let img = unasola.picture
                 
-                 document.querySelector (".sectioncanciones").innerHTML = `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>   <a class="ipervincuos `+codigoTracks+`" href="miplaylist.html"><p class="ipervincuosplaylist">AGREGAR A PLAYLIST</p></a></a> <p class="duracion">`+duracion+`</p> <p class="iconotracks"> PLAY </p></div>`
+                 document.querySelector (".sectioncanciones").innerHTML = `<div class="sectioncancionesfoto"><img class=cancion src="`+ img+` "></div><div class="sectioninfocanciones"><p class=nombrecancion>`+nombre+`</p><a href="artistas.html?idDelArtista=`+idArtista +`"><p class=ipervincuos>`+artista+` </p> </a><a  href="albums.html?idDeAlbum= `+idDeAlbum+`"><p class="ipervincuosalbum">`+album+`</p></a>  <p class="duracion">`+duracion+`s</p> <a class="ipervincuos `+codigoTracks+`" href="miplaylist.html"><p class="ipervincuosplaylist">AGREGAR A PLAYLIST</p></a></a>  <p class="iconotracks"> PLAY </p></div>`
 
         
             

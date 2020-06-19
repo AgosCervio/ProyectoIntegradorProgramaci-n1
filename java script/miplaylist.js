@@ -30,7 +30,7 @@
                   let imagen = track.album.cover
                   let idTrack= track.id
                   
-            document.querySelector(".listacanciones").innerHTML += "<li>"+" <div class=section>"+"<img class=cancion src='"+ imagen+"'>"+"<div class=sectioninfo>"+"<a class=nombrecancion href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2 class= nombrecancion>"+nombre+"</h2>"+"</a>"+"<a class=ipervinculos href='artistas.html?idDelArtista="+idArtista+"'><h2 class= tituloss>"+artista+"</h2></a>"+"<a  class=ipervinculos href='albums.html?idDeAlbum="+idDeAlbum+"'><h2 class= tituloss>"+album+"</h2></a>"+ "<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+ "<i codigo='" + idTrack+  "' idGo="+idTrack+" class='fa fa-minus borrar' ></i>"+"</li>"+"</div>"+"</div>"
+            document.querySelector(".listacanciones").innerHTML += "<li>"+" <div class=section>"+"<img class=cancion src='"+ imagen+"'>"+"<div class=sectioninfo>"+"<a class=nombrecancion href='tracks.html?idDelTrack="+idTrack+"'>"+"<h2 class= nombrecancion>"+nombre+"</h2>"+"</a>"+"<a class=ipervinculos href='artistas.html?idDelArtista="+idArtista+"'><h2 class= tituloss>"+artista+"</h2></a>"+"<a  class=ipervinculos href='albums.html?idDeAlbum="+idDeAlbum+"'><h2 class= tituloss>"+album+"</h2></a>"+ "<p class='borrar'>ELIMINAR DE PLAYLIST</p>"+"<i id='"+ idTrack+"' class='far fa-play-circle iconotracks'></i>"+ "</li>"+"</div>"+"</div>"
 
             
           
@@ -46,62 +46,44 @@
 
 
                     document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
-                })//on click play
+                })
+                canciones = [
 
-
+                ]
+                let borrar = document.querySelector(".borrar")
                
+
+                
+                borrar.addEventListener("click", function(e){
+                  e.preventDefault()
+                  for (let i = 0; i <canciones.length; i++) {
+                   if (canciones [i] == id ){
+                     canciones.splice (i, 1);
+                   } 
+                  }
+                  let boton = document.querySelector (".section")
+                  boton.style.display += "none"
+                  console.log (canciones)
+                  sessionStorage.setItem ("codigoPlaylist", canciones)
+                })
+            
+            
+
+                cadaPlay.addEventListener("click", function(){
+                    
+                    document.querySelector(".reproduccionArtista").innerHTML= "<iframe class='iframe' scrolling='no' frameborder='0' allowTransparency='true' src='https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id="+id+"&app_id=1' width='100%' height='150'></iframe>"
+                })
+            }
 
     
 
+            })          
             
-  
-                
-               
-                  
-            }//cierra for
-            
+        }
 
-
-            let borrar = document.querySelectorAll(".borrar")
-            for (let index = 0; index < borrar.length; index++) {
-                const borrarcancion = borrar[index];
-                let codigo= borrarcancion.getAttribute("codigo") 
-                 
-                
-                    for (let index = 0; index < codigoPlaylist.length; index++) {
-                        const cadaCodigo = codigoPlaylist[index];
-                        
-                    
-                        borrarcancion.addEventListener("click", function(){
-                        alert("hol")
-                        if (cadaCodigo == codigo) {
-                            codigoPlaylist.splice(cadaCodigo, 1) 
-                            
-                        }
-
+         
 
                              
-                        
-                       
-                        
-                      
-                        })
-                    }
-         
-         }
-            
-       })
-    
-       
-               
-               
-               
-               
-           
-       
-       
-   }
-
  } else{
     alert("crea una playlist")
     

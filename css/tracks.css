@@ -115,7 +115,9 @@
              font-size: 30px;
            
            }
-          
+           .ipervincuosplaylist {
+             font-size: 27px;
+           }
       
       }
           @media(min-width:1024px){
@@ -141,5 +143,8 @@
          .duracion{
           font-size: 40px;
         
+        }
+        .ipervincuosplaylist {
+          width: 50%;
         }
         }

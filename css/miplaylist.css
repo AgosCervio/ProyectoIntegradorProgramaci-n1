@@ -17,8 +17,9 @@ ul{
 }
 
 .cancion{
+
   border-radius: 50%;
-  margin-top: 5%;
+  margin-top: 50%;
   margin-left: 5%;
   margin-bottom: 5%;
   width: 100%;
@@ -28,7 +29,7 @@ ul{
 
  .nombrecancion{
   font-family: 'Notable', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   color: rgb(84, 82, 82);
   margin-right: 30px;
  margin: 0;
@@ -43,6 +44,7 @@ ul{
    .iconotracks{
 font-size: 35px;
 color: rgb(84, 82, 82);
+margin-bottom: 5%;
 }
 
 .borrar{

@@ -79,7 +79,9 @@ window.addEventListener ("load", function(){
               let idGo= cadaGoPlay.getAttribute("idGo")
               cadaGoPlay.addEventListener("click", function(){
                 cadaGoPlay.style.backgroundColor = "blue"
-    
+
+              
+               
                   //cancion  se agrega a playlist
                   if (sessionStorage.getItem("codigoPlaylist")!= null) {
                     canciones= sessionStorage.getItem("codigoPlaylist").split(",")
@@ -92,7 +94,7 @@ window.addEventListener ("load", function(){
                       sessionStorage.setItem("codigoPlaylist", canciones)
                   }
                  
-
+                
               })
               // funcion para que se reprodusca el track
 
