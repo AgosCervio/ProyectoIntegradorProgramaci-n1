@@ -1,6 +1,6 @@
 .containgeneros{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 .nombreartista{
    padding-top: 65px;
@@ -65,17 +65,23 @@ color: rgb(84, 82, 82);
     padding-top: 15px;
     text-align: justify;
 }
-@media (min-width:600px){
+@media (min-width:400px){
 
-   
+        .containgeneros{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     .titulogenero{
         right: 95px;
         padding-top: 20px;
     }
 
 }
-@media (min-width:768px){
-
+@media (min-width:800px){
+    .containgeneros{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
     .titulogenero{
         left: 200px;
         top: 250px;
