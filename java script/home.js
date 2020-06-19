@@ -222,7 +222,7 @@ fetch("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/"+codigo
         if (incorrecto == true) {
 
             UIkit.notification({
-            message: 'Email o Contraseña erónea',
+            message: 'Email o Contraseña errónea',
             status: 'warning',
             pos: 'top-center',
             timeout: 1000
