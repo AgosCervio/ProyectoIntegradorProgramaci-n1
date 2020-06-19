@@ -27,7 +27,7 @@ window.addEventListener ("load", function(){
             let genero = cadaGenero.name 
             let id = cadaGenero.id
          
-           document.querySelector (".containalbum").innerHTML =  ' <div class=containfotoalbum> <img class=fotoalbum src=  "' + img +'" >  <p class="año">'+año+'</p> </div> <div class="containinfoalbum"> <h2 class="nombrealbum">' + nombreAlbum+' </h2> <a href="artistas.html?idDelArtista= ' + idArtista + ' ">  <p class="ipervinculo">'+artista+' </p> </a>   <a href="géneros.html?idDelGenero='  + id + '  ">  <p class="ipervinculo1">' +genero+' </p></a> <p class="iconoalbum"> PLAY </p>  </div> ' 
+           document.querySelector (".containalbum").innerHTML =  ' <div class=containfotoalbum> <img class=fotoalbum src=  "' + img +'" >  <p class="año">'+año+'</p> </div> <div class="containinfoalbum"> <h2 class="nombrealbum">' + nombreAlbum+' </h2> <a href="artistas.html?idDelArtista= ' + idArtista + ' ">  <p class="ipervinculo">'+artista+' </p> </a>   <a href="géneros.html?idDelGenero='  + id + '  ">  <p class="ipervinculo1">' +genero+' </p></a> <p  id class="iconoalbum"> PLAY </p>  </div> ' 
          
 
 
@@ -70,7 +70,7 @@ window.addEventListener ("load", function(){
            let idtema= cadatema.id
            let duracion = cadatema.duration
 
-           document.querySelector (".temasdelalbum").innerHTML += "<div class=numeros>   <i idtema="+idtema+" class='fa fa-play-circle play' aria-hidden='true'></i></div> <div class=hola><ul class=temas><li><a href='tracks.html?idDelTrack="+idtema+"'><h1 class=titulodeltrack>"+nombretema+"</h1></a></li></ul></div><p class=tiempo>"+duracion+"</p><div class=icono><a href='miplaylist.html'><i  idGo="+idtema+" class='fa fa-heart-o go' ></i></a> </div> "
+           document.querySelector (".temasdelalbum").innerHTML += "<div class=numeros>   <i idtema="+idtema+" class='fa fa-play-circle play' aria-hidden='true'></i></div> <div class=hola><ul class=temas><li><a href='tracks.html?idDelTrack="+idtema+"'><h1 class=titulodeltrack>"+nombretema+"</h1></a></li></ul></div><p class=tiempo>"+duracion+"s</p><div class=icono><a href='miplaylist.html'><i  idGo="+idtema+" class='fa fa-heart-o go' ></i></a></div> "
            
 //capta los id de del track para cada corazon y al clickear se cambian de color a azul
           let go = document.querySelectorAll(".go")
